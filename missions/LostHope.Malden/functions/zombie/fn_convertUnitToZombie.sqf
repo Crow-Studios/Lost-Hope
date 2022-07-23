@@ -21,6 +21,13 @@ result = [];
 
 [_unit, _type] call WBK_LoadAIThroughEden;
 
+uiSleep 0.5;
+
+private _anim = selectRandom ["WBK_Middle_GetUpUnconscious", "WBK_Crawler_To_Idle"];
+
+unit switchMove _anim;
+unit playMoveNow _anim;
+
 result append [_unit, name _unit, _type];
 
 result

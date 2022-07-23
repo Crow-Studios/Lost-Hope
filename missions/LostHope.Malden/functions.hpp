@@ -1,8 +1,16 @@
 class lost_hope
 {
+	class core {
+		class zombieCleanup {};
+		class notificationHint {};
+	};
+
 	class marker {
 		class getClosestMarker {};
 		class getMarkerDistance {};
+		class markerSetup {};
+		class resetMarkerTime {};
+		class inMarker {};
 	};
 
 	class spawn {
@@ -14,5 +22,6 @@ class lost_hope
 		class convertUnitToZombie {};
 		class spawnZombie {};
 		class spawnHorde {};
+		class spawnHerd {};
 	};
 };

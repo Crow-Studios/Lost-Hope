@@ -1,8 +1,4 @@
-// Calls on each players load in
-
-private _unit = player;
-
-private _localPlayerUID = getPlayerUID _unit;
+params ["_unit"];
 
 _unit setVariable ["lost_hope"+_localPlayerUID+"markerCheck", true];
 _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];

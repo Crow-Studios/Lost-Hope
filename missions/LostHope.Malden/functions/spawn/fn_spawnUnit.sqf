@@ -10,7 +10,7 @@
 *	5: _side 		<SIDE> - EAST, WEST, GUERILLA, CIVILIAN
 *	6: _isMelee		<BOOL> - true/false
 *   
-*   Example:
+*   Examples:
 *   ["C_man_polo_1_F", getPosATL player, "lost_hope_vanilla_police", "lost_hope_police_CBRN", EAST, false] call lost_hope_fnc_spawnUnit;
 *   ["C_man_polo_1_F", getPosATL player, "lost_hope_vanilla_civilians", "lost_hope_melee", EAST, true] call lost_hope_fnc_spawnUnit;
 *
@@ -25,4 +25,4 @@ if (_isMelee) then {_classname = "B_soldier_Melee_RUSH"};
 
 _classname createUnit [_position, _grp, "unit = this"];
 
-[unit, _group, _loadout] call lost_hope_fnc_setLoadout;
+[unit, _group, _loadout, 0] call lost_hope_fnc_setLoadout;

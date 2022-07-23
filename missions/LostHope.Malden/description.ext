@@ -1,3 +1,6 @@
+#include "dialogs\defines.hpp"
+#include "dialogs\dialogs.hpp"
+
 class CfgFunctions
 {
 	#include "functions.hpp"
