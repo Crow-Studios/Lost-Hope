@@ -3,6 +3,8 @@ class lost_hope
 	class core {
 		class zombieCleanup {};
 		class notificationHint {};
+		class playerInit {};
+		class playBoatAnimation {};
 	};
 
 	class marker {

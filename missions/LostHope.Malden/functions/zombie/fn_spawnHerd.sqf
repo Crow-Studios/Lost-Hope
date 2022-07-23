@@ -14,6 +14,8 @@
 
 // Ignore this, was a test, didn't work
 
+
+/*
 params ["_position", "_radius"];
 
 private _sfxUnit = "dev_module_sfx_zombies";
@@ -30,3 +32,4 @@ _markerHerd = [_position] spawn {
         "herdMove" setMarkerPos getPos leader herdGroup;
     };
 };
+*/
