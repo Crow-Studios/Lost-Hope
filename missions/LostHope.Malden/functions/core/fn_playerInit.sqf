@@ -7,7 +7,7 @@ _unit setVariable ["isZombie", false];
 _script = [_localPlayerUID, _unit] spawn {
 	params ["_localPlayerUID", "_unit"];
 	while {_unit getVariable "lost_hope"+_localPlayerUID+"markerCheck"} do {
-		[_unit, 300] call lost_hope_fnc_getClosestMarker;
+		[_unit, 300] spawn lost_hope_fnc_getClosestMarker;
 		uiSleep 1;
 	};
 };

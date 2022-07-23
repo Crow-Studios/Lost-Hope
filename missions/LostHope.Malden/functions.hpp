@@ -3,6 +3,7 @@ class lost_hope
 	class core {
 		class zombieCleanup {};
 		class notificationHint {};
+		class playerInit {};
 	};
 
 	class marker {
@@ -11,6 +12,7 @@ class lost_hope
 		class markerSetup {};
 		class resetMarkerTime {};
 		class inMarker {};
+		class getMarkers {};
 	};
 
 	class spawn {
