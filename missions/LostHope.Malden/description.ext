@@ -25,3 +25,8 @@ class lost_hope_groups
 {
 	#include "configs\cfgUnitGroups.hpp"
 };
+
+class lost_hope_locations
+{
+	#include "configs\cfgLocations.hpp"
+};
