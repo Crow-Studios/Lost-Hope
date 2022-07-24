@@ -1,6 +1,7 @@
 class lost_hope
 {
 	class core {
+		class holdAction {};
 		class zombieCleanup {};
 		class notificationHint {};
 		class playerInit {};
