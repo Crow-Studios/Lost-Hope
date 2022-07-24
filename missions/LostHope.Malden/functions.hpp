@@ -13,6 +13,7 @@ class lost_hope
 		class markerSetup {};
 		class resetMarkerTime {};
 		class inMarker {};
+		class getMarkers {};
 	};
 
 	class spawn {
