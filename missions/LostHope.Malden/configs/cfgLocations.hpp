@@ -24,4 +24,10 @@
 		distance = 50;
 		count[] = {3,5,7};
 	};
+	class lost_hope_town {
+		name = "town";
+		groups[] = {"lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_civilians"};
+		distance = 250;
+		count[] = {11,14,17};
+	};
 
