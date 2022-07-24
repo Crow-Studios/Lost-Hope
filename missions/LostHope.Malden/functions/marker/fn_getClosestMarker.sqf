@@ -16,18 +16,15 @@ private _localPlayerUID = getPlayerUID _unit;
 
 private _result = [];
 
-
-groups = [];
-
 {
+	if (_x == _leader) then {
+		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
+	};
+
 	if (_x distance _leader >= 800) then {
 		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 	} else {
 		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", false];
-	};
-
-	if (_x == _leader) then {
-		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 	};
 
 	_result append [name _leader, _x distance _leader];
@@ -66,7 +63,6 @@ locations = call lost_hope_fnc_getMarkers;
 
 			if ("safezone_2" == _x && ([_unit, 300] call lost_hope_fnc_getMarkerDistance)) then {
 				["Location Nearby!!", "You are near Safezone_2", "info", 5 ] call lost_hope_fnc_notificationHint;
-
 			};
 
 		};

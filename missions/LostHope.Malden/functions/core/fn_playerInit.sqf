@@ -11,3 +11,8 @@ _script = [_localPlayerUID, _unit] spawn {
 		uiSleep 1;
 	};
 };
+
+{
+    missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
+    //_x setMarkerAlpha 0;
+} forEach allMapMarkers;
