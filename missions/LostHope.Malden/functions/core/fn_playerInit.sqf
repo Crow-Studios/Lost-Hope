@@ -1,3 +1,13 @@
+/*
+*	Author: Silence
+*	Description: Sets up player variables, etc
+*
+*	Arguments:
+*	0: _unit 		<OBJECT> - Unit you want to run on
+*	Return Value: None
+*/
+
+
 params ["_unit"];
 
 _unit setVariable ["lost_hope"+_localPlayerUID+"markerCheck", true];
@@ -19,8 +29,6 @@ _script = [_localPlayerUID, _unit] spawn {
     missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
     //_x setMarkerAlpha 0;
 } forEach allMapMarkers;
-
-
 
 [30, _unit] call lost_hope_fnc_resetMarkerTime;
 

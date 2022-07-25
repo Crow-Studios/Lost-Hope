@@ -6,6 +6,7 @@ class lost_hope
 		class notificationHint {};
 		class playerInit {};
 		class playBoatAnimation {};
+		class createCamera {};
 	};
 
 	class marker {

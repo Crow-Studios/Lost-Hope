@@ -18,7 +18,7 @@ if (_ferryBeginning) then {
 
 [_boatLocation, _boat, _vectorRotation] spawn {
     params ["_boatLocation", "_boat", "_vectorRotation"];
-    uiSleep 30;
+    uiSleep 22;
     _boat setPosASL _boatLocation;
     _boat setVelocity [0,0,0];
     _boat setVectorDir _vectorRotation;
