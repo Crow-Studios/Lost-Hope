@@ -1,5 +1,5 @@
 #include "dialogs\defines.hpp"
-#include "dialogs\dialogs.hpp"
+#include "UI\RscMyHUD.hpp"
 
 class CfgFunctions
 {
@@ -29,4 +29,9 @@ class lost_hope_groups
 class lost_hope_locations
 {
 	#include "configs\cfgLocations.hpp"
+};
+
+class RscTitles
+{
+	#include "UI\RscMyHUD.hpp"
 };

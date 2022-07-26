@@ -1,5 +1,9 @@
 class lost_hope
 {
+	class init {
+		class spawn_initServer {};
+		class spawn_initPlayerLocal {};
+	};
 	class core {
 		class holdAction {};
 		class zombieCleanup {};
