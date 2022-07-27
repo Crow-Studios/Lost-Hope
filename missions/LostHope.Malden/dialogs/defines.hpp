@@ -793,9 +793,17 @@ class RscTree
 	colorLines[] = {0,0,0,0};
 	borderSize = 0;
 	expandOnDoubleclick = 1;
-	class ScrollBar: ScrollBar
-	{
-	};
+	class ListScrollBar// : ScrollBar //ListScrollBar is class name required for Arma 3
+    {
+		color[] = {1,1,1,0.6};
+		colorActive[] = {1,1,1,1};
+		colorDisabled[] = {1,1,1,0.3};
+		thumb = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+		border = "#(argb,8,8,3)color(1,1,1,1)";
+		shadow = 0;
+    };
 };
 class RscSlider
 {

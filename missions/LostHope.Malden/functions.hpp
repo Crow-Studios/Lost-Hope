@@ -33,4 +33,9 @@ class lost_hope
 		class spawnHorde {};
 		class spawnHerd {};
 	};
+	class weaponShop {
+		class openShopDialog {};
+		class getWeapons {}; 
+		class buyItem {};
+	};
 };

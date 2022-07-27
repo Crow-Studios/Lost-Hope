@@ -8,7 +8,7 @@
 */
 
 
-params ["_unit"];
+params ["_unit", "_localPlayerUID"];
 
 _unit setVariable ["lost_hope"+_localPlayerUID+"markerCheck", true];
 _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
