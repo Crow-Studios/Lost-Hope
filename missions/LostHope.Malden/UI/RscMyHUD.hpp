@@ -2,7 +2,7 @@ class RscMyHUD
 {
 	idd = 100;
 	onLoad = "uiNamespace setVariable ['RscMyHUD', _this select 0];";
-	duration = 15;
+	duration = 10e10;
 	fadeIn = 1;
 	fadeOut = 1;
 	class Controls
