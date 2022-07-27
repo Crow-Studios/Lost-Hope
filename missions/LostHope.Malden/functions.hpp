@@ -9,6 +9,7 @@ class lost_hope
 		class holdAction {};
 		class zombieCleanup {};
 		class notificationHint {};
+		class lootSpawning {};
 		class playBoatAnimation {};
 		class createCamera {};
 	};
