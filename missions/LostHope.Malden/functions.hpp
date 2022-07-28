@@ -8,11 +8,11 @@ class lost_hope
 		class spawn_initServer {};
 		class spawn_initPlayerLocal {};
 	};
+
 	class core {
 		class holdAction {};
 		class zombieCleanup {};
 		class notificationHint {};
-		class playerInit {};
 		class playBoatAnimation {};
 		class createCamera {};
 	};
