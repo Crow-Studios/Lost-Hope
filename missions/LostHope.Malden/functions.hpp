@@ -34,4 +34,11 @@ class lost_hope
 		class spawnHorde {};
 		class spawnHerd {};
 	};
+
+	class DEV {
+		class dev_drawLootLocations {};
+		class dev_drawZombieLocations {};
+		class dev_drawIndividualZombies {};
+	};
+
 };

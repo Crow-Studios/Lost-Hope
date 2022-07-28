@@ -15,7 +15,6 @@ _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 
 _unit setVariable ["isZombie", false];
 zombieGroup = grpNull;
-herdGroup = grpNull;
 
 _script = [_localPlayerUID, _unit] spawn {
 	params ["_localPlayerUID", "_unit"];

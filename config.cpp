@@ -39,7 +39,7 @@ class cfgMarkers
 		markerClass = "Lost_Hope_Markers";
 		side = 2;
 		size = 32;
-		showEditorMarkerColor = 0; //Whether to show icon color in the editor
+		showEditorMarkerColor = 1; //Whether to show icon color in the editor
 	};
 	class lost_hope_markers_biohazard: Flag
 	{
@@ -52,6 +52,6 @@ class cfgMarkers
 		markerClass = "Lost_Hope_Markers";
 		side = 2;
 		size = 32;
-		showEditorMarkerColor = 0; //Whether to show icon color in the editor
+		showEditorMarkerColor = 1; //Whether to show icon color in the editor
 	};
 };

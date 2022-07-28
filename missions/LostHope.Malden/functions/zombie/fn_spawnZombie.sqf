@@ -33,7 +33,8 @@ if (_type == 6) then
 _classname createUnit [_position, zombieGroup, "unit = this"];
 
 unit setVariable ["isZombie", true];
-unit setVariable ["canDelete", true];
+unit setVariable ["canRefresh", true];
+unit setVariable ["canDelete", false];
 
 [unit, _group, _loadout, _type] call lost_hope_fnc_setLoadout;
 
