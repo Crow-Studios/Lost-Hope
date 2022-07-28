@@ -1,5 +1,9 @@
 class lost_hope
 {
+	class UI {
+		class openHUD {};
+	};
+	
 	class init {
 		class spawn_initServer {};
 		class spawn_initPlayerLocal {};
