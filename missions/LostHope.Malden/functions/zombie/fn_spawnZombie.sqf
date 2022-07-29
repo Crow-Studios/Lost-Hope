@@ -48,7 +48,6 @@ unit setUnitCombatMode "BLUE";
 */
 
 unit setVariable ["isZombie", true];
-unit setVariable ["canRefresh", true];
 unit setVariable ["canDelete", false];
 
 [unit, _path, _group, _loadout, _type] call lost_hope_fnc_setLoadout;

@@ -17,7 +17,7 @@ private _localPlayerUID = getPlayerUID _unit;
 private _result = [];
 
 {
-	if (_x distance _leader >= 800) then {
+	if (_x distance _leader >= 400) then {
 		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 	} else {
 		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", false];
@@ -59,6 +59,12 @@ locations = call lost_hope_fnc_getMarkers;
 		if ( !( "base" in _x) && (_continue) ) then {
 			// checks if the player is in the town, and then checks the distance
 			if ( _name in _x && ([_unit, _distance] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
+				if ("science" in _name) then 
+				{
+					for "_i" from 0 to 4 do {
+						[selectRandom ["dev_asymhuman_stage2_o", "dev_toxmut_o", "dev_asymhuman_o", "Zombie_Special_OPFOR_Boomer", "Zombie_Special_OPFOR_Screamer", "Zombie_Special_OPFOR_Leaper_2"], getMarkerPos _x, EAST] call lost_hope_fnc_spawnMutant;
+					};
+				};
 				// hint the town
 				["Location Nearby!!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
 				[_distance, _groups, getMarkerPos _x, EAST, false, _count, _name] call lost_hope_fnc_markerSetup;

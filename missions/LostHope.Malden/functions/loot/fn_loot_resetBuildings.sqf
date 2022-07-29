@@ -9,7 +9,7 @@ _markerTime = [_time, _unit] spawn {
         private _buildings = [];
 
         {
-            if (_x distance _unit <= 700) then {
+            if (_x distance _unit <= 400) then {
                 _x setVariable ["canDelete", false];
             } else {
                 _x setVariable ["canDelete", true];
@@ -20,7 +20,7 @@ _markerTime = [_time, _unit] spawn {
             };
         } forEach entities "WeaponHolderSimulated_Scripted";
 
-        titleText [format["Resetting Buildings Loot: %1", _buildings], "PLAIN DOWN"];
+        //titleText [format["Resetting Buildings Loot: %1", _buildings], "PLAIN DOWN"];
     };
 
 };

@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=435;
+		nextID=453;
 	};
 	class MarkerIDProvider
 	{
-		nextID=16;
+		nextID=17;
 	};
 	class LayerIndexProvider
 	{
-		nextID=183;
+		nextID=199;
 	};
 	class Camera
 	{
-		pos[]={4460.0571,416.88034,8373.0078};
-		dir[]={0.17288086,-0.62178278,-0.76387191};
-		up[]={0.13725188,0.78318954,-0.60644567};
-		aside[]={-0.97533387,-2.1769665e-008,-0.22073942};
+		pos[]={938.89478,8.383707,11883.69};
+		dir[]={-0.60996586,-0.44894037,-0.65303177};
+		up[]={-0.30646119,0.89354819,-0.32809857};
+		aside[]={-0.73081124,8.8475645e-009,0.68261486};
 	};
 };
 binarizationWanted=0;
@@ -43,7 +43,6 @@ addons[]=
 	"A3_Boat_F_Exp_Boat_Transport_02",
 	"A3_Modules_F",
 	"A3_Structures_F_EPB_Civ_Graffiti",
-	"A3_Structures_F_Training",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Structures_F_Mil_TentHangar",
 	"A3_Props_F_Exp_Civilian_Garbage",
@@ -227,7 +226,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -344,7 +343,7 @@ class CustomAttributes
 		};
 		nAttributes=5;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1489,7 +1488,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=88;
+		items=89;
 		class Item0
 		{
 			dataType="Object";
@@ -1649,7 +1648,7 @@ class Mission
 			side="Independent";
 			class Attributes
 			{
-				init="[  " \n " ferry_boat_end,  " \n " ""Travel To Safezone"",  " \n " ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"", ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"",  " \n " ""true"", ""true"", " \n " { }, " \n " { }, " \n " {  " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];  " \n "  hint ""DEBUG: Running Script Completion"";  " \n "  [_target, true, false] call lost_hope_fnc_playBoatAnimation;" \n "  [FerryEnd, ferry_boat_end, ""I see you survived.. Well done scavenger!""] call lost_hope_fnc_createCamera; " \n "  { " \n " if (_x distance _caller <= 25) then { " \n "  _x setPos (FerryStart modelToWorld [0,0,0]); " \n " }; " \n "  } forEach units group _caller; " \n " }, " \n " { }, " \n " [], 6, nil, false, false  " \n "] call BIS_fnc_holdActionAdd;";
+				init="[  " \n " ferry_boat_end,  " \n " ""Travel To Safezone"",  " \n " ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"", ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"",  " \n " ""true"", ""true"", " \n " { }, " \n " { }, " \n " {  " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];  " \n "  hint ""DEBUG: Running Script Completion"";   " \n "  { " \n " if (_x distance _caller <= 25) then { " \n "  _x setPos (FerryStart modelToWorld [0,0,0]); " \n " }; " \n "  } forEach units group _caller; " \n " }, " \n " { }, " \n " [], 6, nil, false, false  " \n "] call BIS_fnc_holdActionAdd;";
 				name="ferry_boat_end";
 			};
 			id=27;
@@ -1746,7 +1745,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
-				init="[  " \n " ferry_boat_start,  " \n " ""Travel To Island"",  " \n " ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"", ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"",  " \n " ""true"", ""true"", " \n " { }, " \n " { }, " \n " {  " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];  " \n "  hint ""DEBUG: Running Script Completion"";  " \n "  [_target, false, true] call lost_hope_fnc_playBoatAnimation;" \n "  [FerryStart, ferry_boat_start, ""Are you prepared to fight for your life?""] call lost_hope_fnc_createCamera; " \n "  { " \n " if (_x distance _caller <= 25) then { " \n "  _x setPos (FerryEnd modelToWorld [0,0,0]); " \n " }; " \n "  } forEach units group _caller; " \n " }, " \n " { }, " \n " [], 6, nil, false, false  " \n "] call BIS_fnc_holdActionAdd;";
+				init="[  " \n " ferry_boat_start,  " \n " ""Travel To Island"",  " \n " ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"", ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"",  " \n " ""true"", ""true"", " \n " { }, " \n " { }, " \n " {  " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];  " \n "  hint ""DEBUG: Running Script Completion"";   " \n "  { " \n " if (_x distance _caller <= 25) then { " \n "  _x setPos (FerryEnd modelToWorld [0,0,0]); " \n " }; " \n "  } forEach units group _caller; " \n " }, " \n " { }, " \n " [], 6, nil, false, false  " \n "] call BIS_fnc_holdActionAdd;";
 				name="ferry_boat_start";
 			};
 			id=34;
@@ -1831,90 +1830,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Ferry-Safezone";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={928.71118,1.0885208,11827.011};
-						angles[]={4.7125287,2.8260198,0.35561082};
-					};
-					side="Empty";
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=87;
-					type="Land_Shoot_House_Wall_Crouch_F";
-					atlOffset=4.8183761;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={930.45374,1.3977938,11826.364};
-						angles[]={4.7125287,3.1288371,0.35561049};
-					};
-					side="Empty";
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=86;
-					type="Land_Shoot_House_Wall_Crouch_F";
-					atlOffset=4.513133;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-			};
 			id=90;
 			atlOffset=4.6657782;
 		};
@@ -3054,7 +2969,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4990.2871,72.470001,3947.6299};
-				angles[]={0,3.652611,-0};
+				angles[]={0,3.652611,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3113,7 +3028,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5003.0098,75.438644,3931.0183};
-				angles[]={0,0.58952528,-0};
+				angles[]={0,0.58952528,0};
 			};
 			side="Empty";
 			flags=5;
@@ -3129,7 +3044,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5002.4907,76.620399,3931.0027};
-				angles[]={0,3.652611,-0};
+				angles[]={0,3.652611,0};
 			};
 			side="Empty";
 			class Attributes
@@ -3187,8 +3102,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5034.9175,100.59818,4027.5276};
-				angles[]={0,3.7113211,-0};
+				position[]={5034.9175,100.59819,4027.5276};
+				angles[]={0,3.7113211,0};
 			};
 			side="Empty";
 			flags=5;
@@ -3197,7 +3112,7 @@ class Mission
 			};
 			id=205;
 			type="Land_spp_Tower_F";
-			atlOffset=-0.16469574;
+			atlOffset=-0.16468048;
 		};
 		class Item45
 		{
@@ -3205,7 +3120,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5032.2671,124.47207,4028.3032};
-				angles[]={0,3.6763802,-0};
+				angles[]={0,3.6763802,0};
 			};
 			side="Empty";
 			class Attributes
@@ -3214,7 +3129,7 @@ class Mission
 			};
 			id=206;
 			type="Sign_Pointer_Pink_F";
-			atlOffset=13.638115;
+			atlOffset=13.6381;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3264,7 +3179,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5040.2109,124.47202,4025.823};
-				angles[]={0,2.1335859,-0};
+				angles[]={0,2.1335859,0};
 			};
 			side="Empty";
 			class Attributes
@@ -3323,7 +3238,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4947.4023,75.841408,3965.5347};
-				angles[]={0,3.6740057,-0};
+				angles[]={0,3.6740057,0};
 			};
 			side="Empty";
 			flags=5;
@@ -3339,7 +3254,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4946.6753,77.526894,3963.9883};
-				angles[]={0,3.6489911,-0};
+				angles[]={0,3.6489911,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3398,7 +3313,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5008.7471,72.72979,3965.9417};
-				angles[]={0,3.6713443,-0};
+				angles[]={0,3.6713443,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3458,7 +3373,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4995.4023,72.736244,3974.8259};
-				angles[]={0,3.6713443,-0};
+				angles[]={0,3.6713443,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3518,7 +3433,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4976.8994,72.495132,3974.2639};
-				angles[]={0,0.62245297,-0};
+				angles[]={0,0.62245297,0};
 			};
 			side="Empty";
 			flags=4;
@@ -3578,7 +3493,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5017.8965,72.740005,3965.031};
-				angles[]={0,3.6706395,-0};
+				angles[]={0,3.6706395,0};
 			};
 			side="Empty";
 			flags=4;
@@ -4000,7 +3915,7 @@ class Mission
 					angle=263.45993;
 					drawBorder=1;
 					id=186;
-					atlOffset=1.1007996;
+					atlOffset=1.1007919;
 				};
 			};
 			id=247;
@@ -4159,7 +4074,7 @@ class Mission
 					angle=320.48343;
 					drawBorder=1;
 					id=175;
-					atlOffset=-0.011993408;
+					atlOffset=-0.011985779;
 				};
 				class Item2
 				{
@@ -5085,6 +5000,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={926.58398,-0.23185253,11827.244};
+						angles[]={0,3.4946377,0};
 					};
 					side="Independent";
 					flags=3;
@@ -5096,7 +5012,7 @@ class Mission
 					};
 					id=427;
 					type="I_G_officer_F";
-					atlOffset=5.9589996;
+					atlOffset=5.9590001;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5338,6 +5254,17 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item88
+		{
+			dataType="Marker";
+			position[]={943.28003,5.1199999,11882.009};
+			name="respawn_west";
+			text="Stronghold Base";
+			type="mil_dot";
+			colorName="ColorBlue";
+			id=437;
+			atlOffset=0.00075149536;
 		};
 	};
 };
