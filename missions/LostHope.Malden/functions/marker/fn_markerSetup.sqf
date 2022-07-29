@@ -16,12 +16,12 @@
 *	Return Value: None
 */
 
-params ["_distance", "_group", "_position", "_side", "_sound", "_count"];
+params ["_distance", "_group", "_position", "_side", "_sound", "_count", "_name"];
 
 private _sfxUnit = "dev_module_sfx_zombies";
 
 if (_sound) then {
-    [_sfxUnit, _position, "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", _side] call lost_hope_fnc_spawnZombie;
+    [_sfxUnit, _position, "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", _side, _name] call lost_hope_fnc_spawnZombie;
 };
 
 if (random [0.1, 0.5, 1] >= 0.8) then {
@@ -34,9 +34,10 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
         private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
 
         private _pos = [_position, _distance / 4, _distance / 2, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
+        private _nearestRoad = [_pos, _distance / 2] call BIS_fnc_nearestRoad;
 
         //if ("triggerman" in _loadout) then {};
-        ["C_man_polo_1_F", _pos, _group, _loadout, _side, true] call lost_hope_fnc_spawnZombie;
+        ["C_man_polo_1_F", _pos, _group, _loadout, _side, _name] call lost_hope_fnc_spawnZombie;
     };
 
 };

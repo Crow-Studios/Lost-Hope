@@ -25,4 +25,4 @@ if (_isMelee) then {_classname = "B_soldier_Melee_RUSH"};
 
 _classname createUnit [_position, _grp, "unit = this"];
 
-[unit, _group, _loadout, 0] call lost_hope_fnc_setLoadout;
+[unit, _path, _group, _loadout, 0] call lost_hope_fnc_setLoadout;

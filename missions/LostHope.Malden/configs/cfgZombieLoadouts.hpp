@@ -18,6 +18,7 @@
 			watch = "ItemWatch";
 			chance = 0.2;
 			type = 3;
+			armed = 0;
 		};
 		class lost_hope_zombie_melee
 		{
@@ -36,6 +37,7 @@
 			watch = "ItemWatch";
 			chance = 0.1;
 			type = 4;
+			armed = 0;
 		};
 		class lost_hope_zombie_triggerman
 		{
@@ -54,6 +56,7 @@
 			watch = "ItemWatch";
 			chance = 0.3;
 			type = 6;
+			armed = 1;
 		};
 	};
 	// Civ (Farmers)
@@ -76,6 +79,7 @@
 			watch = "ItemWatch";
 			chance = 0.2;
 			type = 2;
+			armed = 0;
 		};
 		class lost_hope_zombie_farmer_triggerman
 		{
@@ -94,6 +98,7 @@
 			watch = "ItemWatch";
 			chance = 0.4;
 			type = 6;
+			armed = 1;
 		};
 	};
 	// Police
@@ -116,6 +121,7 @@
 			watch = "ItemWatch";
 			chance = 0.6;
 			type = 6;
+			armed = 1;
 		};
 		class lost_hope_zombie_police
 		{
@@ -134,6 +140,7 @@
 			watch = "ItemWatch";
 			chance = 0.4;
 			type = 5;
+			armed = 0;
 		};
 	};
 
@@ -157,6 +164,7 @@
 			watch = "ItemWatch";
 			chance = 0.7;
 			type = 6;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_private
 		{
@@ -175,6 +183,7 @@
 			watch = "ItemWatch";
 			chance = 0.5;
 			type = 5;
+			armed = 0;
 		};
 		class lost_hope_zombie_military_sergeant_triggerman
 		{
@@ -193,6 +202,7 @@
 			watch = "ItemWatch";
 			chance = 0.9;
 			type = 6;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_sergeant
 		{
@@ -211,6 +221,7 @@
 			watch = "ItemWatch";
 			chance = 0.9;
 			type = 6;
+			armed = 0;
 		};
 		class lost_hope_zombie_military_pilot
 		{
@@ -229,5 +240,6 @@
 			watch = "ItemWatch";
 			chance = 1;
 			type = 1;
+			armed = 0;
 		};
 	};

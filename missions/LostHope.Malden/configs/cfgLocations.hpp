@@ -3,7 +3,10 @@
 		name = "city";
 		groups[] = {"lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_civilians"};
 		distance = 250;
-		count[] = {11,14,17};
+		count[] = {10,15,20};
+		chance = 5;
+		chanceItems = 30;
+		chanceWeapons = 3;
 	};
 	class lost_hope_military
 	{ 
@@ -11,23 +14,35 @@
 		groups[] = {"lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_military"};
 		distance = 230;
 		count[] = {20,25,30};
+		chance = 8;
+		chanceItems = 30;
+		chanceWeapons = 50;
 	};
 	class lost_hope_village {
 		name = "village";
 		groups[] = {"lost_hope_zombie_vanilla_civilians"};
 		distance = 150;
 		count[] = {8,11,14};
+		chance = 5;
+		chanceItems = 40;
+		chanceWeapons = 2;
 	};
 	class lost_hope_farm {
 		name = "farm";
 		groups[] = {"lost_hope_zombie_vanilla_farmers"};
 		distance = 50;
 		count[] = {3,5,7};
+		chance = 10;
+		chanceItems = 50;
+		chanceWeapons = 30;
 	};
 	class lost_hope_town {
 		name = "town";
 		groups[] = {"lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_civilians"};
 		distance = 250;
 		count[] = {11,14,17};
+		chance = 10;
+		chanceItems = 30;
+		chanceWeapons = 10;
 	};
 
