@@ -9,7 +9,7 @@
 			vest[] = {""};
 			backpack[] = {"B_LegStrapBag_black_F", "B_Messenger_Black_F", "B_Messenger_IDAP_F"};
 			headgear[] = {"H_Watchcap_blk", "H_Booniehat_tan", "H_Cap_blk", "H_Cap_surfer", "H_Hat_tan"};
-			facewear[] = {"G_Aviator", "G_Spectacles", "G_Spectacles_Tinted", "None"};
+			facewear[] = {"dev_zombieEyes", "None"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -18,6 +18,7 @@
 			watch = "ItemWatch";
 			chance = 0.2;
 			type = 3;
+			armed = 0;
 		};
 		class lost_hope_zombie_melee
 		{
@@ -27,7 +28,7 @@
 			vest[] = {""};
 			backpack[] = {"GoG_HolsterSwordVestBack"};
 			headgear[] = {"H_Cap_marshal", "H_MilCap_blue", "H_Shemag_olive", "H_StrawHat_dark", "H_Hat_tan"};
-			facewear[] = {"G_Respirator_yellow_F", "G_Blindfold_01_black_F", "G_Sport_Checkered", "None"};
+			facewear[] = {"G_Respirator_yellow_F", "G_Blindfold_01_black_F", "G_Sport_Checkered", "dev_zombieEyes"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -36,6 +37,7 @@
 			watch = "ItemWatch";
 			chance = 0.1;
 			type = 4;
+			armed = 0;
 		};
 		class lost_hope_zombie_triggerman
 		{
@@ -45,7 +47,7 @@
 			vest[] = {"V_Rangemaster_belt", "V_BandollierB_blk", "V_Chestrig_blk"};
 			backpack[] = {"B_Static_Designator_01_weapon_F", "I_E_HMG_01_A_Weapon_F", "B_SCBA_01_F", "I_E_HMG_01_support_F"};
 			headgear[] = {"H_Cap_marshal", "H_MilCap_blue", "H_Shemag_olive", "H_StrawHat_dark", "H_Hat_tan"};
-			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F", "None"};
+			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F", "dev_zombieEyes"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -54,6 +56,7 @@
 			watch = "ItemWatch";
 			chance = 0.3;
 			type = 6;
+			armed = 1;
 		};
 	};
 	// Civ (Farmers)
@@ -67,7 +70,7 @@
 			vest[] = {""};
 			backpack[] = {"B_LegStrapBag_black_F", "B_Messenger_Black_F", "B_Messenger_IDAP_F"};
 			headgear[] = {"H_Watchcap_blk", "H_Booniehat_tan", "H_Cap_blk", "H_Cap_surfer", "H_Hat_tan"};
-			facewear[] = {"G_Aviator", "G_Spectacles", "G_Spectacles_Tinted", "None"};
+			facewear[] = {"G_Aviator", "G_Spectacles", "G_Spectacles_Tinted", "dev_zombieEyes"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -76,6 +79,7 @@
 			watch = "ItemWatch";
 			chance = 0.2;
 			type = 2;
+			armed = 0;
 		};
 		class lost_hope_zombie_farmer_triggerman
 		{
@@ -85,7 +89,7 @@
 			vest[] = {"V_Rangemaster_belt", "V_BandollierB_blk", "V_Chestrig_blk"};
 			backpack[] = {""};
 			headgear[] = {"H_Cap_marshal", "H_MilCap_blue", "H_StrawHat_dark", "H_Hat_tan"};
-			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F", "None"};
+			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F", "dev_zombieEyes"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -94,6 +98,7 @@
 			watch = "ItemWatch";
 			chance = 0.4;
 			type = 6;
+			armed = 1;
 		};
 	};
 	// Police
@@ -107,7 +112,7 @@
 			vest[] = {"V_CarrierRigKBT_01_light_Olive_F", "V_LegStrapBag_black_F", "V_CarrierRigKBT_01_heavy_Olive_F"};
 			backpack[] = {"B_Static_Designator_01_weapon_F", "B_SCBA_01_F", "I_E_HMG_01_support_F"};
 			headgear[] = {"H_Cap_marshal", "H_MilCap_blue", "H_Shemag_olive", "H_StrawHat_dark", "H_Hat_tan"};
-			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F", "None"};
+			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F", "dev_zombieEyes"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -116,6 +121,7 @@
 			watch = "ItemWatch";
 			chance = 0.6;
 			type = 6;
+			armed = 1;
 		};
 		class lost_hope_zombie_police
 		{
@@ -125,7 +131,7 @@
 			vest[] = {"V_Rangemaster_belt", "V_TacVest_blk_POLICE", "V_Press_F"};
 			backpack[] = {"B_Messenger_Gray_F", "B_CivilianBackpack_01_Everyday_Vrana_F"};
 			headgear[] = {"H_MilCap_gen_F", "H_Beret_gen_F"};
-			facewear[] = {"G_Respirator_yellow_F", "G_Respirator_blue_F", "None"};
+			facewear[] = {"G_Respirator_yellow_F", "G_Respirator_blue_F", "dev_zombieEyes"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -134,6 +140,7 @@
 			watch = "ItemWatch";
 			chance = 0.4;
 			type = 5;
+			armed = 0;
 		};
 	};
 
@@ -157,6 +164,7 @@
 			watch = "ItemWatch";
 			chance = 0.7;
 			type = 6;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_private
 		{
@@ -175,6 +183,7 @@
 			watch = "ItemWatch";
 			chance = 0.5;
 			type = 5;
+			armed = 0;
 		};
 		class lost_hope_zombie_military_sergeant_triggerman
 		{
@@ -193,6 +202,7 @@
 			watch = "ItemWatch";
 			chance = 0.9;
 			type = 6;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_sergeant
 		{
@@ -211,6 +221,7 @@
 			watch = "ItemWatch";
 			chance = 0.9;
 			type = 6;
+			armed = 0;
 		};
 		class lost_hope_zombie_military_pilot
 		{
@@ -229,5 +240,6 @@
 			watch = "ItemWatch";
 			chance = 1;
 			type = 1;
+			armed = 0;
 		};
 	};

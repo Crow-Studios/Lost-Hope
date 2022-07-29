@@ -11,7 +11,8 @@
 *    1 - Crawler
 *    2 - Walker
 *    3 - Shambler
-*    4 and 5 - Runner (Calm, Angry)
+*    4 - Runner (Calm)
+*    5 - Runner (Angry)
 *    6 - Triggerman
 */
 

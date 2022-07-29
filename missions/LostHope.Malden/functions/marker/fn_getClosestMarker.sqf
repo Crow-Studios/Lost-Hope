@@ -39,31 +39,43 @@ locations = call lost_hope_fnc_getMarkers;
 {
 	private _markerVar = missionNamespace getVariable ("Lost_Hope_Marker"+_x+"CanRun");
 	for "_i" from 0 to count locations-1 do {
-		_name = ((locations select _i) select 0);
+		private _name = ((locations select _i) select 0);
 
-		_groups = ((locations select _i) select 1);
+		private _groups = ((locations select _i) select 1);
 
-		_distance = ((locations select _i) select 2);
+		private _distance = ((locations select _i) select 2);
 
-		_count = ((locations select _i) select 3);
+		private _count = ((locations select _i) select 3);
+
+		private _chance = ((locations select _i) select 4);
+
+		private _chanceItems = ((locations select _i) select 5);
+
+		private _chanceWeapons = ((locations select _i) select 6);
 
 		// array append 
-		_nearby_locations append [[_name, _groups, _distance, _count]];
+		private _nearby_locations append [[_name, _groups, _distance, _count, _chance, _chanceItems, _chanceWeapons]];
 
 		if ( !( "base" in _x) && (_continue) ) then {
 			// checks if the player is in the town, and then checks the distance
 			if ( _name in _x && ([_unit, _distance] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
 				// hint the town
 				["Location Nearby!!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
-				[_distance, _groups, getMarkerPos _x, EAST, true, _count] call lost_hope_fnc_markerSetup;
+				[_distance, _groups, getMarkerPos _x, EAST, false, _count, _name] call lost_hope_fnc_markerSetup;
+				[_unit, _x, _chance, _chanceItems, _chanceWeapons, _name] spawn lost_hope_fnc_loot_spawnLoot;
 				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];
 			};
+
 			if ("safezone_1" == _x && ([_unit, 75] call lost_hope_fnc_getMarkerDistance)) then {
 				["Location Nearby!!", "You are near Safezone_1", "info", 5 ] call lost_hope_fnc_notificationHint;
 			};
 
 			if ("safezone_2" == _x && ([_unit, 300] call lost_hope_fnc_getMarkerDistance)) then {
 				["Location Nearby!!", "You are near Safezone_2", "info", 5 ] call lost_hope_fnc_notificationHint;
+			};
+
+			if ( (_name in _x) && !([_unit, _distance] call lost_hope_fnc_getMarkerDistance) ) then {
+				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
 			};
 
 		};
