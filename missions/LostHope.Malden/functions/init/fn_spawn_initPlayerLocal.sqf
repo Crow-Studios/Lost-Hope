@@ -21,7 +21,7 @@ diag_log "Starting the HUD loop";
 _loop = [] spawn {
 	while {True} do {
 		//("HUD" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];	// remove the HUD
-		execVM "openHUD.sqf"; //Recreate the hud
+		call lost_hope_fnc_openHUD;
 		uiSleep 0.1;
 	};
 };
