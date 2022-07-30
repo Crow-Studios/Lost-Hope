@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=453;
+		nextID=487;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=199;
+		nextID=229;
 	};
 	class Camera
 	{
-		pos[]={938.89478,8.383707,11883.69};
-		dir[]={-0.60996586,-0.44894037,-0.65303177};
-		up[]={-0.30646119,0.89354819,-0.32809857};
-		aside[]={-0.73081124,8.8475645e-009,0.68261486};
+		pos[]={2677.5117,17.248867,7303.4551};
+		dir[]={0.70022511,-0.68729544,0.19315761};
+		up[]={0.66254967,0.7263779,0.18276483};
+		aside[]={0.26591885,1.4901161e-008,-0.96399546};
 	};
 };
 binarizationWanted=0;
@@ -226,7 +226,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -343,7 +343,7 @@ class CustomAttributes
 		};
 		nAttributes=5;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -391,7 +391,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=17;
+									items=41;
 									class Item0
 									{
 										class data
@@ -630,6 +630,342 @@ class CustomAttributes
 											value="ims_isimscanhitallies";
 										};
 									};
+									class Item17
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_cba_killswitch";
+										};
+									};
+									class Item18
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_cba_friendly";
+										};
+									};
+									class Item19
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_cba_friendlyside";
+										};
+									};
+									class Item20
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_deleteweapon";
+										};
+									};
+									class Item21
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_cba_infection";
+										};
+									};
+									class Item22
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_cba_infection_resurrectzombie";
+										};
+									};
+									class Item23
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_distance_max";
+										};
+									};
+									class Item24
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_distance_hunt";
+										};
+									};
+									class Item25
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_distance_agro";
+										};
+									};
+									class Item26
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_distance_roam";
+										};
+									};
+									class Item27
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_attack_reachman";
+										};
+									};
+									class Item28
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_attack_damagemn";
+										};
+									};
+									class Item29
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_attack_reachveh";
+										};
+									};
+									class Item30
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_attack_damageveh";
+										};
+									};
+									class Item31
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_attack_launchveh";
+										};
+									};
+									class Item32
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_attack_timeout";
+										};
+									};
+									class Item33
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_infectionchance";
+										};
+									};
+									class Item34
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_head_caliber";
+										};
+									};
+									class Item35
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_head_chance";
+										};
+									};
+									class Item36
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_uniformfix";
+										};
+									};
+									class Item37
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_useidentity";
+										};
+									};
+									class Item38
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_greeneyes";
+										};
+									};
+									class Item39
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_zombie_health";
+										};
+									};
+									class Item40
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="dev_hivemind_health";
+										};
+									};
 								};
 							};
 						};
@@ -646,7 +982,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=17;
+									items=41;
 									class Item0
 									{
 										class data
@@ -762,7 +1098,7 @@ class CustomAttributes
 																"BOOL"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -1122,7 +1458,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0.34999999;
+														value=0.5;
 													};
 												};
 												class Item1
@@ -1412,6 +1748,1086 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item17
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item18
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="[""HeadlessClient_F"", ""VirtualCurator_F"", ""B_VirtualCurator_F"", ""O_VirtualCurator_F"", ""I_VirtualCurator_F"", ""C_VirtualCurator_F""]";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item19
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item20
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item21
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item22
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item23
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=500;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item24
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=100;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item25
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=50;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item26
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=75;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item27
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=2.5;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item28
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.125;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item29
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=8;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item30
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.001;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item31
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="[0,1,1]";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item32
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.5;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item33
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.90397525;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item34
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=9;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item35
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item36
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item37
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item38
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item39
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item40
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0.5;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -1488,23 +2904,47 @@ class Mission
 	};
 	class Entities
 	{
-		items=89;
+		items=88;
 		class Item0
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2693.3684,4.2260365,7307.7622};
-				angles[]={0,4.1378403,0};
+				position[]={2693.3679,4.2260427,7307.7622};
+				angles[]={0,4.1378441,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="[   " \n "    lamp,   " \n "    ""Turn Off Light"",   " \n "    ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"", ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"",   " \n "    ""lightIsOn lamp == 'ON'"", ""lightIsOn lamp == 'ON'"",  " \n "    { },  " \n "    { },  " \n "    {   " \n "        params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];   " \n "        hint ""DEBUG: Running Script Completion"";    " \n "        lamp switchLight ""OFF"";     " \n "    }, " \n "    { },  " \n "    [], 6, nil, false, false   " \n "] call BIS_fnc_holdActionAdd; " \n " " \n "[   " \n "    lamp,   " \n "    ""Turn On Light"",   " \n "    ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"", ""\A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_takeOff2_ca.paa"",   " \n "    ""lightIsOn lamp == 'OFF'"", ""lightIsOn lamp == 'OFF'"",  " \n "    { },  " \n "    { },  " \n "    {   " \n "        params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];   " \n "        hint ""DEBUG: Running Script Completion""; " \n "        lamp switchLight ""ON"";     " \n "    }, " \n "    { },  " \n "    [], 6, nil, false, false   " \n "] call BIS_fnc_holdActionAdd;";
+				name="lamp";
 			};
 			id=0;
 			type="Land_LampHarbour_F";
-			atlOffset=-1.1920929e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item1
 		{
@@ -1576,32 +3016,118 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2693.8059,1.5662756,7306.6865};
-				angles[]={6.1851015,0,6.271987};
+				position[]={2693.8059,1.5663214,7306.687};
+				angles[]={6.1850977,0,6.2719803};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=10;
 			type="Land_Portable_generator_F";
-			atlOffset=-0.011970878;
+			atlOffset=-0.012000203;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2693.5349,1.7407496,7307.395};
+				position[]={2693.5349,1.7403049,7307.395};
 			};
 			side="Empty";
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=16;
 			type="PowerCable_01_StraightShort_F";
-			atlOffset=0.42344451;
+			atlOffset=0.42299986;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Cap_2_hide";
+					expression="_this animateSource ['Cap_2_hide',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Cap_1_hide";
+					expression="_this animateSource ['Cap_1_hide',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
 		};
 		class Item7
 		{
@@ -1619,12 +3145,13 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={2693.2083,1.1198838,7306.3965};
+				position[]={2693.208,1.12,7306.396};
 				angles[]={6.001297,0,0.17809267};
 			};
 			title="Add generator sound";
-			description="And an action to turn it off, which will sink with lamp";
+			description="And an action to turn it off, which will sync with lamp";
 			id=23;
+			atlOffset=0.00037145615;
 		};
 		class Item9
 		{
@@ -1828,13 +3355,6 @@ class Mission
 		};
 		class Item17
 		{
-			dataType="Layer";
-			name="Ferry-Safezone";
-			id=90;
-			atlOffset=4.6657782;
-		};
-		class Item18
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -1923,7 +3443,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item19
+		class Item18
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -2116,7 +3636,7 @@ class Mission
 				nAttributes=7;
 			};
 		};
-		class Item20
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2158,7 +3678,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item21
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2200,7 +3720,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item22
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2240,7 +3760,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item23
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2279,7 +3799,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item24
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2318,7 +3838,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item25
+		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2359,7 +3879,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item26
+		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2399,7 +3919,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item27
+		class Item26
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2438,7 +3958,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2477,7 +3997,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2518,7 +4038,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2557,7 +4077,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2598,7 +4118,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2638,7 +4158,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2678,7 +4198,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item34
+		class Item33
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2719,7 +4239,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item35
+		class Item34
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2759,7 +4279,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2799,7 +4319,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item37
+		class Item36
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2840,7 +4360,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item38
+		class Item37
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2880,7 +4400,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2922,7 +4442,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item40
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2963,7 +4483,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item41
+		class Item40
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3022,7 +4542,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item42
+		class Item41
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3038,7 +4558,7 @@ class Mission
 			id=203;
 			type="Land_LifeguardTower_01_F";
 		};
-		class Item43
+		class Item42
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3097,7 +4617,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item44
+		class Item43
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3114,7 +4634,7 @@ class Mission
 			type="Land_spp_Tower_F";
 			atlOffset=-0.16468048;
 		};
-		class Item45
+		class Item44
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3173,7 +4693,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item46
+		class Item45
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3232,7 +4752,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item47
+		class Item46
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3248,7 +4768,7 @@ class Mission
 			id=208;
 			type="Land_GuardTower_02_F";
 		};
-		class Item48
+		class Item47
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3307,7 +4827,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item49
+		class Item48
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3367,7 +4887,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item50
+		class Item49
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3427,7 +4947,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item51
+		class Item50
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3487,7 +5007,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item52
+		class Item51
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3546,7 +5066,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item53
+		class Item52
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3587,7 +5107,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item54
+		class Item53
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3628,7 +5148,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item55
+		class Item54
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3669,7 +5189,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item56
+		class Item55
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3710,7 +5230,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item57
+		class Item56
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3751,7 +5271,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item58
+		class Item57
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3791,7 +5311,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item59
+		class Item58
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3832,7 +5352,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item60
+		class Item59
 		{
 			dataType="Layer";
 			name="Cities";
@@ -3921,7 +5441,7 @@ class Mission
 			id=247;
 			atlOffset=13.330101;
 		};
-		class Item61
+		class Item60
 		{
 			dataType="Layer";
 			name="Farms";
@@ -3995,7 +5515,7 @@ class Mission
 			id=248;
 			atlOffset=-160.07994;
 		};
-		class Item62
+		class Item61
 		{
 			dataType="Layer";
 			name="Military";
@@ -4038,7 +5558,7 @@ class Mission
 			id=249;
 			atlOffset=90.934761;
 		};
-		class Item63
+		class Item62
 		{
 			dataType="Layer";
 			name="Towns";
@@ -4158,7 +5678,7 @@ class Mission
 			id=251;
 			atlOffset=-131.19806;
 		};
-		class Item64
+		class Item63
 		{
 			dataType="Layer";
 			name="Villages";
@@ -4264,7 +5784,7 @@ class Mission
 			id=252;
 			atlOffset=-107.05402;
 		};
-		class Item65
+		class Item64
 		{
 			dataType="Layer";
 			name="Safezones";
@@ -4306,16 +5826,16 @@ class Mission
 			id=253;
 			atlOffset=-22.383869;
 		};
-		class Item66
+		class Item65
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={924.56976,5.1662245,11879.707};
+				position[]={924.57001,5.1660004,11879.707};
 			};
 			id=313;
 			type="ModuleTimeMultiplier_F";
-			atlOffset=0.056224346;
+			atlOffset=0.056000233;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4333,14 +5853,14 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=2;
 						};
 					};
 				};
 				nAttributes=1;
 			};
 		};
-		class Item67
+		class Item66
 		{
 			dataType="Group";
 			side="West";
@@ -4722,7 +6242,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item68
+		class Item67
 		{
 			dataType="Marker";
 			position[]={8067,29.566,10215.785};
@@ -4733,7 +6253,7 @@ class Mission
 			id=400;
 			atlOffset=-0.00022697449;
 		};
-		class Item69
+		class Item68
 		{
 			dataType="Marker";
 			position[]={6026.0791,125.12,8631.7695};
@@ -4743,7 +6263,7 @@ class Mission
 			colorName="ColorRed";
 			id=401;
 		};
-		class Item70
+		class Item69
 		{
 			dataType="Marker";
 			position[]={7266.8911,167.56,7920.3691};
@@ -4753,7 +6273,7 @@ class Mission
 			colorName="ColorRed";
 			id=402;
 		};
-		class Item71
+		class Item70
 		{
 			dataType="Marker";
 			position[]={3735.24,18.27,3231.519};
@@ -4764,7 +6284,7 @@ class Mission
 			id=403;
 			atlOffset=-0.0001335144;
 		};
-		class Item72
+		class Item71
 		{
 			dataType="Marker";
 			position[]={5872.5952,54.950001,3522.4529};
@@ -4774,7 +6294,7 @@ class Mission
 			colorName="ColorRed";
 			id=404;
 		};
-		class Item73
+		class Item72
 		{
 			dataType="Marker";
 			position[]={8103.2251,99.376999,3444.7351};
@@ -4785,7 +6305,7 @@ class Mission
 			id=405;
 			atlOffset=0.0001449585;
 		};
-		class Item74
+		class Item73
 		{
 			dataType="Marker";
 			position[]={5776.0415,2.610939,2428.084};
@@ -4796,7 +6316,7 @@ class Mission
 			id=406;
 			atlOffset=0.027772427;
 		};
-		class Item75
+		class Item74
 		{
 			dataType="Marker";
 			position[]={8918.8652,-0.055999994,3712.7358};
@@ -4811,7 +6331,7 @@ class Mission
 			id=407;
 			atlOffset=34.878124;
 		};
-		class Item76
+		class Item75
 		{
 			dataType="Marker";
 			position[]={9997.0508,28.113037,2532.177};
@@ -4827,7 +6347,7 @@ class Mission
 			id=408;
 			atlOffset=49.072128;
 		};
-		class Item77
+		class Item76
 		{
 			dataType="Marker";
 			position[]={11936.349,28.113037,2532.177};
@@ -4843,7 +6363,7 @@ class Mission
 			id=409;
 			atlOffset=60.420116;
 		};
-		class Item78
+		class Item77
 		{
 			dataType="Marker";
 			position[]={12762.662,-0.055999994,3712.7971};
@@ -4858,7 +6378,7 @@ class Mission
 			id=410;
 			atlOffset=66.608498;
 		};
-		class Item79
+		class Item78
 		{
 			dataType="Marker";
 			position[]={9997.0508,28.113037,4891.752};
@@ -4874,7 +6394,7 @@ class Mission
 			id=411;
 			atlOffset=60.549541;
 		};
-		class Item80
+		class Item79
 		{
 			dataType="Marker";
 			position[]={11936.349,28.113037,4891.752};
@@ -4890,7 +6410,7 @@ class Mission
 			id=412;
 			atlOffset=29.356716;
 		};
-		class Item81
+		class Item80
 		{
 			dataType="Marker";
 			position[]={10777.236,11.402,4055.062};
@@ -4901,7 +6421,7 @@ class Mission
 			id=413;
 			atlOffset=-35.906452;
 		};
-		class Item82
+		class Item81
 		{
 			dataType="Marker";
 			position[]={6211.1812,112.884,10741.783};
@@ -4912,7 +6432,7 @@ class Mission
 			id=420;
 			atlOffset=0.00019073486;
 		};
-		class Item83
+		class Item82
 		{
 			dataType="Marker";
 			position[]={2265.897,-0.25799999,12428.382};
@@ -4923,7 +6443,7 @@ class Mission
 			id=421;
 			atlOffset=86.71978;
 		};
-		class Item84
+		class Item83
 		{
 			dataType="Marker";
 			position[]={2250.8081,-0.118,11685.455};
@@ -4934,7 +6454,7 @@ class Mission
 			id=422;
 			atlOffset=42.34766;
 		};
-		class Item85
+		class Item84
 		{
 			dataType="Layer";
 			name="Research Facilites";
@@ -4977,7 +6497,7 @@ class Mission
 			id=423;
 			atlOffset=36.8992;
 		};
-		class Item86
+		class Item85
 		{
 			dataType="Marker";
 			position[]={7054.9658,123.28513,10065.071};
@@ -4987,7 +6507,7 @@ class Mission
 			colorName="ColorRed";
 			id=425;
 		};
-		class Item87
+		class Item86
 		{
 			dataType="Group";
 			side="Independent";
@@ -5012,7 +6532,7 @@ class Mission
 					};
 					id=427;
 					type="I_G_officer_F";
-					atlOffset=5.9590001;
+					atlOffset=5.9589996;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5255,7 +6775,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item88
+		class Item87
 		{
 			dataType="Marker";
 			position[]={943.28003,5.1199999,11882.009};

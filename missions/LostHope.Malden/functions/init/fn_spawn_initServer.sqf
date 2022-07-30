@@ -8,3 +8,9 @@ private _localPlayerUID = getPlayerUID _unit;
     missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
     //_x setMarkerAlpha 0;
 } forEach allMapMarkers;
+
+zombieGroup = grpNull;
+hivemindGroup = grpNull;
+
+publicVariable "zombieGroup";
+publicVariable "hivemindGroup";

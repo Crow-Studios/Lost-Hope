@@ -28,12 +28,15 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
     ["C_man_polo_1_F", _position, _side, true] call lost_hope_fnc_spawnHorde;
 } else {
 
-    for "_i" from 0 to (random _count) do {
+    private _amount = round(random _count);
+    hint str _amount;
+    if (sunOrMoon != 1) then {_amount = _amount / 2};
+    for "_i" from 0 to (_amount) do {
 
         private _group = selectRandom _group;
         private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
 
-        private _pos = [_position, _distance / 4, _distance / 2, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
+        private _pos = [_position, 50, 80, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
         private _nearestRoad = [_pos, _distance / 2] call BIS_fnc_nearestRoad;
 
         //if ("triggerman" in _loadout) then {};

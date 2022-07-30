@@ -84,7 +84,7 @@
 		class lost_hope_zombie_farmer_triggerman
 		{
 			primary[] = {"arifle_AKS_F"};
-			secondary[] = {"hgun_Pistol_heavy_01_F"};
+			secondary[] = {"hgun_Pistol_heavy_01_F", "hgun_Rook40_F", "hgun_Pistol_heavy_02_F"};
 			uniform[] = {"U_C_HunterBody_grn", "U_OrestesBody", "U_C_WorkerCoveralls"};
 			vest[] = {"V_Rangemaster_belt", "V_BandollierB_blk", "V_Chestrig_blk"};
 			backpack[] = {""};
@@ -143,7 +143,6 @@
 			armed = 0;
 		};
 	};
-
 	// Military
 	class lost_hope_zombie_vanilla_military
 	{
@@ -187,8 +186,8 @@
 		};
 		class lost_hope_zombie_military_sergeant_triggerman
 		{
-			primary[] = {"arifle_MX_SW_F", "arifle_Katiba_GL_F"};
-			secondary[] = {""};
+			primary[] = {"arifle_MX_SW_F", "arifle_Katiba_GL_F", "arifle_AKM_F"};
+			secondary[] = {"hgun_Pistol_01_F"};
 			uniform[] = {"U_B_GhillieSuit", "U_B_CTRG_1", "U_I_OfficerUniform"};
 			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
 			backpack[] = {"B_SCBA_01_F", "B_TacticalPack_ocamo", "B_TacticalPack_mcamo"};
@@ -232,7 +231,7 @@
 			backpack[] = {""};
 			headgear[] = {"H_CrewHelmetHeli_B", "H_PilotHelmetHeli_O"};
 			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Bandanna_beast"};
-			nvg = "ACE_NVG_Gen1";
+			nvg = "NVGoggles";
 			binoculars = "";
 			map = "ItemMap";
 			terminal = "ItemGPS";
@@ -243,6 +242,7 @@
 			armed = 0;
 		};
 	};
+	// Military Science
 	class lost_hope_zombie_vanilla_science
 	{
 		class lost_hope_zombie_science_private_triggerman
@@ -254,7 +254,7 @@
 			backpack[] = {"B_SCBA_01_F"};
 			headgear[] = {"H_HelmetHBK_headset_F", "H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_CrewHelmetHeli_B", "H_HelmetSpecB_snakeskin"};
 			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
-			nvg = "";
+			nvg = "NVGoggles_OPFOR";
 			binoculars = "Rangefinder";
 			map = "ItemMap";
 			terminal = "ItemGPS";
@@ -267,13 +267,13 @@
 		class lost_hope_zombie_science_sergeant_triggerman
 		{
 			primary[] = {"arifle_MX_SW_F", "arifle_Katiba_GL_F"};
-			secondary[] = {""};
+			secondary[] = {"hgun_Pistol_heavy_01_F", "hgun_Rook40_F", "hgun_Pistol_heavy_02_F"};
 			uniform[] = {"U_C_CBRN_Suit_01_Blue_F", "U_B_CBRN_Suit_01_MTP_F", "U_B_CBRN_Suit_01_Tropic_F", "U_C_CBRN_Suit_01_White_F", "U_B_CBRN_Suit_01_Wdl_F"};
 			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
 			backpack[] = {"B_SCBA_01_F"};
 			headgear[] = {"H_HelmetHBK_headset_F", "H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_CrewHelmetHeli_B", "H_HelmetSpecB_snakeskin"};
 			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
-			nvg = "";
+			nvg = "NVGoggles_OPFOR";
 			binoculars = "Rangefinder";
 			map = "ItemMap";
 			terminal = "ItemGPS";
@@ -282,5 +282,28 @@
 			chance = 0.9;
 			type = 6;
 			armed = 1;
+		};
+	};
+	// Scientists
+	class lost_hope_zombie_vanilla_scientists
+	{
+		class lost_hope_zombie_scientist
+		{
+			primary[] = {""};
+			secondary[] = {""};
+			uniform[] = {"U_C_Scientist", "U_C_WorkerCoveralls", "U_C_Uniform_Scientist_01_formal_F", "U_C_ConstructionCoverall_Black_F", "U_C_Paramedic_01_F"};
+			vest[] = {"V_LegStrapBag_black_F", "V_Pocketed_black_F", "V_Pocketed_olive_F"};
+			backpack[] = {"B_UAV_01_backpack_F"};
+			headgear[] = {"H_Watchcap_blk", "H_MilCap_gen_F", "H_Cap_marshal", "H_Beret_CSAT_01_F", "H_Construction_headset_red_F"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Respirator_yellow_F"};
+			nvg = "";
+			binoculars = "Rangefinder";
+			map = "ItemMap";
+			terminal = "ItemGPS";
+			navigation = "ItemCompass";
+			watch = "ItemWatch";
+			chance = 1;
+			type = 4;
+			armed = 0;
 		};
 	};

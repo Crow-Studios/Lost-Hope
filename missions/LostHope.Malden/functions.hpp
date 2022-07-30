@@ -50,4 +50,9 @@ class lost_hope
 		class loot_resetBuildings {};
 	};
 
+	class mutant {
+		class spawnMutant {};
+		class spawnHivemind {};
+	};
+
 };

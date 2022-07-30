@@ -29,11 +29,29 @@
 			"lost_hope_zombie_military_pilot"
 		};
 	};
+	// Farmers
 	class lost_hope_zombie_vanilla_farmers
 	{
         groups[] =
 		{
 			"lost_hope_zombie_farmer",
 			"lost_hope_zombie_farmer_triggerman"
+		};
+	};
+	// Military Science
+	class lost_hope_zombie_vanilla_science
+	{
+        groups[] =
+		{
+			"lost_hope_zombie_science_private_triggerman",
+			"lost_hope_zombie_science_sergeant_triggerman"
+		};
+	};
+	// Scientists
+	class lost_hope_zombie_vanilla_scientist
+	{
+        groups[] =
+		{
+			"lost_hope_zombie_scientist"
 		};
 	};

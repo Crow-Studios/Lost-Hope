@@ -7,6 +7,7 @@ class CfgMissions
 		{
 			briefingName = "Lost Hope - Malden";
 			directory = "Lost_Hope\missions\Lost_Hope.Malden";
+			author = "Lost Hope Dev Team";
 		};
 	};
 };
