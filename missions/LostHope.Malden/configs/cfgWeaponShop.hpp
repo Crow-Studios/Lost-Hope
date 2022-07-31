@@ -11,24 +11,7 @@
             { "arifle_MXM_F", "MXM ( Sand )", 96000, 45000},
             { "srifle_DMR_01_F", "Rahim", 90000, 45000}
 		};
-		mags[] = {
-			// {"", "", 20000, 75, ""}
-            { "30Rnd_556x45_Stanag_Tracer_Yellow", "", 0, 0},
-            { "30Rnd_65x39_caseless_mag", "", 0, 0},
-            { "30Rnd_65x39_caseless_green", "", 0, 0},
-            { "30Rnd_65x39_caseless_msbs_mag", "", 0, 0},
-            { "100Rnd_65x39_caseless_mag", "", 0, 0},
-            { "20Rnd_762x51_Mag", "", 0, 0},
-            { "200Rnd_556x45_Box_F", "", 0, 0},
-            { "50Rnd_570x28_SMG_03", "", 0, 0},
-            { "50Rnd_570x28_SMG_03", "", 0, 0},
-            { "7Rnd_408_Mag", "", 0, 0},
-            { "30Rnd_762x39_AK12_Mag_F", "", 0, 0},
-            { "11Rnd_45ACP_Mag", "", 0, 0},
-            { "20Rnd_556x45_UW_mag", "", 0, 0},
-            { "11Rnd_45ACP_Mag", "", 0, 0},
-		};
-		accs[] = {
+        optics[] = {
 			{ "optic_khs_blk", "", 50000, 0 },
             { "optic_khs_hex", "", 50000, 0 },
             { "optic_khs_old", "", 50000, 0 },
@@ -45,4 +28,28 @@
             { "optic_aco_grn_smg", "", 700, 0 },
             { "optic_aco_smg", "", 700, 0 }
 		};
+        bipods[] = {
+            { "bipod_02_f_arid", "", 700, 0, "" },
+            { "bipod_03_f_blk", "", 700, 0, "" },
+            { "bipod_02_f_blk", "", 700, 0, "" },
+            { "bipod_01_f_blk", "", 700, 0, "" },
+            { "bipod_02_f_hex", "", 700, 0, "" },
+            { "bipod_01_f_khk", "", 700, 0, "" },
+            { "bipod_02_f_lush", "", 700, 0, "" },
+            { "bipod_01_f_mtp", "", 700, 0, "" },
+            { "bipod_03_f_oli", "", 700, 0, "" },
+            { "bipod_01_f_snd", "", 700, 0, "" },
+            { "bipod_02_f_tan", "", 700, 0, "" }
+        };
+        muzzles[] = {
+            // { "muzzle_snds_m", "", 25000, 0, "" },
+            { "muzzle_snds_H_snd_F", "re", 50000, 0},
+            { "muzzle_snds_B", "ree", 25000, 0},
+            { "muzzle_snds_B_snd_F", "reee", 25000, 0}
+        };
+		mags[] = {
+            { "20Rnd_762x51_Mag", "", 0, 0},
+        };
+
+
 	};

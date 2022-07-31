@@ -36,6 +36,6 @@ class lost_hope
 	class weaponShop {
 		class openShopDialog {};
 		class getWeapons {}; 
-		class buyItem {};
+		class displaySelectedItem {};
 	};
 };
