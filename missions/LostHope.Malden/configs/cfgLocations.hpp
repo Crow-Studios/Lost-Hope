@@ -9,7 +9,7 @@
 		chanceWeapons = 3;
 	};
 	class lost_hope_military
-	{ 
+	{
 		name = "military";
 		groups[] = {"lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_military"};
 		distance = 500;

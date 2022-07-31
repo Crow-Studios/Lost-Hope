@@ -63,4 +63,14 @@ if (sunOrMoon != 1) then {
         [unit, _type] spawn lost_hope_fnc_convertUnitToZombie;
     };
 
+    unit addEventHandler ["Killed", {
+        params ["_unit", "_killer", "_instigator", "_useEffects"];
+        [_unit] spawn {
+            params ["_unit"];
+            [_unit] join grpNull;
+            uiSleep 3;
+            deleteVehicle _unit;
+        };
+    }];
+
 };

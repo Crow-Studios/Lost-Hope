@@ -10,6 +10,7 @@ _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 _unit setVariable ["isZombie", false];
 
 [_unit, "lost_hope_loadouts", "lost_hope_vanilla_civilians", "lost_hope_unit", 7] call lost_hope_fnc_setLoadout;
+_unit setPos (stronghold_respawn modelToWorld [0,0,0]);
 
 _script = [_localPlayerUID, _unit] spawn {
 	diag_log "PLAYER RESPAWN: RUNNING WHILE LOOP FOR GETCLOSESTMARKER";

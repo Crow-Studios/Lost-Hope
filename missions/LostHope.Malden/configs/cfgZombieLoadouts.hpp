@@ -22,7 +22,7 @@
 		};
 		class lost_hope_zombie_melee
 		{
-			primary[] = {""};
+			primary[] = {"SMG_03_TR_hex"};
 			secondary[] = {"Knife_m3", "Knife_kukri", "Shovel_Russian_Rotated", "WBK_SmallHammer"};
 			uniform[] = {"U_C_Poloshirt_tricolour", "U_C_WorkerCoveralls", "U_C_Poor_1", "U_OrestesBody"};
 			vest[] = {""};

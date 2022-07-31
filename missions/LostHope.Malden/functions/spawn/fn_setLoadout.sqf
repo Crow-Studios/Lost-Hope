@@ -16,8 +16,6 @@
 
 params ["_unit", "_path", "_group", "_loadout", "_type"];
 
-result = [_unit, _path, _group, _loadout, _type];
-
 // Grab loadout stuff
 
 if (_type == 7) then {
@@ -71,8 +69,6 @@ if (_type == 7) then {
     private _armed = getNumber (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group >> _loadout >> "armed");
     //private _type = getNumber (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group >>  _loadout >> "type");
 
-    result append [[_primary, _secondary, _uniform, _vest, _backpack, _headgear, _facewear, _nvg, _binoculars, _map, _terminal, _navigation, _watch, _chance]];
-
     // Clear loadout
     removeAllWeapons _unit;
     removeAllItems _unit;
@@ -88,6 +84,12 @@ if (_type == 7) then {
 
     // Start loadout script
 
+    _unit forceAddUniform selectRandom _uniform;
+    _unit addVest selectRandom _vest;
+
+    _unit addHeadgear selectRandom _headgear;
+    _unit addGoggles selectRandom _facewear;
+
     if (_armed isEqualTo 1 && _type isEqualTo 6) then {
 
         private _allowedMagsPrimary = selectRandom ( [_primary] call BIS_fnc_compatibleMagazines );
@@ -95,18 +97,12 @@ if (_type == 7) then {
 
         hint str _allowedMagsPrimary;
 
-        _unit addMagazines [_allowedMagsPrimary, (selectRandom [1,2])];
-        _unit addMagazines [_allowedMagsSecondary, (selectRandom [1,2])];
+        _unit addMagazines [_allowedMagsPrimary, (selectRandom [2,3])];
+        _unit addMagazines [_allowedMagsSecondary, (selectRandom [2,3])];
     
         _unit addWeapon _primary;
         _unit addWeapon _secondary;
     };
-
-    _unit forceAddUniform selectRandom _uniform;
-    _unit addVest selectRandom _vest;
-
-    _unit addHeadgear selectRandom _headgear;
-    _unit addGoggles selectRandom _facewear;
 
     if (_randomNumber <= _chance && _chance != 1) then {
         _unit addBackpack selectRandom _backpack;
@@ -139,5 +135,3 @@ if (_type == 7) then {
     };
 
 };
-
-result
