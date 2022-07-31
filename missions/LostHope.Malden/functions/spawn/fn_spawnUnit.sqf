@@ -18,11 +18,12 @@
 */
 
 params ["_classname", "_position", "_group", "_loadout", "_side", "_isMelee"];
-    
+
+private _path = "lost_hope_zombie_loadouts";
 private _grp = createGroup [_side, true];
 
 if (_isMelee) then {_classname = "B_soldier_Melee_RUSH"};
 
 _classname createUnit [_position, _grp, "unit = this"];
 
-[unit, _path, _group, _loadout, 0] call lost_hope_fnc_setLoadout;
+[unit, _path, _group, _loadout, 6] call lost_hope_fnc_setLoadout;

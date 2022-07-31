@@ -26,8 +26,10 @@ uiSleep 0.5;
 
 private _anim = selectRandom ["WBK_Middle_GetUpUnconscious", "WBK_Crawler_To_Idle"];
 
-unit switchMove _anim;
-unit playMoveNow _anim;
+//_unit switchMove _anim;
+//_unit playMoveNow _anim;
+
+_unit setVariable ["isMutant", false];
 
 result append [_unit, name _unit, _type];
 

@@ -17,6 +17,7 @@ player setVariable ["cash", 53250, true];
 
 params ["_unit", "_localPlayerUID"];
 
+/*
 diag_log "Starting the HUD loop";
 _loop = [] spawn {
 	while {True} do {
@@ -26,16 +27,17 @@ _loop = [] spawn {
 	};
 };
 diag_log "Successfully started the HUD loop";
+*/ // Fix this piece of shit
 
 _unit setVariable ["lost_hope"+_localPlayerUID+"markerCheck", true];
 _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 _unit setVariable ["isZombie", false];
 
-zombieGroup = grpNull;
-
 _script = [_localPlayerUID, _unit] spawn {
+	diag_log "SPAWN INIT PLAYER: RUNNING WHILE LOOP FOR GETCLOSESTMARKER";
 	params ["_localPlayerUID", "_unit"];
 	while {_unit getVariable "lost_hope"+_localPlayerUID+"markerCheck"} do {
+		if !(alive _unit) exitWith {diag_log "SPAWN INIT PLAYER: Unit has been killed, Aborting and Rerunning"};
 		[_unit, 300] spawn lost_hope_fnc_getClosestMarker;
 		uiSleep 2;
 	};

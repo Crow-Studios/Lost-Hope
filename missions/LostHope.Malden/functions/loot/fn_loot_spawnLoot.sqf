@@ -8,6 +8,14 @@ private _result = [];
 
 private _houses = _unit nearObjects ["Building", 2000];
 
+if (sunOrMoon != 1) then 
+{
+	_type = "lost_hope_zombie_vanilla_farmers";
+	_chance = _chance * 2;
+	_itemChance = _itemChance * 2;
+	_weaponChance = _weaponChance * 3;
+};
+
 {
 	_buildingPos = [_x] call BIS_fnc_buildingPositions;
 	hintSilent "Started Spawning Loot";
@@ -20,6 +28,7 @@ private _houses = _unit nearObjects ["Building", 2000];
 				case "city": {_type = selectRandom ["lost_hope_zombie_vanilla_civilians", "lost_hope_zombie_vanilla_police"]};
 				case "village": {_type = selectRandom ["lost_hope_zombie_vanilla_farmers", "lost_hope_zombie_vanilla_civilians"]};
 				case "town": {_type = selectRandom ["lost_hope_zombie_vanilla_farmers", "lost_hope_zombie_vanilla_civilians"]};
+				case "science": {_type = selectRandom ["lost_hope_zombie_vanilla_military", "lost_hope_zombie_vanilla_science"]};
 			};
 			private _random = random 100;
 			hintSilent str _random;
@@ -28,10 +37,9 @@ private _houses = _unit nearObjects ["Building", 2000];
 				hint "Started loot spawning script";
 				// Move all of these to config, then grab
 				private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type) call BIS_fnc_getCfgSubClasses );
-				private _groupWeapons = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type) call BIS_fnc_getCfgSubClasses );
 
 				//private _number = getText (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "type");
-				private _melee = selectRandom ["WBK_survival_weapon_3", "Knife_m3"];
+				private _melee = selectRandom ["WBK_Katana", "Shovel_Russian_Rotated", "WBK_SmallHammer", "Sashka_Russian"];
 				private _items = selectRandom ["FirstAidKit", "dev_enzymeCapsule", "MiniGrenade", "B_IR_Grenade", "ToolKit"];
 
 				private _magazinesCount = selectRandom [1, 2];
@@ -47,19 +55,40 @@ private _houses = _unit nearObjects ["Building", 2000];
 				private _map = ( getText (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "map") );
 				private _holder = "WeaponHolderSimulated_Scripted" createVehicle [0,0,0]; // WeaponHolderSimulated_Scripted
 
+				_holder addEventHandler ["ContainerOpened", {
+					params ["_container", "_unit"];
+					_container enableSimulation true;
+					_container setVectorUp surfaceNormal position _container;
+				}];
+
+				_holder addEventHandler ["ContainerClosed", {
+					params ["_container", "_unit"];
+					_container enableSimulation false;
+					_container setVectorUp surfaceNormal position _container;
+				}];
+
 				_holder setPosATL _x;
+				_holder setVectorUp surfaceNormal position _holder;
 				//_holder enableSimulation false;
 				_holder allowDamage false;
 
 				if (_weaponChance >= _random && (_armed isEqualTo 1) ) then {
 					private _primary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "primary") );
+					private _secondary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "secondary") );
 					private _magazinesPrimary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _primary >> "magazines") );
-					_holder addWeaponCargoGlobal [_primary,1];
-					_holder addMagazineCargoGlobal [_magazinesPrimary, _magazinesCount];
-					_result append [[_group, _primary, _magazinesPrimary]];
+					private _magazinesSecondary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _secondary >> "magazines") );
+					if (selectRandom [1,2] == 2) then {
+						_holder addWeaponCargoGlobal [_primary,1];
+						_holder addMagazineCargoGlobal [_magazinesPrimary, _magazinesCount];
+						_result append [[_group, _primary, _magazinesPrimary]];
+					} else {
+						_holder addWeaponCargoGlobal [_secondary,1];
+						_holder addMagazineCargoGlobal [_magazinesSecondary, _magazinesCount];
+						_result append [[_group, _secondary, _magazinesSecondary]];
+					};
 				};
 
-				if (_random <= _weaponChance) then {
+				if (_random <= _weaponChance && !(_armed isEqualTo 1)) then {
 					_holder addWeaponCargoGlobal [_melee, 1];
 				};
 

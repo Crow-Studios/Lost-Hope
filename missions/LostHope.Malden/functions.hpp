@@ -15,6 +15,7 @@ class lost_hope
 		class notificationHint {};
 		class playBoatAnimation {};
 		class createCamera {};
+		class screenToBlack {};
 	};
 
 	class marker {
@@ -48,6 +49,24 @@ class lost_hope
 	class loot {
 		class loot_spawnLoot {};
 		class loot_resetBuildings {};
+	};
+
+	class mutant {
+		class spawnMutant {};
+		class spawnHivemind {};
+	};
+
+	class events {
+		class canCancelEvent {};
+		class hasEventFinished {};
+		class traderInfested {};
+		class traderTakeOver {};
+		class canSpawnEvent {};
+	};
+
+	class task {
+		class deleteTask {};
+		class setTaskState {};
 	};
 
 };

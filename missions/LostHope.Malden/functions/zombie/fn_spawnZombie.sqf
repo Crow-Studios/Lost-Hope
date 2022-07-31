@@ -26,33 +26,51 @@ if (zombieGroup isEqualTo grpNull) then {
     zombieGroup = createGroup [_side, true];
 };
 
-switch (_name) do
-{
-    case "military": {_type = selectRandom [1,2,3,4,5]};
-    case "farm": {_type = selectRandom [2,3]};
-    case "city": {_type = selectRandom [1,2]};
-    case "village": {_type = selectRandom [1,2]};
-    case "town": {_type = selectRandom [1,2,3]};
-};
+if (sunOrMoon != 1) then {
+    selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, zombieGroup, "unit = this"];
+    unit setVariable ["isZombie", true];
+    unit setVariable ["canDelete", false];
+} else {
 
-_classname createUnit [_position, zombieGroup, "unit = this"];
+    switch (_name) do
+    {
+        case "military": {_type = selectRandom [3,4,5,6]};
+        case "farm": {_type = selectRandom [2,3]};
+        case "city": {_type = selectRandom [1,2,3]};
+        case "village": {_type = selectRandom [1,2]};
+        case "town": {_type = selectRandom [1,2,3]};
+        case "science": {_type = selectRandom [4,5,6]};
+    };
 
-/*
-unit disableAI "AUTOTARGET";
-unit disableAI "TARGET";
-unit disableAI "FSM";
+    _classname createUnit [_position, zombieGroup, "unit = this"];
 
-unit setSkill ["spotTime", 0.1];
+    /*
+    unit disableAI "AUTOTARGET";
+    unit disableAI "TARGET";
+    unit disableAI "FSM";
 
-unit setUnitCombatMode "BLUE";
-*/
+    unit setSkill ["spotTime", 0.1];
 
-unit setVariable ["isZombie", true];
-unit setVariable ["canRefresh", true];
-unit setVariable ["canDelete", false];
+    unit setUnitCombatMode "BLUE";
+    */
 
-[unit, _path, _group, _loadout, _type] call lost_hope_fnc_setLoadout;
+    unit setVariable ["isZombie", true];
+    unit setVariable ["canDelete", false];
 
-if (_classname == "dev_module_sfx_zombies") then {} else {
-    [unit, _type] spawn lost_hope_fnc_convertUnitToZombie;
+    [unit, _path, _group, _loadout, _type] call lost_hope_fnc_setLoadout;
+
+    if (_classname == "dev_module_sfx_zombies") then {} else {
+        [unit, _type] spawn lost_hope_fnc_convertUnitToZombie;
+    };
+
+    unit addEventHandler ["Killed", {
+        params ["_unit", "_killer", "_instigator", "_useEffects"];
+        [_unit] spawn {
+            params ["_unit"];
+            [_unit] join grpNull;
+            uiSleep 3;
+            deleteVehicle _unit;
+        };
+    }];
+
 };

@@ -11,19 +11,9 @@ class lost_hope_loadouts_zombie
 	#include "configs\cfgZombieLoadouts.hpp"
 };
 
-class lost_hope_loadouts
-{
-	#include "configs\cfgUnitLoadouts.hpp"
-};
-
 class lost_hope_groups_zombie
 {
 	#include "configs\cfgZombieGroups.hpp"
-};
-
-class lost_hope_groups
-{
-	#include "configs\cfgUnitGroups.hpp"
 };
 
 class lost_hope_locations
@@ -35,3 +25,5 @@ class RscTitles
 {
 	#include "UI\RscMyHUD.hpp"
 };
+
+respawnOnStart = -1;
