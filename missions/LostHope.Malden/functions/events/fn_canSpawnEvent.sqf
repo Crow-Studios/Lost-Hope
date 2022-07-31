@@ -46,6 +46,8 @@ _startEventScript = [_time, _trader, _type] spawn {
                 ["C_man_polo_2_F", _pos, "lost_hope_zombie_vanilla_military", "lost_hope_zombie_military_private_triggerman", WEST, false] call lost_hope_fnc_spawnUnit;
 
                 if (_nearestRoad != objNull) then {unit setPosATL getPosATL _nearestRoad};
+
+                unit doMove getMarkerPos _trader;
             };
             waitUntil {count units traderEvent >= 10};
             [] spawn lost_hope_fnc_hasEventFinished;
