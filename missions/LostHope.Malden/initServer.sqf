@@ -1,1 +1,1 @@
-[] spawn lost_hope_fnc_spawn_initServer;
+[] spawn lost_hope_fnc_spawn_initServer; 
