@@ -30,21 +30,19 @@ _playerUIDStr = _LB_PLAYER lbData _playerSelected;
 //perform the function appropriately
 switch (_functionType) do {
 	case 0: {
-		private _code = compile format ['[ %1 ] call %2;',player, _functionStr];
-		call _code;
+		[ player ] call compile _functionStr;
 	};
 
 	case 1: {
-		private _code = compile format ['[ %1 ] call %2;',target, _functionStr];
-		call _code;
+		[ target ] call compile _functionStr;
 	};
 
 	case 2: {
-		[ player ] spawn _functionStr;
+		[ player ] spawn compile _functionStr;
 	};
 
 	case 3: {
-		[ target ] spawn _functionStr;
+		[ target ] spawn compile _functionStr;
 	};
 
 };
