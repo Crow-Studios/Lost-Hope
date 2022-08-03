@@ -9,7 +9,6 @@ _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
 _unit setVariable ["isZombie", false];
 
-[_unit, "lost_hope_loadouts", "lost_hope_vanilla_civilians", "lost_hope_unit", 7] call lost_hope_fnc_setLoadout;
 _unit setPos (stronghold_respawn modelToWorld [0,0,0]);
 
 _script = [_localPlayerUID, _unit] spawn {
@@ -24,3 +23,5 @@ _script = [_localPlayerUID, _unit] spawn {
 
 [5, _unit] call lost_hope_fnc_zombieCleanup;
 [5, _unit] call lost_hope_fnc_loot_resetBuildings;
+
+[_unit, "lost_hope_loadouts_zombie", "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", 7] call lost_hope_fnc_setLoadout;

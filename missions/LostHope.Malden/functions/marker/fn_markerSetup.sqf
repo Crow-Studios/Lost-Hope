@@ -8,10 +8,11 @@
 *	2: _position 		<ARRAY> - [X,Y,Z]
 *	3: _side 		<SIDE> - EAST, WEST, GUERILLA, CIVILIAN
 *	4: _sound 		<BOOL> - True/false
-*	5: _count 		<ARRAy> - [1,3,5]
+*	5: _count 		<ARRAY> - [1,3,5]
+*	6: _name 		<STRING> - Refer loadout hpp files
 *   
 *   Example:
-*   [500, ["lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie_vanilla_military"], getPosATL player, EAST, false, [1,3,5]] call lost_hope_fnc_markerSetup;
+*   [500, ["lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie_vanilla_military"], getPosATL player, EAST, false, "Military"] call lost_hope_fnc_markerSetup;
 *
 *	Return Value: None
 */
@@ -41,6 +42,8 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
 
         //if ("triggerman" in _loadout) then {};
         ["C_man_polo_1_F", _pos, _group, _loadout, _side, _name] call lost_hope_fnc_spawnZombie;
+
+        if (_nearestRoad != objNull) then {unit setPosATL getPosATL _nearestRoad};
     };
 
 };

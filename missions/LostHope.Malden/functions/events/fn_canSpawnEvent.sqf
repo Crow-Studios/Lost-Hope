@@ -26,7 +26,7 @@ _startEventScript = [_time, _trader, _type] spawn {
 
                 private _pos = [getMarkerPos _trader, 10, 30, 3, 0, 20, 0] call BIS_fnc_findSafePos;
 
-                ["C_man_polo_1_F", _pos, _group, _loadout, EAST, _type] call lost_hope_fnc_spawnZombie;
+                ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
 
                 unit setPos _pos;
 
@@ -41,11 +41,11 @@ _startEventScript = [_time, _trader, _type] spawn {
             for "_i" from 0 to 3 do
             {
                 private _pos = [getMarkerPos _trader, 20, 60, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
-                private _nearestRoad = [_pos, 100] call BIS_fnc_nearestRoad;
+                //private _nearestRoad = [_pos, 100] call BIS_fnc_nearestRoad;
 
                 ["C_man_polo_2_F", _pos, "lost_hope_zombie_vanilla_military", "lost_hope_zombie_military_private_triggerman", WEST, false] call lost_hope_fnc_spawnUnit;
 
-                if (_nearestRoad != objNull) then {unit setPosATL getPosATL _nearestRoad};
+                //if (_nearestRoad != objNull) then {unit setPosATL getPosATL _nearestRoad};
 
                 unit doMove getMarkerPos _trader;
             };

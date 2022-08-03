@@ -1,3 +1,14 @@
+/*
+*	Author: Silence
+*	Description: Resets all weapon holders/deletes them
+*
+*	Arguments:
+*	0: _time		<INTGER> - Time (in seconds)
+*	1: _unit 		<OBJECT> - Unit you want to run this on
+*	Return Value: None
+*/
+
+
 params ["_time", "_unit"]; // In seconds
 
 _markerTime = [_time, _unit] spawn {

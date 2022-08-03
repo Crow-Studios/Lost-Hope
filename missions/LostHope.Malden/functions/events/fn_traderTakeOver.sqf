@@ -5,7 +5,3 @@ if (traderEvent isEqualTo grpNull) then {
 };
 
 uiSleep _time;
-
-{
-    
-} forEach units traderEvent;

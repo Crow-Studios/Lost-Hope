@@ -6,8 +6,28 @@ if (_draw) then {
     _drawIcon_Zombie = addMissionEventHandler ["Draw3D",
     {
         {
-            if (_x getVariable "isZombie" && _x distance player <= 300) then {
-                private _canDelete = _x getVariable ["canDelete", false];
+            if ( _x getVariable "isZombie" && !(_x getVariable "isMutant") && (_x distance player <= 200) && (count units group _x >= 10) ) exitWith {
+                drawIcon3D
+                [
+                    "Lost_Hope\markers\lost_hope_zombie.paa",
+                    //"a3\ui_f\data\Map\Markers\Military\dot_ca.paa",
+                    [[1,0,0,1], [1,1,1,1]],
+                    (leader group _x modelToWorldVisual [0,0,1]),
+                    1,1,0,
+                    "Zombie Group Leader"
+                ];
+                drawIcon3D
+                [
+                    "",
+                    //"a3\ui_f\data\Map\Markers\Military\dot_ca.paa",
+                    [[1,0,0,1], [1,1,1,1]],
+                    (leader group _x modelToWorldVisual [0,0,0.7]),
+                    0.9,0.9,0,
+                    format ["Zombie Group Count: %1", (count units group _x)]
+                ];
+            };
+            if ( _x getVariable "isZombie" && !(_x getVariable "isMutant") && _x distance player <= 200 && (count units group _x <= 10) ) then {
+                private _type = _x getVariable ["zombieType", "UNKNOWN"];
                 drawIcon3D
                 [
                     "Lost_Hope\markers\lost_hope_zombie.paa",
@@ -15,7 +35,7 @@ if (_draw) then {
                     [[1,0,0,1], [1,1,1,1]],
                     (_x modelToWorldVisual [0,0,1]),
                     1,1,0,
-                    format ["Zombie Can Delete: %1", _canDelete]
+                    "Zombie (Normal)"
                 ];
                 drawIcon3D
                 [
@@ -23,10 +43,23 @@ if (_draw) then {
                     //"a3\ui_f\data\Map\Markers\Military\dot_ca.paa",
                     [[1,0,0,1], [1,1,1,1]],
                     (_x modelToWorldVisual [0,0,0.7]),
-                    0.9,0.9,0,
-                    format ["Zombie Health: %1", round((1-getDammage _x) * 100)]
+                    1,1,0,
+                    format ["Zombie Loadout Type: %1", _type]
                 ];
             };
+
+            if (_x getVariable "isMutant" && _x distance player <= 200) then {
+                drawIcon3D
+                [
+                    "Lost_Hope\markers\lost_hope_biohazard.paa",
+                    //"a3\ui_f\data\Map\Markers\Military\dot_ca.paa",
+                    [[0,1,0,1], [1,1,1,1]],
+                    (_x modelToWorldVisual [0,0,1]),
+                    1,1,0,
+                    "Zombie (Necroplague)"
+                ];
+            };
+            
         } forEach allUnits;
     }];
 

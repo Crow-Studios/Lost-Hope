@@ -4,6 +4,7 @@
 *
 *	Arguments:
 *	0: _unit 		<OBJECT> - Unit to run on
+*	0: _path 		<STRING> - Refer loadout hpp files
 *	1: _group 		<STRING> - Refer loadout hpp files
 *	2: _loadout		<STRING> - Refer loadout hpp files
 *	3: _type		<INTEGER> - 1-6
@@ -48,6 +49,8 @@ if (_type == 7) then {
 
     _unit addHeadgear selectRandom _headgear;
     _unit addGoggles selectRandom _facewear;
+
+    _unit addItem _map;
 
 } else { 
 

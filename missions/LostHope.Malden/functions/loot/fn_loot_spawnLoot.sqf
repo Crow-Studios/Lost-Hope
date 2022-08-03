@@ -1,8 +1,21 @@
+/*
+*	Author: Silence
+*	Description: Attempts loot spawn
+*
+*	Arguments:
+*	0: _unit 		<OBJECT> - Unit you want to run this on
+*	1: _marker		<STRING> - Marker string
+*	2: _chance		<INTEGER> - 0-100
+*	3: _itemChance		<INTEGER> - 0-100
+*	4: _weaponChance		<INTEGER> - 0-100
+*	5: _type		<STRING> - Refer loadout hpp files
+*	Return Value: None
+*/
+
+
 params ["_unit", "_marker", "_chance", "_itemChance", "_weaponChance", "_type"];
 
-hintSilent "Started loot script";
-
-hintSilent _marker;
+diag_log format["SPAWN LOOT TRIGGERED BY: %1 AT MARKER %2 WITH GIVEN CHANCE %3 AS TYPE %4", _unit, _marker, _chance, _type];
 
 private _result = [];
 
@@ -10,7 +23,7 @@ private _houses = _unit nearObjects ["Building", 2000];
 
 if (sunOrMoon != 1) then 
 {
-	_type = "lost_hope_zombie_vanilla_farmers";
+	_type = "lost_hope_zombie_vanilla_military";
 	_chance = _chance * 2;
 	_itemChance = _itemChance * 2;
 	_weaponChance = _weaponChance * 3;
@@ -18,7 +31,7 @@ if (sunOrMoon != 1) then
 
 {
 	_buildingPos = [_x] call BIS_fnc_buildingPositions;
-	hintSilent "Started Spawning Loot";
+	diag_log "SPAWN LOOT SUCCESSFUL, RUNNING LOOP";
 	{
 		if (_x inArea _marker) then {
 			switch (_type) do 
@@ -31,10 +44,9 @@ if (sunOrMoon != 1) then
 				case "science": {_type = selectRandom ["lost_hope_zombie_vanilla_military", "lost_hope_zombie_vanilla_science"]};
 			};
 			private _random = random 100;
-			hintSilent str _random;
 			if (_chance > _random) then
 			{
-				hint "Started loot spawning script";
+				diag_log "SPAWN LOOT RANDOM SUCCESSFUL, SPAWNING LOOT OBJECTS";
 				// Move all of these to config, then grab
 				private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type) call BIS_fnc_getCfgSubClasses );
 
@@ -92,15 +104,16 @@ if (sunOrMoon != 1) then
 					_holder addWeaponCargoGlobal [_melee, 1];
 				};
 
-				for "_i" from 0 to 1 do {
+				for "_i" from 0 to 2 do {
 					if (_random <= _itemChance) then {
-						_holder addItemCargoGlobal [selectRandom [_items, _binoculars, _map], 1];
+						_holder addItemCargoGlobal [selectRandom [_items], 1];
 					};
 				};
 
 				for "_i" from 0 to 1 do {
 					if (_random <= 30) then {
 						_holder addItemCargoGlobal [selectRandom [_vests, _uniforms, _headgear], 1];
+						_holder addItemCargoGlobal [selectRandom [_items, _binoculars, _map], 1];
 					};
 				};
 
@@ -119,6 +132,4 @@ if (sunOrMoon != 1) then
 	} forEach _buildingPos;
 } forEach _houses;
 
-//[true] call lost_hope_fnc_dev_drawLootLocations;
-
-hintSilent str _result;
+_result

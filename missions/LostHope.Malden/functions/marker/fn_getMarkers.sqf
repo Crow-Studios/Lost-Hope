@@ -3,7 +3,7 @@
 *	Description: loops through cfgLocations for locations
 *
 *	Arguments: None
-*	Return Value: None
+*	Return Value: Array
 */
 
 locationNames = [];

@@ -1,6 +1,6 @@
 /*
 *	Author: Silence
-*	Description: Spawns zombie horde
+*	Description: Spawns zombie herd
 *
 *	Arguments:
 *	0: _position 		<STRING> - Classname to spawn

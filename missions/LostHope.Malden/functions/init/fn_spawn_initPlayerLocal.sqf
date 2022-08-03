@@ -1,9 +1,3 @@
-player setVariable ["food", 100, true];
-player setVariable ["water", 100, true];
-player setVariable ["money", 500, true];
-player setVariable ["bank", 5300, true];
-player setVariable ["cash", 53250, true];
-
 // Calls on each players load in
 /*
 *	Author: Silence
@@ -14,20 +8,13 @@ player setVariable ["cash", 53250, true];
 *	Return Value: None
 */
 
-
 params ["_unit", "_localPlayerUID"];
 
-/*
-diag_log "Starting the HUD loop";
-_loop = [] spawn {
-	while {True} do {
-		//("HUD" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];	// remove the HUD
-		call lost_hope_fnc_openHUD;
-		uiSleep 0.1;
-	};
-};
-diag_log "Successfully started the HUD loop";
-*/ // Fix this piece of shit
+_unit setVariable ["food", 100, true];
+_unit setVariable ["water", 100, true];
+_unit setVariable ["money", 500, true];
+_unit setVariable ["bank", 5300, true];
+_unit setVariable ["cash", 53250, true];
 
 _unit setVariable ["lost_hope"+_localPlayerUID+"markerCheck", true];
 _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
@@ -48,4 +35,4 @@ _script = [_localPlayerUID, _unit] spawn {
 [5, _unit] call lost_hope_fnc_zombieCleanup;
 [5, _unit] call lost_hope_fnc_loot_resetBuildings;
 
-[_unit, "lost_hope_loadouts", "lost_hope_vanilla_civilians", "lost_hope_unit", 7] call lost_hope_fnc_setLoadout;
+[_unit, "lost_hope_loadouts_zombie", "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", 7] call lost_hope_fnc_setLoadout;

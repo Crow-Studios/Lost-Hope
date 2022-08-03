@@ -18,6 +18,7 @@ _zombieTime = [_time, _unit] spawn {
 
     while {alive _unit} do {
         uiSleep _time;
+
         // Zombie
         {
             if (_x distance _unit <= 800) then {
@@ -30,6 +31,7 @@ _zombieTime = [_time, _unit] spawn {
                 deleteVehicle _x;
             };
         } forEach units zombieGroup;
+
         // Hivemind
         {
             if (_x distance _unit <= 800) then {
@@ -42,6 +44,22 @@ _zombieTime = [_time, _unit] spawn {
                 deleteVehicle _x;
             };
         } forEach units hivemindGroup;
+    
+        // Dead Bodies
+        { 
+            if (_x distance _unit <= 800) then {
+                _x setVariable ["canDelete", false];
+            } else {
+                _x setVariable ["canDelete", true];
+            };
+
+            if ( (_x getVariable "canDelete") && !(isPlayer [_x]) ) then {
+                //hideBody _x; // No need given the range
+                //uiSleep 3;
+                deleteVehicle _x;
+            };
+        } forEach allDeadMen;
+
         if !(alive _unit) exitWith {diag_log "ZOMBIE CLEANUP: Unit has been killed, Aborting and Rerunning"};
     };
 };
