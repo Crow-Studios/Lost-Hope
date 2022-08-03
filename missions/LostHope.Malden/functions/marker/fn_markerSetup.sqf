@@ -29,7 +29,7 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
 } else {
 
     private _amount = round(random _count);
-    hint str _amount;
+    //hint str _amount;
     if (sunOrMoon != 1) then {_amount = _amount / 2};
     for "_i" from 0 to (_amount) do {
 

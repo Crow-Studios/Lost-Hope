@@ -4,7 +4,7 @@ _startEventScript = [_time, _trader, _type] spawn {
     params ["_time", "_trader", "_type"];
     while {true} do {
       uiSleep _time;
-      hint "Running While Loop";
+      //hint "Running While Loop";
 
         // Check if can start event after X time
         {

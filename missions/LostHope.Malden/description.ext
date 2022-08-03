@@ -1,5 +1,8 @@
 #include "dialogs\defines.hpp"
 #include "UI\RscMyHUD.hpp"
+#include "UI\DevelopmenPanel.hpp"
+#include "configs\Config_AdminTools.hpp"
+#include "configs\Config_Staff.hpp"
 
 class CfgFunctions
 {

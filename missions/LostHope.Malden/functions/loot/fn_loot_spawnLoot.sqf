@@ -1,8 +1,8 @@
 params ["_unit", "_marker", "_chance", "_itemChance", "_weaponChance", "_type"];
 
-hintSilent "Started loot script";
+//hintSilent "Started loot script";
 
-hintSilent _marker;
+//hintSilent _marker;
 
 private _result = [];
 
@@ -18,7 +18,7 @@ if (sunOrMoon != 1) then
 
 {
 	_buildingPos = [_x] call BIS_fnc_buildingPositions;
-	hintSilent "Started Spawning Loot";
+	//hintSilent "Started Spawning Loot";
 	{
 		if (_x inArea _marker) then {
 			switch (_type) do 
@@ -31,10 +31,10 @@ if (sunOrMoon != 1) then
 				case "science": {_type = selectRandom ["lost_hope_zombie_vanilla_military", "lost_hope_zombie_vanilla_science"]};
 			};
 			private _random = random 100;
-			hintSilent str _random;
+			//hintSilent str _random;
 			if (_chance > _random) then
 			{
-				hint "Started loot spawning script";
+				//hint "Started loot spawning script";
 				// Move all of these to config, then grab
 				private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type) call BIS_fnc_getCfgSubClasses );
 
@@ -121,4 +121,4 @@ if (sunOrMoon != 1) then
 
 //[true] call lost_hope_fnc_dev_drawLootLocations;
 
-hintSilent str _result;
+//hintSilent str _result;
