@@ -1,13 +1,14 @@
 class gunShop {
 	idd = 10000;
-	onLoad = "uiNamespace setVariable ['gunShop', _this select 0];"
+	onLoad = "uiNamespace setVariable ['gunShop', _this select 0]";
 	class controls {
 		class mainWeaponsTree: RscTree
 		{
 			idc = 1500;
+			onTreeSelChanged = "call lost_hope_fnc_displaySelectedItem";
 
 			x = 0.304511 * safezoneW + safezoneX;
-			y = 0.247 * safezoneH + safezoneY;
+			y = 0.258 * safezoneH + safezoneY;
 			w = 0.262367 * safezoneW;
 			h = 0.385 * safezoneH;
 			colorBackground[] = {-1,-1,-1,0.8};
@@ -24,7 +25,6 @@ class gunShop {
 				border = "#(argb,8,8,3)color(1,1,1,1)";
 				shadow = 0;
 			};
-			onTreeSelChanged = "call lost_hope_fnc_displaySelectedItem";
 		};
 		class closeButton: RscButton
 		{
@@ -33,7 +33,7 @@ class gunShop {
 
 			text = "Close"; //--- ToDo: Localize;
 			x = 0.391966 * safezoneW + safezoneX;
-			y = 0.654 * safezoneH + safezoneY;
+			y = 0.687 * safezoneH + safezoneY;
 			w = 0.0771668 * safezoneW;
 			h = 0.044 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
@@ -43,11 +43,10 @@ class gunShop {
 		class buyBtn: RscButton
 		{
 			idc = 1600;
-			// onButtonClick = "";
 
 			text = "Buy"; //--- ToDo: Localize;
 			x = 0.304511 * safezoneW + safezoneX;
-			y = 0.654 * safezoneH + safezoneY;
+			y = 0.687 * safezoneH + safezoneY;
 			w = 0.0771668 * safezoneW;
 			h = 0.044 * safezoneH;
 			colorBackground[] = {-1,-1,-1,1};
@@ -60,7 +59,7 @@ class gunShop {
 
 			text = "#(argb,8,8,3)color(1,1,1,1)";
 			x = 0.479422 * safezoneW + safezoneX;
-			y = 0.643 * safezoneH + safezoneY;
+			y = 0.654 * safezoneH + safezoneY;
 			w = 0.216067 * safezoneW;
 			h = 0.121 * safezoneH;
 			colorText[] = {-1,-1,-1,0.8};
@@ -73,54 +72,53 @@ class gunShop {
 			idc = 1100;
 
 			x = 0.489711 * safezoneW + safezoneX;
-			y = 0.654 * safezoneH + safezoneY;
+			y = 0.665 * safezoneH + safezoneY;
 			w = 0.0977446 * safezoneW;
 			h = 0.022 * safezoneH;
 			colorText[] = {-1,-1,-1,1};
-			class Attributes
-            {
-                font = "TahomaB";
-                color = "#FFFFFF";
-                align = "left";
-                valign = "middle";
-                size = ".5";
-            };
 		};
 		class ItemCaliber: RscStructuredText
 		{
 			idc = 1101;
 
 			x = 0.489711 * safezoneW + safezoneX;
-			y = 0.687 * safezoneH + safezoneY;
+			y = 0.698 * safezoneH + safezoneY;
 			w = 0.0977446 * safezoneW;
 			h = 0.022 * safezoneH;
 			colorText[] = {-1,-1,-1,1};
-			class Attributes
-            {
-                font = "TahomaB";
-                color = "#FFFFFF";
-                align = "left";
-                valign = "middle";
-                size = ".5";
-            };
 		};
 		class ItemPrice: RscStructuredText
 		{
 			idc = 1102;
 
 			x = 0.489711 * safezoneW + safezoneX;
-			y = 0.72 * safezoneH + safezoneY;
+			y = 0.731 * safezoneH + safezoneY;
 			w = 0.0977446 * safezoneW;
 			h = 0.022 * safezoneH;
 			colorText[] = {-1,-1,-1,1};
-			class Attributes
-            {
-                font = "TahomaB";
-                color = "#FFFFFF";
-                align = "left";
-                valign = "middle";
-                size = ".5";
-            };
+		};
+		class typeDropdown: RscCombo
+		{
+			idc = 2100;
+			x = 0.304511 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.257223 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {-1,-1,-1,1};
+			colorActive[] = {-1,-1,-1,1};
 		};
 	};
 };
+
+
+
+
+
+
+
+
+
+
+
+
+

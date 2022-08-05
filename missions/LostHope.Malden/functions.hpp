@@ -37,5 +37,6 @@ class lost_hope
 		class openShopDialog {};
 		class getWeapons {}; 
 		class displaySelectedItem {};
+		class getCategories {};
 	};
 };
