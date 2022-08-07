@@ -40,7 +40,7 @@ pilot allowDamage false;
 
 //Hints
 ["Airdrop", "An airdrop has been called in by a player! Check your maps to find it!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"];
-_airdrop_picture ctrlSetText "incoming.paa";
+_airdrop_picture ctrlSetText "UI\pictures\Airdrop\incoming.paa";
 
 //Settings
 pilot doMove (getPosATL player);
@@ -64,7 +64,7 @@ _markerstr setMarkerText "Airdrop Plane";
 
 		sleep .1;
 
-		if(meters < 100) exitWith { _text ctrlSetStructuredText parseText format ["The package has been dropped!"]; ["Airdrop", "The package has been dropped! Hurry up and look for it!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"]; uiSleep .75; _airdrop_picture ctrlSetText "airdrop.paa";};
+		if(meters < 100) exitWith { _text ctrlSetStructuredText parseText format ["The package has been dropped!"]; ["Airdrop", "The package has been dropped! Hurry up and look for it!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"]; uiSleep .75; _airdrop_picture ctrlSetText "UI\pictures\Airdrop\airdrop.paa";};
 
 		sleep .1;
 
@@ -89,7 +89,7 @@ _markerstr setMarkerText "Airdrop Plane";
 	pilot doMove [0,0,1000];
 
 	waitUntil {getPosATL _crate select 2 < 10}; //Wait until package lands and then deploy blue smoke
-	_airdrop_picture ctrlSetText "landed.paa";
+	_airdrop_picture ctrlSetText "UI\pictures\Airdrop\landed.paa";
 	_text ctrlSetStructuredText parseText format ["The package has landed!"];
 	["Airdrop", "The package has landed! Hurry before it gets looted!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"];
 
