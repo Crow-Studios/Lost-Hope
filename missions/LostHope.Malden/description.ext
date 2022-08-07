@@ -24,6 +24,7 @@ class lost_hope_locations
 class RscTitles
 {
 	#include "UI\RscMyHUD.hpp"
+	#include "UI\Airdrop_UI.hpp"
 };
 
 respawnOnStart = -1;

@@ -62,7 +62,8 @@ class lost_hope
 		class traderInfested {};
 		class traderTakeOver {};
 		class canSpawnEvent {};
-		class airdrop {};
+		class airdropPlayer {};
+		class airdropRandom {};
 	};
 
 	class task {
