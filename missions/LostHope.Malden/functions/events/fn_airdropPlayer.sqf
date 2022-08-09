@@ -73,6 +73,8 @@ _markerstr setMarkerText "Airdrop Plane";
 			deleteMarker "aircraft";
 		};
 
+		// Add flare gun model/object, base off of that, in meantime if the player isn't close to dropsite hint notifcation that it was cancelled and delete the plane as normal
+
 		sleep .1;
 
 		_vel = velocity _aircraft;
