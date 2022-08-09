@@ -27,7 +27,7 @@ class Airdrop_UI
 		{
 			idc = 3200;
 			style = ST_PICTURE;
-			text = "airdrop.paa";
+			text = "";
 			x = 0.958907 * safezoneW + safezoneX;
 			y = 0.687 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;

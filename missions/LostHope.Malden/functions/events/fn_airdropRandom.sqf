@@ -20,7 +20,7 @@ missionNamespace setVariable ["Airdrop_Active", True, true];
 private _randomPos = [nil, ["water"]] call BIS_fnc_randomPos; //Random position not in water within range of player
 
 _aircraft = "C_Plane_Civil_01_racing_F" createVehicle _randomPos;
-_aircraft setPosATL [getPosATL _aircraft select 0, getPosATL _aircraft select 1, (getPosATL _aircraft select 2) + 2250];
+_aircraft setPosATL [getPosATL _aircraft select 0, getPosATL _aircraft select 1, (getPosATL _aircraft select 2) + 1500];
 _grp = createGroup civilian;
 "B_RangeMaster_F" createUnit [getPosATL _aircraft, _grp,"pilot = this"];
 pilot moveInDriver _aircraft;
@@ -28,6 +28,7 @@ pilot moveInDriver _aircraft;
 //DO NOT CHANGE THESE OR I WILL MOLEST YOUR CAT!
 _aircraft allowDamage false;
 pilot allowDamage false;
+// Ok I won't change them ;)
 
 _randomPos = [nil, ["water"]] call BIS_fnc_randomPos; //Random position not in water
 //Hints
@@ -35,8 +36,8 @@ _randomPos = [nil, ["water"]] call BIS_fnc_randomPos; //Random position not in w
 
 //Settings
 pilot doMove _randomPos;
-pilot flyInHeight 1750;
-_aircraft flyInHeight 1750;
+pilot flyInHeight 600;
+_aircraft flyInHeight 600;
 
 _markerstr = createMarker ["aircraft", getPosATL _aircraft];
 _markerstr setMarkerShape "ICON";
@@ -53,7 +54,7 @@ _markerstr setMarkerText "Airdrop Plane";
 
 		sleep .1;
 
-		if(meters < 100) exitWith {  ["Airdrop", "The package has been dropped! Check your map", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"]; uiSleep .75; deleteMarker "aircraft";};
+		if (meters < 100) exitWith {  ["Airdrop", "The package has been dropped! Check your map", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"]; uiSleep .75; deleteMarker "aircraft";};
 
 		sleep .1;
 

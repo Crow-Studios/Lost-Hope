@@ -55,7 +55,7 @@ locations = call lost_hope_fnc_getMarkers;
 		// array append
 		private _nearby_locations append [[_name, _groups, _distance, _count, _chance, _chanceItems, _chanceWeapons]];
 
-		if ( !( "base" in _x) && (_continue) ) then {
+		if ( !( "base" in _x ) && (_continue) && ("airdrop" in _x) ) then {
 			// checks if the player is in the town, and then checks the distance
 			if ( _name in _x && ([_unit, _distance] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
 				if ("science" in _name) then 

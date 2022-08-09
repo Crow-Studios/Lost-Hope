@@ -21,6 +21,11 @@ class lost_hope_locations
 	#include "configs\cfgLocations.hpp"
 };
 
+class lost_hope_airdrops
+{
+	#include "configs\cfgAirdrops.hpp"
+};
+
 class RscTitles
 {
 	#include "UI\RscMyHUD.hpp"
