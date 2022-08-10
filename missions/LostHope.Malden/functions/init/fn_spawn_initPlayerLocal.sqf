@@ -34,5 +34,6 @@ _script = [_localPlayerUID, _unit] spawn {
 
 [5, _unit] call lost_hope_fnc_zombieCleanup;
 [5, _unit] call lost_hope_fnc_loot_resetBuildings;
+[] spawn lost_hope_fnc_modConflicts;
 
 [_unit, "lost_hope_loadouts_zombie", "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", 7] call lost_hope_fnc_setLoadout;

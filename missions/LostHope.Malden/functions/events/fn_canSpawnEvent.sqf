@@ -4,7 +4,6 @@ _startEventScript = [_time, _trader, _type] spawn {
     params ["_time", "_trader", "_type"];
     while {true} do {
       uiSleep _time;
-      hint "Running While Loop";
 
         // Check if can start event after X time
         {
@@ -50,7 +49,7 @@ _startEventScript = [_time, _trader, _type] spawn {
                 unit doMove getMarkerPos _trader;
             };
             waitUntil {count units traderEvent >= 10};
-            [] spawn lost_hope_fnc_hasEventFinished;
+            [player] spawn lost_hope_fnc_hasEventFinished;
             [_time, _trader] call lost_hope_fnc_canCancelEvent;
         };
     };

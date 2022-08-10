@@ -98,8 +98,6 @@ if (_type == 7) then {
         private _allowedMagsPrimary = selectRandom ( [_primary] call BIS_fnc_compatibleMagazines );
         private _allowedMagsSecondary = selectRandom ( [_secondary] call BIS_fnc_compatibleMagazines );
 
-        hint str _allowedMagsPrimary;
-
         _unit addMagazines [_allowedMagsPrimary, (selectRandom [2,3])];
         _unit addMagazines [_allowedMagsSecondary, (selectRandom [2,3])];
     

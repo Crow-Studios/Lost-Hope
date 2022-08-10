@@ -36,7 +36,7 @@ locations = call lost_hope_fnc_getMarkers;
 
 {
 	private _continue = _unit getVariable ("lost_hope"+_localPlayerUID+"continueMarkerScript");
-	private _markerVar = missionNamespace getVariable ("Lost_Hope_Marker"+_x+"CanRun");
+	private _markerVar = missionNamespace getVariable [("Lost_Hope_Marker"+_x+"CanRun"), false];
 	for "_i" from 0 to count locations-1 do {
 		private _name = ((locations select _i) select 0);
 
@@ -55,46 +55,52 @@ locations = call lost_hope_fnc_getMarkers;
 		// array append
 		private _nearby_locations append [[_name, _groups, _distance, _count, _chance, _chanceItems, _chanceWeapons]];
 
-		if ( !( "base" in _x ) && (_continue) && ("airdrop" in _x) ) then {
+		if ( !( "base" in _x ) && (_continue) && (_markerVar) ) then {
 			// checks if the player is in the town, and then checks the distance
-			if ( _name in _x && ([_unit, _distance] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
-				if ("science" in _name) then 
+			if ( _name in _x && ([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) ) then {
+				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false,true];
+				//hint str _markerVar;
+				// hint the area
+				["Location Nearby!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
+
+				[_distance, _groups, getMarkerPos _x, EAST, false, _count, _name] call lost_hope_fnc_markerSetup;
+				[_unit, _x, _chance, _chanceItems, _chanceWeapons, _name] spawn lost_hope_fnc_loot_spawnLoot;
+				diag_log format["%1 has been triggered by %2", _x, _unit];
+				if ("science" in _name) then
 				{
 					//[getMarkerPos _x, independent] call lost_hope_fnc_spawnHivemind;
 					for "_i" from 0 to 4 do {
 						[selectRandom ["dev_asymhuman_stage2_o", "dev_toxmut_o", "dev_asymhuman_o"], getMarkerPos _x, independent] call lost_hope_fnc_spawnMutant;
 					};
 				};
-				// hint the area
-				["Location Nearby!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
-
-				[_distance, _groups, getMarkerPos _x, EAST, false, _count, _name] call lost_hope_fnc_markerSetup;
-				[_unit, _x, _chance, _chanceItems, _chanceWeapons, _name] spawn lost_hope_fnc_loot_spawnLoot;
-				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];
-				diag_log format["%1 has been triggered by %2", _x, _unit];
 			};
 
-			if ("safezone_1" == _x && ([_unit, 300] call lost_hope_fnc_getMarkerDistance)) then {
+			/*
+			if ("safezone_1" == _x && ([_unit, 300, _x] call lost_hope_fnc_getMarkerDistance)) then {
 				//["Location Nearby!", "You are near Safezone_1", "info", 5] call lost_hope_fnc_notificationHint;
 			};
 
-			if ("trader" in _x && ([_unit, 150] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
+			if ("trader" in _x && ([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
 				["Location Nearby!", "You are near a Trader", "info", 10] call lost_hope_fnc_notificationHint;
 				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];
 				diag_log format["%1 has been triggered by %2", _x, _unit];
 			};
+			*/
 
-			if ("trader" in _x && !([_unit, 150] call lost_hope_fnc_getMarkerDistance)) then {
+			/*
+			if ("trader" in _x && !([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance)) then {
 				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
 				diag_log format["%1 has been reset", _x];
 			};
-
-			if ( (_name in _x) && !([_unit, _distance] call lost_hope_fnc_getMarkerDistance) ) then {
-				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
-				diag_log format["%1 has been reset", _x];
-			};
+			*/
 
 		};
+
+		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) ) then {
+			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
+			diag_log format["%1 has been reset", _x];
+		};
+
 	};
 } forEach allMapMarkers;
 

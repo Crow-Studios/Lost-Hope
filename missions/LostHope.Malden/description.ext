@@ -6,11 +6,6 @@ class CfgFunctions
 	#include "functions.hpp"
 };
 
-class lost_hope_loadouts_zombie
-{
-	#include "configs\cfgZombieLoadouts.hpp"
-};
-
 class lost_hope_groups_zombie
 {
 	#include "configs\cfgZombieGroups.hpp"
@@ -21,15 +16,94 @@ class lost_hope_locations
 	#include "configs\cfgLocations.hpp"
 };
 
-class lost_hope_airdrops
-{
-	#include "configs\cfgAirdrops.hpp"
-};
-
 class RscTitles
 {
 	#include "UI\RscMyHUD.hpp"
 	#include "UI\Airdrop_UI.hpp"
 };
+
+#define true 1
+#define false 0
+
+// Mod stuff
+
+
+/*
+	// RHS
+	class lost_hope_loadouts_zombie
+	{
+		#include "configs\cfgZombieLoadoutsRHS.hpp"
+	};
+
+	class lost_hope_airdrops
+	{
+		#include "configs\cfgAirdropsRHS.hpp"
+	};
+
+	// 3CB
+	class lost_hope_loadouts_zombie
+	{
+		#include "configs\cfgZombieLoadouts3CB.hpp"
+	};
+
+	class lost_hope_airdrops
+	{
+		#include "configs\cfgAirdrops3CB.hpp"
+	};
+
+*/
+
+#if __has_include("\rhsusf\addons\rhsusf_main\config.bin")
+	#define HASRHS	true
+	#define VANILLA   false
+#else
+	#define HASRHS	false
+#endif
+
+#if __has_include("\uk3cb_baf_weapons\addons\uk3cb_baf_weapons_L85a3\config.bin")
+	#define HAS3CB	true
+	#define VANILLA   false
+#else
+	#define HAS3CB	false
+#endif
+
+#define HASRHS	false
+
+class lost_hope_loadouts_zombie
+{
+	#if HAS3CB
+		#include "configs\cfgZombieLoadouts3CB.hpp"
+	#endif
+	#if HASRHS
+		#include "configs\cfgZombieLoadoutsRHS.hpp"
+	#endif
+
+	#ifndef VANILLA
+		#include "configs\cfgZombieLoadouts.hpp"
+	#endif
+		
+	// Should trigger ONLY if they load 3CB and RHS at once
+};
+
+
+//w = __EVAL( if (HASRHS && HAS3CB) then compile "hybridLoaded = 1" );
+//e = __EVAL( preprocessFileLineNumbers "configs\cfgAirdrops3CB.hpp");
+//r = __EVAL( preprocessFileLineNumbers "configs\cfgZombieLoadouts3CB.hpp");
+
+// Failsafe
+//#ifndef HASRHS
+//	#define HASRHS	false
+//#endif
+
+
+/*
+#if __has_include("\rhsusf\addons\rhsusf_main\config.bin")
+#else
+	class lost_hope_airdrops
+	{
+		#include "configs\cfgAirdrops.hpp"
+	};
+#endif
+*/
 
 respawnOnStart = -1;

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=698;
+		nextID=706;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=305;
+		nextID=745;
 	};
 	class Camera
 	{
-		pos[]={862.78754,54.676445,12172.66};
-		dir[]={0.88550532,-0.45583504,0.089970633};
-		up[]={0.45350036,0.8900643,0.046077337};
-		aside[]={0.10108326,7.6106517e-009,-0.99487805};
+		pos[]={1006.7429,35.0993,12193.722};
+		dir[]={-0.58002442,-0.5264703,0.621629};
+		up[]={-0.35917863,0.85018462,0.38494217};
+		aside[]={0.73116106,-3.9115548e-008,0.68222499};
 	};
 };
 binarizationWanted=0;
@@ -56,7 +56,6 @@ addons[]=
 	"A3_Structures_F_Training",
 	"A3_Structures_F_Exp_Industrial_Port",
 	"A3_Structures_F_Ind_Cargo",
-	"ace_cargo",
 	"A3_Boat_F_Gamma_Boat_Civil_04",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -68,13 +67,11 @@ addons[]=
 	"A3_Structures_F_Furniture",
 	"A3_Props_F_Exp_Commercial_Market",
 	"A3_Structures_F_EPB_Civ_Garbage",
-	"ace_dragging",
 	"A3_Structures_F_Civ_Constructions",
 	"A3_Structures_F_Civ_Camping",
 	"A3_Weapons_F_Exp",
 	"A3_Weapons_F_Enoch",
 	"A3_Weapons_F_Mark",
-	"ace_realisticnames",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Structures_F_Ind_SolarPowerPlant",
@@ -341,7 +338,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -422,7 +419,7 @@ class CustomAttributes
 		};
 		nAttributes=5;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -2274,11 +2271,11 @@ class Mission
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={928.41583,0,11824.97};
+				position[]={927.44238,0,11824.97};
 			};
 			title="Ferry";
 			id=31;
-			atlOffset=5.6307106;
+			atlOffset=5.9959364;
 		};
 		class Item14
 		{

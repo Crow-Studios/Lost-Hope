@@ -17,8 +17,6 @@ params ["_unit", "_marker", "_chance", "_itemChance", "_weaponChance", "_type"];
 
 diag_log format["SPAWN LOOT TRIGGERED BY: %1 AT MARKER %2 WITH GIVEN CHANCE %3 AS TYPE %4", _unit, _marker, _chance, _type];
 
-private _result = [];
-
 private _houses = _unit nearObjects ["Building", 2000];
 
 if (sunOrMoon != 1) then 
@@ -52,7 +50,9 @@ if (sunOrMoon != 1) then
 
 				//private _number = getText (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "type");
 				private _melee = selectRandom ["WBK_Katana", "Shovel_Russian_Rotated", "WBK_SmallHammer", "Sashka_Russian"];
-				private _items = selectRandom ["FirstAidKit", "dev_enzymeCapsule", "MiniGrenade", "B_IR_Grenade", "ToolKit"];
+				private _items = selectRandom ["FirstAidKit", "dev_enzymeCapsule"];
+				private _grenades = selectRandom ["MiniGrenade"];
+				private _tools = selectRandom ["ToolKit"];
 
 				private _magazinesCount = selectRandom [1, 2];
 
@@ -84,7 +84,7 @@ if (sunOrMoon != 1) then
 				//_holder enableSimulation false;
 				_holder allowDamage false;
 
-				if (_weaponChance >= _random && (_armed isEqualTo 1) ) then {
+				if (_weaponChance <= _random && (_armed isEqualTo 1) ) then {
 					private _primary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "primary") );
 					private _secondary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "secondary") );
 					private _magazinesPrimary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _primary >> "magazines") );
@@ -92,36 +92,35 @@ if (sunOrMoon != 1) then
 					if (selectRandom [1,2] == 2) then {
 						_holder addWeaponCargoGlobal [_primary,1];
 						_holder addMagazineCargoGlobal [_magazinesPrimary, _magazinesCount];
-						_result append [[_group, _primary, _magazinesPrimary]];
 					} else {
 						_holder addWeaponCargoGlobal [_secondary,1];
 						_holder addMagazineCargoGlobal [_magazinesSecondary, _magazinesCount];
-						_result append [[_group, _secondary, _magazinesSecondary]];
-					};
-				};
-
-				if (_random <= _weaponChance && !(_armed isEqualTo 1)) then {
-					_holder addWeaponCargoGlobal [_melee, 1];
-				};
-
-				for "_i" from 0 to 2 do {
-					if (_random <= _itemChance) then {
-						_holder addItemCargoGlobal [selectRandom [_items], 1];
-					};
-				};
-
-				for "_i" from 0 to 1 do {
-					if (_random <= 30) then {
-						_holder addItemCargoGlobal [selectRandom [_vests, _uniforms, _headgear], 1];
-						_holder addItemCargoGlobal [selectRandom [_items, _binoculars, _map], 1];
 					};
 				};
 
 				/*
-				if (_random <= 20) then {
-					_holder addBackpackCargoGlobal [_backpack, 1];
+				if (_random <= 5 && !(_armed isEqualTo 1)) then {
+					_holder addWeaponCargoGlobal [_melee, 1];
 				};
 				*/
+
+				for "_i" from 0 to random [0, 1, 2] do {
+					if (_random <= _itemChance) then {
+						_holder addItemCargoGlobal [_items, 1];
+					};
+				};
+
+				if (_random <= 30) then {
+					_holder addItemCargoGlobal [_vests, 1];
+				};
+
+				if (_random <= 20) then {
+					_holder addItemCargoGlobal [selectRandom [_uniforms, _headgear], 1];
+				};
+
+				if (_random <= 10) then {
+					_holder addBackpackCargoGlobal [_backpack, 1];
+				};
 
 				_holder setDir random [0, 70, 180];
 				
@@ -131,5 +130,3 @@ if (sunOrMoon != 1) then
 		};
 	} forEach _buildingPos;
 } forEach _houses;
-
-_result

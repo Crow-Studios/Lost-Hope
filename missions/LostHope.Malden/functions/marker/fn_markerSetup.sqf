@@ -28,9 +28,8 @@ if (_sound) then {
 if (random [0.1, 0.5, 1] >= 0.8) then {
     ["C_man_polo_1_F", _position, _side, true] call lost_hope_fnc_spawnHorde;
 } else {
-
-    private _amount = round(random _count);
-    hint str _amount;
+    private _amount = round (random _count);
+    hint str (_amount + 1);
     if (sunOrMoon != 1) then {_amount = _amount / 2};
     for "_i" from 0 to (_amount) do {
 
@@ -44,6 +43,7 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
         ["C_man_polo_1_F", _pos, _group, _loadout, _side, _name] call lost_hope_fnc_spawnZombie;
 
         if (_nearestRoad != objNull) then {unit setPosATL getPosATL _nearestRoad};
+        uiSleep .2;
     };
 
 };

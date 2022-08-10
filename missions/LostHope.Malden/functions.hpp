@@ -7,6 +7,7 @@ class lost_hope
 	class init {
 		class spawn_initServer {};
 		class spawn_initPlayerLocal {};
+		class modConflicts {};
 	};
 
 	class core {
@@ -16,6 +17,7 @@ class lost_hope
 		class playBoatAnimation {};
 		class createCamera {};
 		class screenToBlack {};
+		class modsLoaded {};
 	};
 
 	class marker {
