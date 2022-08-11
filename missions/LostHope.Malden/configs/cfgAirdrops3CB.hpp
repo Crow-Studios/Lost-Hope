@@ -122,8 +122,8 @@
             "UK3CB_BAF_U_Smock_MTP_DPMW",
             "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve",
             "UK3CB_BAF_U_CombatUniform_MTP_Ghillie_RM",
-            "UK3CB_BAF_U_JumperUniform_MTP",
-            "UK3CB_BAF_U_Smock_DPMW_OLI"
+            "U_I_CBRN_Suit_01_AAF_F",
+            "U_B_CBRN_Suit_01_Wdl_F"
         };
         vests[] =
         {

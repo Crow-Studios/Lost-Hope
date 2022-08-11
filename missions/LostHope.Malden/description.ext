@@ -67,7 +67,9 @@ class RscTitles
 	#define HAS3CB	false
 #endif
 
+#define HAS3CB	false
 #define HASRHS	false
+#undef VANILLA
 
 class lost_hope_loadouts_zombie
 {
@@ -81,8 +83,21 @@ class lost_hope_loadouts_zombie
 	#ifndef VANILLA
 		#include "configs\cfgZombieLoadouts.hpp"
 	#endif
-		
-	// Should trigger ONLY if they load 3CB and RHS at once
+};
+
+class lost_hope_airdrops
+{
+	#if HAS3CB
+		#include "configs\cfgAirdrops3CB.hpp"
+	#endif
+	#if HASRHS
+		#include "configs\cfgAirdropsRHS.hpp"
+	#endif
+
+	#ifndef VANILLA
+		#include "configs\cfgAirdrops.hpp"
+	#endif
+
 };
 
 

@@ -108,7 +108,7 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 		];
 	};
 
-	_crate = createVehicle ["C_IDAP_supplyCrate_F", getPosATL _aircraft - [0,0,-2]];
+	_crate = createVehicle ["C_IDAP_supplyCrate_F", getPosATL _aircraft - [0,0,-10]];
 	_crate allowDamage false;
 	_crate setVelocity [0,0,0];
 	clearItemCargoGlobal _crate;

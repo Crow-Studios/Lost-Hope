@@ -29,7 +29,6 @@ if (sunOrMoon != 1) then
 
 {
 	_buildingPos = [_x] call BIS_fnc_buildingPositions;
-	diag_log "SPAWN LOOT SUCCESSFUL, RUNNING LOOP";
 	{
 		if (_x inArea _marker) then {
 			switch (_type) do 
@@ -41,10 +40,10 @@ if (sunOrMoon != 1) then
 				case "town": {_type = selectRandom ["lost_hope_zombie_vanilla_farmers", "lost_hope_zombie_vanilla_civilians"]};
 				case "science": {_type = selectRandom ["lost_hope_zombie_vanilla_military", "lost_hope_zombie_vanilla_science"]};
 			};
-			private _random = random 100;
+			private _random = round (random 100);
+			diag_log _random;
 			if (_chance > _random) then
 			{
-				diag_log "SPAWN LOOT RANDOM SUCCESSFUL, SPAWNING LOOT OBJECTS";
 				// Move all of these to config, then grab
 				private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type) call BIS_fnc_getCfgSubClasses );
 
@@ -83,8 +82,11 @@ if (sunOrMoon != 1) then
 				_holder setVectorUp surfaceNormal position _holder;
 				//_holder enableSimulation false;
 				_holder allowDamage false;
+				
+				diag_log [_weaponChance, _random, _armed];
 
-				if (_weaponChance <= _random && (_armed isEqualTo 1) ) then {
+				if ( (_weaponChance >= _random) && (_armed isEqualTo 1) ) then {
+					diag_log format ["WEAPON HAS BEEN SPAWNED AT POS: %1", getPosATL _holder];
 					private _primary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "primary") );
 					private _secondary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "secondary") );
 					private _magazinesPrimary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _primary >> "magazines") );

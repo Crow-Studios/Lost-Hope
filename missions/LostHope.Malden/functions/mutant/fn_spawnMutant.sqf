@@ -42,7 +42,7 @@ for "_i" from 0 to 2 do { // Each mutant is accompanied by 3 normal zombie mutan
     private _type = "lost_hope_zombie_vanilla_scientists";
     private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type) call BIS_fnc_getCfgSubClasses );
 
-    "dev_o_zombie_scientist2_i" createUnit [_position, hivemindGroup, "zombie = this"];
+    "dev_o_zombie_p_beggar_F_euro" createUnit [_position, hivemindGroup, "zombie = this"];
     zombie setVariable ["isZombie", true];
     zombie setVariable ["isMutant", true];
     zombie setVariable ["canDelete", false];

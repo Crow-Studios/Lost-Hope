@@ -66,7 +66,7 @@
 		{
 			primary[] = {""};
 			secondary[] = {""};
-			uniform[] = {"U_BG_Guerilla3_1", "U_BG_Guerilla2_3", "U_Marshal"};
+			uniform[] = {"rhs_uniform_6sh122_gloves_v2", "rhs_uniform_6sh122_v2", "rhs_uniform_6sh122_gloves_v1"};
 			vest[] = {""};
 			backpack[] = {"B_LegStrapBag_black_F", "B_Messenger_Black_F", "B_Messenger_IDAP_F"};
 			headgear[] = {"H_Watchcap_blk", "H_Booniehat_tan", "H_Cap_blk", "H_Cap_surfer", "H_Hat_tan"};
@@ -107,15 +107,15 @@
 	{
 		class lost_hope_zombie_police_CBRN_triggerman
 		{
-			primary[] = {"arifle_MX_Black_F", "SMG_03C_black"};
-			secondary[] = {"hgun_ACPC2_F"};
-			uniform[] = {"U_C_CBRN_Suit_01_Blue_F", "U_C_CBRN_Suit_01_White_F"};
-			vest[] = {"V_CarrierRigKBT_01_light_Olive_F", "V_LegStrapBag_black_F", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_Static_Designator_01_weapon_F", "B_SCBA_01_F", "I_E_HMG_01_support_F"};
-			headgear[] = {"H_Cap_marshal", "H_MilCap_blue", "H_Shemag_olive", "H_StrawHat_dark", "H_Hat_tan"};
-			facewear[] = {"G_Respirator_yellow_F", "G_RegulatorMask_F"};
+			primary[] = {"hlc_rifle_bcmblackjack", "rhs_weap_m4_carryhandle_mstock"};
+			secondary[] = {"rhsusf_weap_glock17g4"};
+			uniform[] = {"rhs_uniform_cu_ucp"};
+			vest[] = {"rhsusf_spcs_ucp_rifleman_alt", "rhsusf_spcs_ucp_medic", "rhsusf_spcs_ucp_teamleader_alt"};
+			backpack[] = {"rhsusf_assault_eagleaiii_ucp", "B_SCBA_01_F", "I_E_HMG_01_support_F"};
+			headgear[] = {"rhsusf_patrolcap_ucp", "rhsusf_ach_helmet_ESS_ucp", "rhs_Booniehat_ucp"};
+			facewear[] = {"rhsusf_shemagh2_gogg_tan", "G_RegulatorMask_F"};
 			nvg = "";
-			binoculars = "Binocular";
+			binoculars = "rhsusf_bino_lrf_Vector21";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
@@ -126,13 +126,13 @@
 		};
 		class lost_hope_zombie_police
 		{
-			primary[] = {"hgun_PDW2000_F", "srifle_DMR_01_F"};
-			secondary[] = {""};
-			uniform[] = {"U_B_GEN_Soldier_F", "U_B_GEN_Commander_F"};
-			vest[] = {"V_Rangemaster_belt", "V_TacVest_blk_POLICE", "V_Press_F"};
-			backpack[] = {"B_Messenger_Gray_F", "B_CivilianBackpack_01_Everyday_Vrana_F"};
-			headgear[] = {"H_MilCap_gen_F", "H_Beret_gen_F"};
-			facewear[] = {"G_Respirator_yellow_F", "G_Respirator_blue_F"};
+			primary[] = {"rhs_weap_m4_carryhandle", "rhs_weap_M590_8RD"};
+			secondary[] = {"rhsusf_weap_m1911a1"};
+			uniform[] = {"rhs_uniform_cu_ucp"};
+			vest[] = {"rhsusf_spcs_ucp_rifleman_alt", "rhsusf_spcs_ucp_medic", "rhsusf_spcs_ucp_teamleader_alt"};
+			backpack[] = {"rhsusf_assault_eagleaiii_ucp"};
+			headgear[] = {"rhsusf_patrolcap_ucp", "rhsusf_ach_helmet_ESS_ucp", "rhs_Booniehat_ucp"};
+			facewear[] = {"rhsusf_shemagh2_gogg_tan", "G_RegulatorMask_F"};
 			nvg = "";
 			binoculars = "Binocular";
 			map = "ItemMap";
@@ -149,15 +149,15 @@
 	{
 		class lost_hope_zombie_military_private_triggerman
 		{
-			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
-			secondary[] = {"hgun_ACPC2_F"};
-			uniform[] = {"U_B_CombatUniform_mcam", "U_B_CTRG_3", "U_B_CombatUniform_mcam_tshirt"};
-			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_SCBA_01_F", "B_TacticalPack_ocamo", "B_TacticalPack_mcamo"};
-			headgear[] = {"H_HelmetHBK_headset_F", "H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_CrewHelmetHeli_B", "H_HelmetSpecB_snakeskin"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
+			primary[] = {"hlc_rifle_CQBR", "rhs_weap_m40a5", "rhs_weap_m249_pip_ris", "hlc_rifle_G36C"};
+			secondary[] = {"rhsusf_weap_m9"};
+			uniform[] = {"rhs_uniform_cu_ocp", "rhs_uniform_cu_ocp_1stcav", "rhs_uniform_acu_ocp"};
+			vest[] = {"rhsusf_spcs_ocp_rifleman", "rhsusf_spcs_ocp_rifleman_alt", "rhsusf_spcs_ocp_grenadier", "rhsusf_spcs_ocp_squadleader", "rhsusf_spcs_ocp_teamleader"};
+			backpack[] = {"B_SCBA_01_F", "rhsusf_assault_eagleaiii_ocp"};
+			headgear[] = {"rhsusf_ach_helmet_ocp_alt", "rhsusf_ach_helmet_headset_ess_ocp", "rhsusf_ach_helmet_camo_ocp", "rhsusf_ach_helmet_ocp_norotos", "rhsusf_ach_helmet_ocp"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "rhsusf_shemagh2_tan"};
 			nvg = "";
-			binoculars = "Rangefinder";
+			binoculars = "rhsusf_bino_lerca_1200_black";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
@@ -168,15 +168,15 @@
 		};
 		class lost_hope_zombie_military_private
 		{
-			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
-			secondary[] = {""};
-			uniform[] = {"U_B_CombatUniform_mcam", "U_B_CTRG_3", "U_B_CombatUniform_mcam_tshirt"};
-			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrierL_CTRG", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_TacticalPack_mcamo"};
-			headgear[] = {"H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_HelmetSpecB_snakeskin"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
+			primary[] = {"rhs_weap_m4a1_mstock", "hlc_rifle_416D10"};
+			secondary[] = {"rhsusf_weap_m9"};
+			uniform[] = {"rhs_uniform_cu_ocp", "rhs_uniform_cu_ocp_1stcav", "rhs_uniform_acu_ocp"};
+			vest[] = {"rhsusf_spcs_ocp_rifleman", "rhsusf_spcs_ocp_rifleman_alt", "rhsusf_spcs_ocp_grenadier", "rhsusf_spcs_ocp_squadleader", "rhsusf_spcs_ocp_teamleader"};
+			backpack[] = {"rhsusf_assault_eagleaiii_ocp"};
+			headgear[] = {"rhsusf_ach_helmet_ocp_alt", "rhsusf_ach_helmet_headset_ess_ocp", "rhsusf_ach_helmet_camo_ocp", "rhsusf_ach_helmet_ocp_norotos", "rhsusf_ach_helmet_ocp"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "rhsusf_shemagh2_tan"};
 			nvg = "";
-			binoculars = "Rangefinder";
+			binoculars = "rhsusf_bino_lerca_1200_black";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
@@ -187,15 +187,15 @@
 		};
 		class lost_hope_zombie_military_sergeant_triggerman
 		{
-			primary[] = {"arifle_MX_SW_F", "arifle_Katiba_GL_F", "arifle_AKM_F"};
-			secondary[] = {"hgun_Pistol_01_F"};
-			uniform[] = {"U_B_GhillieSuit", "U_B_CTRG_1", "U_I_OfficerUniform"};
-			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_SCBA_01_F", "B_TacticalPack_ocamo", "B_TacticalPack_mcamo"};
-			headgear[] = {"H_HelmetHBK_headset_F", "H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_CrewHelmetHeli_B", "H_HelmetSpecB_snakeskin"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
-			nvg = "";
-			binoculars = "Rangefinder";
+			primary[] = {"rhs_weap_m4a1_blockII_KAC_bk", "rhs_weap_m4a1_blockII_M203_bk", "rhs_weap_m249_pip_S", "rhs_weap_XM2010"};
+			secondary[] = {"hlc_pistol_P229R_Elite", "hlc_pistol_P226R_Stainless", "hlc_pistol_Mk25TR"};
+			uniform[] = {"rhs_uniform_FROG01_d", "rhs_uniform_g3_tan", "rhs_uniform_g3_mc"};
+			vest[] = {"rhsusf_spc_rifleman", "rhsusf_spc_squadleader", "rhsusf_plateframe_teamleader", "rhsusf_plateframe_grenadier", "rhsusf_plateframe_marksman"};
+			backpack[] = {""};
+			headgear[] = {"rhsusf_opscore_aor1", "rhsusf_opscore_aor1_pelt_nsw", "rhsusf_lwh_helmet_marpatd", "rhsusf_mich_bare_norotos_alt_tan", "rhsusf_mich_helmet_marpatd_norotos_arc_headset"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_AirPurifyingRespirator_01_F"};
+			nvg = "rhsusf_ANPVS_15";
+			binoculars = "rhsusf_bino_lerca_1200_black";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
@@ -206,20 +206,19 @@
 		};
 		class lost_hope_zombie_military_sergeant
 		{
-			primary[] = {""};
-			secondary[] = {"dev_weapon_scanner"};
-			uniform[] = {"U_B_GhillieSuit", "U_B_CTRG_1", "U_I_OfficerUniform"};
-			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_SCBA_01_F", "B_TacticalPack_ocamo"};
-			headgear[] = {"H_PilotHelmetHeli_O", "H_HelmetSpecB_snakeskin"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
-			nvg = "";
-			binoculars = "";
+			primary[] = {"rhs_weap_m4a1_blockII_KAC_bk", "hlc_wp_xm4", "hlc_rifle_416D10_RAHG"};
+			secondary[] = {"hlc_pistol_P229R_Elite", "hlc_pistol_P226R_Stainless", "hlc_pistol_Mk25TR"};
+			uniform[] = {"rhs_uniform_FROG01_d", "rhs_uniform_g3_tan", "rhs_uniform_g3_mc"};
+			vest[] = {"rhsusf_spc_rifleman", "rhsusf_spc_squadleader", "rhsusf_plateframe_teamleader", "rhsusf_plateframe_grenadier", "rhsusf_plateframe_marksman"};
+			backpack[] = {""};
+			headgear[] = {"rhsusf_opscore_aor1", "rhsusf_opscore_aor1_pelt_nsw", "rhsusf_lwh_helmet_marpatd", "rhsusf_mich_bare_norotos_alt_tan", "rhsusf_mich_helmet_marpatd_norotos_arc_headset"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_AirPurifyingRespirator_01_F"};
+			nvg = "rhsusf_ANPVS_15";
+			binoculars = "rhsusf_bino_lerca_1200_black";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
 			watch = "ItemWatch";
-			chance = 0.9;
 			type = 6;
 			armed = 0;
 		};
@@ -227,12 +226,12 @@
 		{
 			primary[] = {""};
 			secondary[] = {""};
-			uniform[] = {"U_B_PilotCoveralls", "U_I_pilotCoveralls", "U_B_HeliPilotCoveralls"};
+			uniform[] = {"rhs_uniform_acu_ucp", "rhs_uniform_acu_ucp2", "rhs_uniform_abu"};
 			vest[] = {""};
 			backpack[] = {""};
-			headgear[] = {"H_CrewHelmetHeli_B", "H_PilotHelmetHeli_O"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Bandanna_beast"};
-			nvg = "NVGoggles";
+			headgear[] = {"rhsusf_hgu56p_black", "rhsusf_hgu56p_visor_tan"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_Bandanna_beast", "rhs_scarf"};
+			nvg = "rhsusf_ANPVS_14";
 			binoculars = "";
 			map = "ItemMap";
 			terminal = "ItemGPS";
@@ -248,15 +247,15 @@
 	{
 		class lost_hope_zombie_science_private_triggerman
 		{
-			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
-			secondary[] = {"hgun_ACPC2_F"};
-			uniform[] = {"U_C_CBRN_Suit_01_Blue_F", "U_B_CBRN_Suit_01_MTP_F", "U_B_CBRN_Suit_01_Tropic_F", "U_C_CBRN_Suit_01_White_F", "U_B_CBRN_Suit_01_Wdl_F"};
-			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_SCBA_01_F"};
-			headgear[] = {"H_HelmetHBK_headset_F", "H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_CrewHelmetHeli_B", "H_HelmetSpecB_snakeskin"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
-			nvg = "NVGoggles_OPFOR";
-			binoculars = "Rangefinder";
+			primary[] = {"rhs_weap_m249_pip_S_para", "rhs_weap_m4a1_blockII_M203_bk", "rhs_weap_m240B", "rhs_weap_M107"};
+			secondary[] = {"hlc_pistol_P229R_Elite", "hlc_pistol_P226R_Stainless", "hlc_pistol_Mk25TR"};
+			uniform[] = {"rhs_uniform_FROG01_d", "rhs_uniform_g3_tan", "rhs_uniform_g3_mc"};
+			vest[] = {"rhsusf_spc_rifleman", "rhsusf_spc_squadleader", "rhsusf_plateframe_teamleader", "rhsusf_plateframe_grenadier", "rhsusf_plateframe_marksman"};
+			backpack[] = {""};
+			headgear[] = {"rhsusf_opscore_aor1", "rhsusf_opscore_aor1_pelt_nsw", "rhsusf_mich_helmet_marpatd_norotos_arc_headset"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_AirPurifyingRespirator_01_F"};
+			nvg = "rhsusf_ANPVS_15";
+			binoculars = "rhsusf_bino_lerca_1200_black";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
@@ -267,15 +266,15 @@
 		};
 		class lost_hope_zombie_science_sergeant_triggerman
 		{
-			primary[] = {"arifle_MX_SW_F", "arifle_Katiba_GL_F"};
-			secondary[] = {"hgun_Pistol_heavy_01_F", "hgun_Rook40_F", "hgun_Pistol_heavy_02_F"};
-			uniform[] = {"U_C_CBRN_Suit_01_Blue_F", "U_B_CBRN_Suit_01_MTP_F", "U_B_CBRN_Suit_01_Tropic_F", "U_C_CBRN_Suit_01_White_F", "U_B_CBRN_Suit_01_Wdl_F"};
-			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
-			backpack[] = {"B_SCBA_01_F"};
-			headgear[] = {"H_HelmetHBK_headset_F", "H_HelmetHBK_ear_F", "H_HelmetB_light_snakeskin", "H_CrewHelmetHeli_B", "H_HelmetSpecB_snakeskin"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Balaclava_blk"};
-			nvg = "NVGoggles_OPFOR";
-			binoculars = "Rangefinder";
+			primary[] = {"rhs_weap_m32", "rhs_weap_m4a1_blockII_M203_bk", "rhsusf_weap_MP7A2", "rhs_weap_m14_socom_rail", "hlc_wp_xm4"};
+			secondary[] = {"hlc_pistol_P229R_Elite", "hlc_pistol_P226R_Stainless", "hlc_pistol_Mk25TR"};
+			uniform[] = {"rhs_uniform_FROG01_d", "rhs_uniform_g3_tan", "rhs_uniform_g3_mc"};
+			vest[] = {"rhsusf_spc_rifleman", "rhsusf_spc_squadleader", "rhsusf_plateframe_teamleader", "rhsusf_plateframe_grenadier", "rhsusf_plateframe_marksman"};
+			backpack[] = {""};
+			headgear[] = {"rhsusf_opscore_aor1", "rhsusf_opscore_aor1_pelt_nsw", "rhsusf_mich_helmet_marpatd_norotos_arc_headset"};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_AirPurifyingRespirator_01_F"};
+			nvg = "rhsusf_ANPVS_15";
+			binoculars = "rhsusf_bino_lerca_1200_black";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";
@@ -292,13 +291,13 @@
 		{
 			primary[] = {""};
 			secondary[] = {""};
-			uniform[] = {"U_C_Scientist", "U_C_WorkerCoveralls", "U_C_Uniform_Scientist_01_formal_F", "U_C_ConstructionCoverall_Black_F", "U_C_Paramedic_01_F"};
-			vest[] = {"V_LegStrapBag_black_F", "V_Pocketed_black_F", "V_Pocketed_olive_F"};
-			backpack[] = {"B_UAV_01_backpack_F"};
-			headgear[] = {"H_Watchcap_blk", "H_MilCap_gen_F", "H_Cap_marshal", "H_Beret_CSAT_01_F", "H_Construction_headset_red_F"};
-			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F", "G_Respirator_yellow_F"};
+			uniform[] = {"rhs_uniform_acu_ucp2", "rhs_uniform_g3_blk", "rhs_uniform_gorka_r_g_gloves", "rhs_uniform_gorka_r_y_gloves", "rhs_uniform_6sh122_gloves_v2"};
+			vest[] = {""};
+			backpack[] = {"rhs_assault_umbts_engineer_empty", "RHS_SPG9_Gun_Bag", "RHS_SPG9_Tripod_Bag"};
+			headgear[] = {""};
+			facewear[] = {"G_AirPurifyingRespirator_02_black_F", "G_RegulatorMask_F"};
 			nvg = "";
-			binoculars = "Rangefinder";
+			binoculars = "rhsusf_bino_lrf_Vector21";
 			map = "ItemMap";
 			terminal = "ItemGPS";
 			navigation = "ItemCompass";

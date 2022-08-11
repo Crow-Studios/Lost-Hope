@@ -33,9 +33,9 @@
         };
         nvg[] =
         {
-            "NVGoggles_OPFOR",
-            "NVGoggles_INDEP",
-            "NVGoggles",
+            "rhs_1PN138",
+            "rhsusf_ANPVS_14",
+            "rhsusf_ANPVS_15",
             "Shield_RoadSign_NoPeople"
         };
         terminal[] =
@@ -49,14 +49,17 @@
     {
         weapons[] =
         {
-            "arifle_MX_SW_Black_F",
-            "arifle_MX_GL_Black_F",
-            "LMG_Zafir_F",
-            "LMG_Mk200_F",
-            "LMG_03_F",
-            "arifle_MSBS65_GL_sand_F",
-            "arifle_RPK12_F",
-            "srifle_DMR_03_F"
+            "hlc_rifle_RU556",
+            "hlc_rifle_vendimus",
+            "hlc_rifle_Colt727",
+            "hlc_rifle_FN3011Modern",
+            "hlc_rifle_aks74u_MTK",
+            "hlc_rifle_auga3_bl",
+            "rhs_weap_m16a4_carryhandle",
+            "rhs_weap_vss_grip_npz",
+            "rhs_weap_m4_m203",
+            "rhs_weap_svdp",
+            "rhs_weap_ak74m_fullplum_npz"
         };
         items[] =
         {
@@ -89,9 +92,9 @@
         };
         nvg[] =
         {
-            "NVGoggles_OPFOR",
-            "NVGoggles_INDEP",
-            "NVGoggles"
+            "rhs_1PN138",
+            "rhsusf_ANPVS_14",
+            "rhsusf_ANPVS_15"
         };
         terminal[] =
         {
@@ -116,22 +119,26 @@
         };
         uniforms[] =
         {
-            "U_B_Wetsuit",
-            "U_I_FullGhillie_sard",
-            "U_B_FullGhillie_sard",
-            "U_B_FullGhillie_ard",
-            "U_O_V_Soldier_Viper_hex_F",
-            "U_I_E_CBRN_Suit_01_EAF_F",
+            "rhs_uniform_gorka_1_b",
+            "rhs_uniform_vkpo_gloves_alt",
+            "rhs_uniform_bdu_erdl",
+            "rhs_uniform_g3_m81",
+            "rhs_uniform_gorka_r_y_gloves",
+            "rhs_uniform_mvd_izlom",
             "U_I_CBRN_Suit_01_AAF_F",
             "U_B_CBRN_Suit_01_Wdl_F"
         };
         vests[] =
         {
-            "V_RebreatherB",
-            "V_PlateCarrierIAGL_oli",
-            "V_PlateCarrierH_CTRG",
-            "V_EOD_blue_F",
-            "V_PlateCarrierSpec_blk"
+            "rhs_6b13_crewofficer",
+            "rhs_6b45_rifleman_2",
+            "rhs_6sh46",
+            "rhsusf_iotv_ucp_Teamleader",
+            "rhsusf_plateframe_teamleader",
+            "rhsusf_spcs_ucp_rifleman",
+            "rhsusf_spcs_ucp_saw",
+            "rhsusf_spcs_ucp_sniper",
+            "rhsusf_mbav_rifleman"
         };
         backpack[] =
         {
@@ -139,13 +146,13 @@
         };
         headgear[] =
         {
-            "H_HelmetB_camo",
-            "H_HelmetCrew_O_ghex_F",
-            "H_HelmetO_ViperSP_ghex_F",
-            "H_HelmetB_TI_arid_F",
-            "H_HelmetB_TI_tna_F",
-            "H_HelmetCrew_I_E",
-            "H_HelmetSpecO_ocamo"
+            "rhs_6b26_ess_green",
+            "rhs_6b28_green",
+            "rhs_6b47_bare",
+            "rhs_6b47_6m2",
+            "rhsusf_ach_bare_headset_ess",
+            "rhsusf_ach_helmet_ucp_norotos",
+            "rhsusf_lwh_helmet_marpatd_ess"
         };
         nvg[] =
         {
@@ -163,14 +170,17 @@
     {
         weapons[] =
         {
-            "arifle_MX_SW_Black_F",
-            "arifle_MX_GL_Black_F",
-            "LMG_Zafir_F",
-            "LMG_Mk200_F",
-            "LMG_03_F",
-            "arifle_MSBS65_GL_sand_F",
-            "arifle_RPK12_F",
-            "srifle_DMR_03_F"
+            "hlc_rifle_RU556",
+            "hlc_rifle_vendimus",
+            "hlc_rifle_Colt727",
+            "hlc_rifle_FN3011Modern",
+            "hlc_rifle_aks74u_MTK",
+            "hlc_rifle_auga3_bl",
+            "rhs_weap_m16a4_carryhandle",
+            "rhs_weap_vss_grip_npz",
+            "rhs_weap_m4_m203",
+            "rhs_weap_svdp",
+            "rhs_weap_ak74m_fullplum_npz"
         };
         items[] =
         {
@@ -185,22 +195,26 @@
         };
         uniforms[] =
         {
-            "U_B_Wetsuit",
-            "U_I_FullGhillie_sard",
-            "U_B_FullGhillie_sard",
-            "U_B_FullGhillie_ard",
-            "U_O_V_Soldier_Viper_hex_F",
-            "U_I_E_CBRN_Suit_01_EAF_F",
+            "rhs_uniform_gorka_1_b",
+            "rhs_uniform_vkpo_gloves_alt",
+            "rhs_uniform_bdu_erdl",
+            "rhs_uniform_g3_m81",
+            "rhs_uniform_gorka_r_y_gloves",
+            "rhs_uniform_mvd_izlom",
             "U_I_CBRN_Suit_01_AAF_F",
             "U_B_CBRN_Suit_01_Wdl_F"
         };
         vests[] =
         {
-            "V_RebreatherB",
-            "V_PlateCarrierIAGL_oli",
-            "V_PlateCarrierH_CTRG",
-            "V_EOD_blue_F",
-            "V_PlateCarrierSpec_blk"
+            "rhs_6b13_crewofficer",
+            "rhs_6b45_rifleman_2",
+            "rhs_6sh46",
+            "rhsusf_iotv_ucp_Teamleader",
+            "rhsusf_plateframe_teamleader",
+            "rhsusf_spcs_ucp_rifleman",
+            "rhsusf_spcs_ucp_saw",
+            "rhsusf_spcs_ucp_sniper",
+            "rhsusf_mbav_rifleman"
         };
         backpack[] =
         {
@@ -208,13 +222,13 @@
         };
         headgear[] =
         {
-            "H_HelmetB_camo",
-            "H_HelmetCrew_O_ghex_F",
-            "H_HelmetO_ViperSP_ghex_F",
-            "H_HelmetB_TI_arid_F",
-            "H_HelmetB_TI_tna_F",
-            "H_HelmetCrew_I_E",
-            "H_HelmetSpecO_ocamo"
+            "rhs_6b26_ess_green",
+            "rhs_6b28_green",
+            "rhs_6b47_bare",
+            "rhs_6b47_6m2",
+            "rhsusf_ach_bare_headset_ess",
+            "rhsusf_ach_helmet_ucp_norotos",
+            "rhsusf_lwh_helmet_marpatd_ess"
         };
         nvg[] =
         {
