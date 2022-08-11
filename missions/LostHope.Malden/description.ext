@@ -25,9 +25,6 @@ class RscTitles
 #define true 1
 #define false 0
 
-// Mod stuff
-
-
 /*
 	// RHS
 	class lost_hope_loadouts_zombie
@@ -99,26 +96,5 @@ class lost_hope_airdrops
 	#endif
 
 };
-
-
-//w = __EVAL( if (HASRHS && HAS3CB) then compile "hybridLoaded = 1" );
-//e = __EVAL( preprocessFileLineNumbers "configs\cfgAirdrops3CB.hpp");
-//r = __EVAL( preprocessFileLineNumbers "configs\cfgZombieLoadouts3CB.hpp");
-
-// Failsafe
-//#ifndef HASRHS
-//	#define HASRHS	false
-//#endif
-
-
-/*
-#if __has_include("\rhsusf\addons\rhsusf_main\config.bin")
-#else
-	class lost_hope_airdrops
-	{
-		#include "configs\cfgAirdrops.hpp"
-	};
-#endif
-*/
 
 respawnOnStart = -1;
