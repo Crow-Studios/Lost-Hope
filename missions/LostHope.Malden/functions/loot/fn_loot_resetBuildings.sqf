@@ -21,9 +21,9 @@ _markerTime = [_time, _unit] spawn {
 
         {
             if (_x distance _unit <= 800) then {
-                _x setVariable ["canDelete", false];
+                _x setVariable ["canDelete", false, true];
             } else {
-                _x setVariable ["canDelete", true];
+                _x setVariable ["canDelete", true, true];
             };
 
             if ( (_x getVariable "canDelete") ) then {

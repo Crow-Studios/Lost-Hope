@@ -30,7 +30,7 @@ if (sunOrMoon != 1) then {
     selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, zombieGroup, "unit = this"];
     unit setVariable ["isZombie", true];
     unit setVariable ["isMutant", false];
-    unit setVariable ["canDelete", false];
+    unit setVariable ["canDelete", false, true];
     unit setVariable ["zombieType", _name];
 } else {
 
@@ -58,7 +58,7 @@ if (sunOrMoon != 1) then {
 
     unit setVariable ["isZombie", true];
     unit setVariable ["zombieType", _name];
-    unit setVariable ["canDelete", false];
+    unit setVariable ["canDelete", false, true];
 
     [unit, _path, _group, _loadout, _type] call lost_hope_fnc_setLoadout;
 

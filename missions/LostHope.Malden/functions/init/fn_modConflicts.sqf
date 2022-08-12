@@ -8,8 +8,6 @@ private _RHS = ( (_modsLoaded) select 1 );
 
 private _ACE = ( (_modsLoaded) select 2 );
 
-private _3CB = false;
-
 if (_3CB) then {diag_log "MOD CONFLICTS: 3CB LOADED, NO ISSUES"};
 
 if (_3CB && _RHS) exitWith {

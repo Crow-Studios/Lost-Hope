@@ -64,9 +64,9 @@ class RscTitles
 	#define HAS3CB	false
 #endif
 
-#define HAS3CB	false
-#define HASRHS	false
-#undef VANILLA
+//#define HAS3CB	false
+//#define HASRHS	false
+//#undef VANILLA
 
 class lost_hope_loadouts_zombie
 {

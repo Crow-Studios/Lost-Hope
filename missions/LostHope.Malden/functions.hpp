@@ -28,6 +28,7 @@ class lost_hope
 		class resetMarkerTime {};
 		class inMarker {};
 		class getMarkers {};
+		class traderSetup {};
 	};
 
 	class spawn {

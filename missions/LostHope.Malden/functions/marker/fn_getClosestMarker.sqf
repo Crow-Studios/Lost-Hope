@@ -79,19 +79,6 @@ locations = call lost_hope_fnc_getMarkers;
 			if ("safezone_1" == _x && ([_unit, 300, _x] call lost_hope_fnc_getMarkerDistance)) then {
 				//["Location Nearby!", "You are near Safezone_1", "info", 5] call lost_hope_fnc_notificationHint;
 			};
-
-			if ("trader" in _x && ([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
-				["Location Nearby!", "You are near a Trader", "info", 10] call lost_hope_fnc_notificationHint;
-				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];
-				diag_log format["%1 has been triggered by %2", _x, _unit];
-			};
-			*/
-
-			/*
-			if ("trader" in _x && !([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance)) then {
-				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
-				diag_log format["%1 has been reset", _x];
-			};
 			*/
 
 		};
@@ -99,6 +86,25 @@ locations = call lost_hope_fnc_getMarkers;
 		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) ) then {
 			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
 			diag_log format["%1 has been reset", _x];
+		};
+
+		if ( "trader" in _x && ([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance) && (_markerVar) ) exitWith {
+			["Location Nearby!", "You are near a Trader", "info", 10] call lost_hope_fnc_notificationHint;
+			[_x, "lost_hope_zombie_vanilla_military"] call lost_hope_fnc_traderSetup;
+			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];
+			diag_log format["Trader: %1 has been triggered by %2", _x, _unit];
+		};
+
+		if ( "trader" in _x && !([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) ) then {
+			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true];
+			diag_log format["Trader: %1 has been reset", _x];
+			private _marker = _x;
+			{
+				if (_x inArea _marker) then {
+					deleteVehicle _x;
+					diag_log format ["Unit %1 was deleted at %2", _x, _marker];
+				};
+			} forEach allUnits;
 		};
 
 	};

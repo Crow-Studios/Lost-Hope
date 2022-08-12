@@ -31,12 +31,15 @@ private _randomPos = [[[getPosATL _unit, _maxRange]], [ "water", [getPosATL _uni
 
 _aircraft = "C_Plane_Civil_01_racing_F" createVehicle _randomPos;
 _aircraft setPosATL [getPosATL _aircraft select 0, getPosATL _aircraft select 1, (getPosATL _aircraft select 2) + 1500];
+_flare = createVehicle ["lost_hope_ammo_flare_1", getPosATL _unit];
+_flarePos = getPosATL _flare;
 _grp = createGroup civilian;
-"B_RangeMaster_F" createUnit [getPosATL _aircraft, _grp,"pilot = this"];
+"B_RangeMaster_F" createUnit [getPosATL _aircraft,_grp,"pilot = this"];
 pilot moveInDriver _aircraft;
 
 //DO NOT CHANGE THESE OR I WILL ~BLEEP~
 _aircraft allowDamage false;
+_flare allowDamage false;
 pilot allowDamage false;
 
 //Hints
@@ -57,10 +60,10 @@ _aircraftstr setMarkerText "Airdrop Plane";
 missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,true];
 
 //Main Method
-[_aircraft, _airdropDistance_text, _airdrop_picture, _unit] spawn {
-	params ["_aircraft", "_text", "_airdrop_picture", "_unit"];
+[_aircraft, _airdropDistance_text, _airdrop_picture, _unit, _flare, _flarePos] spawn {
+	params ["_aircraft", "_text", "_airdrop_picture", "_unit", "_flare", "_flarePos"];
 	while {true} do {
-		meters = _aircraft distance2D _unit;
+		meters = _aircraft distance2D _flarePos;
 		"aircraft" setMarkerPos getPosATL _aircraft;
 		_text ctrlSetStructuredText parseText format ["The pilot is <t color='#ff0000'>%1</t> meters away from you.", round(meters)];
 
@@ -79,19 +82,10 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 			deleteMarker "aircraft";
 		};
 		
-		/*
-		if (meters >= 100) exitWith {
-			["Airdrop", "The package drop has been cancelled, the flare has burnt out!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"]; 
-			deleteMarker "aircraft";
-			_text ctrlSetStructuredText parseText format ["The package has been aborted."]; 
-			_airdrop_picture ctrlSetText "UI\pictures\Airdrop\airdrop.paa";
-			_airdrop_picture ctrlSetTextColor [1, 0, 0, 1];
-			deleteVehicle _aircraft;
-			deleteVehicle pilot;
+		if ( meters >= 10 && !(alive _flare) ) then {
+			_flare = createVehicle ["lost_hope_ammo_flare_1", _flarePos];
+			_flare allowDamage false;
 		};
-		*/
-
-		// Add flare gun model/object, base off of that, in meantime if the player isn't close to dropsite hint notifcation that it was cancelled and delete the plane as normal
 
 		sleep .1;
 
@@ -116,7 +110,7 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 	waitUntil {getPosATL _crate select 2 < 100};
 	_para = createVehicle ["B_Parachute_02_F", getPosATL _crate];
 	_crate attachTo [_para,[0,0,0]];
-	_smoke = createVehicle ["SmokeShellRed", getPosATL _crate];
+	_smoke = createVehicle ["lost_hope_ammo_flare_1", getPosATL _crate];
 	_smoke attachTo [_crate,[0,0,0]];
 	_lootType = selectRandom ["lost_hope_airdrop_weapons", "lost_hope_airdrop_supplies", "lost_hope_airdrop_clothing", "lost_hope_airdrop_mixed"];
 
@@ -198,7 +192,7 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 	*/
 
 	deleteVehicle _smoke;
-	_smoke = createVehicle ["SmokeShellBlue", getPosATL _crate];
+	_smoke = createVehicle ["lost_hope_ammo_flare_2", getPosATL _crate];
 	_smoke attachTo [_crate,[0,0,0]];
 
 	uiSleep 10;

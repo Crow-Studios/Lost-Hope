@@ -22,12 +22,12 @@ _zombieTime = [_time, _unit] spawn {
         // Zombie
         {
             if (_x distance _unit <= 800) then {
-                _x setVariable ["canDelete", false];
+                _x setVariable ["canDelete", false, true];
             } else {
-                _x setVariable ["canDelete", true];
+                _x setVariable ["canDelete", true, true];
             };
 
-            if ( (_x getVariable "canDelete") ) then {
+            if ( (_x getVariable "canDelete") || ( "trader" in ([_x] call lost_hope_fnc_returnClosestMarker) ) ) then {
                 deleteVehicle _x;
             };
         } forEach units zombieGroup;
@@ -35,9 +35,9 @@ _zombieTime = [_time, _unit] spawn {
         // Hivemind
         {
             if (_x distance _unit <= 800) then {
-                _x setVariable ["canDelete", false];
+                _x setVariable ["canDelete", false, true];
             } else {
-                _x setVariable ["canDelete", true];
+                _x setVariable ["canDelete", true, true];
             };
 
             if ( (_x getVariable "canDelete") ) then {
@@ -48,9 +48,9 @@ _zombieTime = [_time, _unit] spawn {
         // Dead Bodies
         { 
             if (_x distance _unit <= 800) then {
-                _x setVariable ["canDelete", false];
+                _x setVariable ["canDelete", false, true];
             } else {
-                _x setVariable ["canDelete", true];
+                _x setVariable ["canDelete", true, true];
             };
 
             if ( (_x getVariable "canDelete") && !(isPlayer [_x]) ) then {

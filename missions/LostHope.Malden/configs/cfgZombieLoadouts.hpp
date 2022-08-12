@@ -168,7 +168,7 @@
 		class lost_hope_zombie_military_private
 		{
 			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
-			secondary[] = {""};
+			secondary[] = {"hgun_ACPC2_F"};
 			uniform[] = {"U_B_CombatUniform_mcam", "U_B_CTRG_3", "U_B_CombatUniform_mcam_tshirt"};
 			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrierL_CTRG", "V_CarrierRigKBT_01_heavy_Olive_F"};
 			backpack[] = {"B_TacticalPack_mcamo"};
@@ -182,7 +182,7 @@
 			watch = "ItemWatch";
 			chance = 0.5;
 			type = 5;
-			armed = 0;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_sergeant_triggerman
 		{
@@ -205,7 +205,7 @@
 		};
 		class lost_hope_zombie_military_sergeant
 		{
-			primary[] = {""};
+			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
 			secondary[] = {"dev_weapon_scanner"};
 			uniform[] = {"U_B_GhillieSuit", "U_B_CTRG_1", "U_I_OfficerUniform"};
 			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
@@ -220,12 +220,12 @@
 			watch = "ItemWatch";
 			chance = 0.9;
 			type = 6;
-			armed = 0;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_pilot
 		{
-			primary[] = {""};
-			secondary[] = {""};
+			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
+			secondary[] = {"hgun_ACPC2_F"};
 			uniform[] = {"U_B_PilotCoveralls", "U_I_pilotCoveralls", "U_B_HeliPilotCoveralls"};
 			vest[] = {""};
 			backpack[] = {""};
@@ -239,7 +239,7 @@
 			watch = "ItemWatch";
 			chance = 1;
 			type = 1;
-			armed = 0;
+			armed = 1;
 		};
 	};
 	// Military Science

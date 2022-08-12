@@ -18,7 +18,7 @@ _startEventScript = [_time, _trader, _type] spawn {
             if (traderEvent isEqualTo grpNull) then {
                 traderEvent = createGroup [EAST, true];
             };
-            for "_i" from 0 to (random [25, 35, 45]) do {
+            for "_i" from 0 to (random [30, 40, 50]) do {
 
                 private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie") call BIS_fnc_getCfgSubClasses );
                 private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
@@ -32,11 +32,12 @@ _startEventScript = [_time, _trader, _type] spawn {
                 [unit] join traderEvent;
 
                 unit setVariable ["isZombie", true];
-                unit setVariable ["canDelete", false];
+                unit setVariable ["canDelete", false, true];
 
                 uiSleep 0.2;
 
             };
+            /*
             for "_i" from 0 to 3 do
             {
                 private _pos = [getMarkerPos _trader, 20, 60, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
@@ -48,6 +49,7 @@ _startEventScript = [_time, _trader, _type] spawn {
 
                 unit doMove getMarkerPos _trader;
             };
+            */
             waitUntil {count units traderEvent >= 10};
             [player] spawn lost_hope_fnc_hasEventFinished;
             [_time, _trader] call lost_hope_fnc_canCancelEvent;

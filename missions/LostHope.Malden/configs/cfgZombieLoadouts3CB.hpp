@@ -182,7 +182,7 @@
 			watch = "ItemWatch";
 			chance = 0.5;
 			type = 5;
-			armed = 0;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_sergeant_triggerman
 		{
@@ -220,12 +220,12 @@
 			watch = "ItemWatch";
 			chance = 0.9;
 			type = 5;
-			armed = 0;
+			armed = 1;
 		};
 		class lost_hope_zombie_military_pilot
 		{
-			primary[] = {""};
-			secondary[] = {""};
+			primary[] = {"UK3CB_BAF_L119A1_RIS", "UK3CB_BAF_L85A2_EMAG"};
+			secondary[] = {"hlc_pistol_P239_357"};
 			uniform[] = {"UK3CB_BAF_U_HeliPilotCoveralls_Army", "UK3CB_BAF_U_HeliPilotCoveralls_RAF", "UK3CB_BAF_U_HeliPilotCoveralls_RN"};
 			vest[] = {"UK3CB_BAF_V_Osprey_HiVis"};
 			backpack[] = {""};
@@ -239,7 +239,7 @@
 			watch = "ItemWatch";
 			chance = 1;
 			type = 1;
-			armed = 0;
+			armed = 1;
 		};
 	};
 	// Military Science

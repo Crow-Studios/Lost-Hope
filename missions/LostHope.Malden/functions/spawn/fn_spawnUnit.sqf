@@ -14,7 +14,7 @@
 *   ["C_man_polo_1_F", getPosATL player, "lost_hope_vanilla_police", "lost_hope_police_CBRN", EAST, false] call lost_hope_fnc_spawnUnit;
 *   ["C_man_polo_1_F", getPosATL player, "lost_hope_vanilla_civilians", "lost_hope_melee", EAST, true] call lost_hope_fnc_spawnUnit;
 *
-*	Return Value: None
+*	Return Value: Unit
 */
 
 params ["_classname", "_position", "_group", "_loadout", "_side", "_isMelee"];
@@ -27,3 +27,5 @@ if (_isMelee) then {_classname = "B_soldier_Melee_RUSH"};
 _classname createUnit [_position, _grp, "unit = this"];
 
 [unit, _path, _group, _loadout, 6] call lost_hope_fnc_setLoadout;
+
+unit
