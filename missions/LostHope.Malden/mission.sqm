@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=740;
+		nextID=748;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=765;
+		nextID=775;
 	};
 	class Camera
 	{
-		pos[]={1055.1552,141.70229,11993.682};
-		dir[]={-0.65236223,-0.48413569,-0.58313346};
-		up[]={-0.36095354,0.87498969,-0.32264963};
-		aside[]={-0.66644186,4.5634806e-008,0.74556154};
+		pos[]={1036.526,18.509506,648.70154};
+		dir[]={0.64658964,-0.13547736,0.75076538};
+		up[]={0.088444158,0.99076629,0.10269288};
+		aside[]={0.75774735,-1.2822566e-006,-0.6526053};
 	};
 };
 binarizationWanted=0;
@@ -57,7 +57,6 @@ addons[]=
 	"A3_Structures_F_Training",
 	"A3_Structures_F_Exp_Industrial_Port",
 	"A3_Structures_F_Ind_Cargo",
-	"ace_cargo",
 	"A3_Boat_F_Gamma_Boat_Civil_04",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -69,25 +68,24 @@ addons[]=
 	"A3_Structures_F_Furniture",
 	"A3_Props_F_Exp_Commercial_Market",
 	"A3_Structures_F_EPB_Civ_Garbage",
-	"ace_dragging",
 	"A3_Structures_F_Civ_Constructions",
 	"A3_Structures_F_Civ_Camping",
 	"A3_Weapons_F_Exp",
 	"A3_Weapons_F_Enoch",
 	"A3_Weapons_F_Mark",
-	"ace_realisticnames",
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Structures_F_Ind_SolarPowerPlant",
 	"A3_Structures_F_Enoch_Military_Barracks",
 	"A3_Misc_F_Helpers",
 	"A3_Structures_F_Argo_Military_Fortifications",
-	"A3_Structures_F_Enoch_Industrial_Sawmills"
+	"A3_Structures_F_Enoch_Industrial_Sawmills",
+	"A3_Characters_F_AoW"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=34;
+		items=33;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -212,113 +210,106 @@ class AddonsMetaData
 		};
 		class Item18
 		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item19
-		{
 			className="A3_Boat_F_Gamma";
 			name="Arma 3 - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item19
 		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item20
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item21
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item22
 		{
 			className="A3_Soft_F_Orange";
 			name="Arma 3 Orange - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Supplies_F_Enoch";
 			name="Arma 3 Contact Platform - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item24
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
-		{
-			className="ace_dragging";
-			name="ACE3 - Dragging";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item27
+		class Item25
 		{
 			className="A3_Weapons_F_Exp";
 			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item26
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item27
 		{
 			className="A3_Weapons_F_Mark";
 			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item28
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item29
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item32
+		class Item30
 		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item33
+		class Item31
 		{
 			className="A3_Structures_F_Enoch_Industrial";
 			name="Arma 3 Contact Platform - Industrial Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item32
+		{
+			className="A3_Characters_F_AoW";
+			name="Arma 3 Art of War - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -366,7 +357,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="SCALAR";
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
 					value=6;
 				};
 			};
@@ -379,7 +376,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="SCALAR";
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
 					value=20;
 				};
 			};
@@ -392,7 +395,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="SCALAR";
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
 					value=3;
 				};
 			};
@@ -405,7 +414,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="ARRAY";
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 					class value
 					{
 						items=1;
@@ -413,7 +428,13 @@ class CustomAttributes
 						{
 							class data
 							{
-								singleType="STRING";
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
 								value="Counter";
 							};
 						};
@@ -429,7 +450,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="SCALAR";
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
 					value=1;
 				};
 			};
@@ -447,7 +474,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="ARRAY";
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 					class value
 					{
 						items=4;
@@ -455,7 +488,13 @@ class CustomAttributes
 						{
 							class data
 							{
-								singleType="STRING";
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
 								value="#CBA_HASH#";
 							};
 						};
@@ -463,7 +502,13 @@ class CustomAttributes
 						{
 							class data
 							{
-								singleType="ARRAY";
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
 								class value
 								{
 									items=41;
@@ -471,7 +516,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="wbk_zombiesisusestatdeathcontrol";
 										};
 									};
@@ -479,7 +530,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="wbk_zombiesisuseparticledeathcontrol";
 										};
 									};
@@ -487,7 +544,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="wbk_zombiesisusebitinganimation";
 										};
 									};
@@ -495,7 +558,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_infection_totaltime";
 										};
 									};
@@ -503,7 +572,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_infection_resurrecttime";
 										};
 									};
@@ -511,7 +586,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_infection_resurrectparasitechance";
 										};
 									};
@@ -519,7 +600,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_infection_resurrectwebknight";
 										};
 									};
@@ -527,7 +614,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="zen_common_autoaddobjects";
 										};
 									};
@@ -535,7 +628,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="zen_common_disablegearanim";
 										};
 									};
@@ -543,7 +642,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="zen_editor_disablelivesearch";
 										};
 									};
@@ -551,7 +656,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_damagemultiplier";
 										};
 									};
@@ -559,7 +670,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_useglasses";
 										};
 									};
@@ -567,7 +684,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="ims_wbk_customcamserver";
 										};
 									};
@@ -575,7 +698,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="ims_rifledodgeset";
 										};
 									};
@@ -583,7 +712,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="ims_bluntweapon";
 										};
 									};
@@ -591,7 +726,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="ims_bayonetonai";
 										};
 									};
@@ -599,7 +740,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="ims_isimscanhitallies";
 										};
 									};
@@ -607,7 +754,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_killswitch";
 										};
 									};
@@ -615,7 +768,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_friendly";
 										};
 									};
@@ -623,7 +782,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_friendlyside";
 										};
 									};
@@ -631,7 +796,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_deleteweapon";
 										};
 									};
@@ -639,7 +810,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_infection";
 										};
 									};
@@ -647,7 +824,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_cba_infection_resurrectzombie";
 										};
 									};
@@ -655,7 +838,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_distance_max";
 										};
 									};
@@ -663,7 +852,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_distance_hunt";
 										};
 									};
@@ -671,7 +866,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_distance_agro";
 										};
 									};
@@ -679,7 +880,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_distance_roam";
 										};
 									};
@@ -687,7 +894,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_attack_reachman";
 										};
 									};
@@ -695,7 +908,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_attack_damagemn";
 										};
 									};
@@ -703,7 +922,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_attack_reachveh";
 										};
 									};
@@ -711,7 +936,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_attack_damageveh";
 										};
 									};
@@ -719,7 +950,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_attack_launchveh";
 										};
 									};
@@ -727,7 +964,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_attack_timeout";
 										};
 									};
@@ -735,7 +978,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_infectionchance";
 										};
 									};
@@ -743,7 +992,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_head_caliber";
 										};
 									};
@@ -751,7 +1006,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_head_chance";
 										};
 									};
@@ -759,7 +1020,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_uniformfix";
 										};
 									};
@@ -767,7 +1034,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_useidentity";
 										};
 									};
@@ -775,7 +1048,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_greeneyes";
 										};
 									};
@@ -783,7 +1062,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_zombie_health";
 										};
 									};
@@ -791,7 +1076,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="STRING";
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
 											value="dev_hivemind_health";
 										};
 									};
@@ -802,7 +1093,13 @@ class CustomAttributes
 						{
 							class data
 							{
-								singleType="ARRAY";
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
 								class value
 								{
 									items=41;
@@ -810,7 +1107,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -818,7 +1121,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -826,7 +1135,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -837,7 +1152,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -845,7 +1166,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -853,7 +1180,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -864,7 +1197,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -872,7 +1211,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -880,7 +1225,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -891,7 +1242,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -899,7 +1256,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=60;
 													};
 												};
@@ -907,7 +1270,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -918,7 +1287,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -926,7 +1301,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="STRING";
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
 														value="[5,10,15]";
 													};
 												};
@@ -934,7 +1315,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -945,7 +1332,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -953,7 +1346,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=0;
 													};
 												};
@@ -961,7 +1360,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -972,7 +1377,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -980,7 +1391,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -988,7 +1405,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -999,7 +1422,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1007,7 +1436,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1015,7 +1450,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1026,7 +1467,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1034,7 +1481,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1042,7 +1495,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1053,7 +1512,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1061,7 +1526,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1069,7 +1540,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1080,7 +1557,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1088,7 +1571,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=2;
 													};
 												};
@@ -1096,7 +1585,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1107,7 +1602,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1115,7 +1616,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1123,7 +1630,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1134,7 +1647,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1142,7 +1661,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1150,7 +1675,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1161,7 +1692,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1169,7 +1706,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -1177,7 +1720,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1188,7 +1737,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1196,7 +1751,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -1204,7 +1765,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1215,7 +1782,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1223,7 +1796,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1231,7 +1810,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1242,7 +1827,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1250,7 +1841,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -1258,7 +1855,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1269,7 +1872,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1277,7 +1886,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -1285,7 +1900,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1296,7 +1917,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1304,7 +1931,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="STRING";
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
 														value="[""HeadlessClient_F"", ""VirtualCurator_F"", ""B_VirtualCurator_F"", ""O_VirtualCurator_F"", ""I_VirtualCurator_F"", ""C_VirtualCurator_F""]";
 													};
 												};
@@ -1312,7 +1945,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1323,7 +1962,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1331,7 +1976,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -1339,7 +1990,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1350,7 +2007,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1358,7 +2021,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1366,7 +2035,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1377,7 +2052,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1385,7 +2066,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1393,7 +2080,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1404,7 +2097,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1412,7 +2111,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=0;
 													};
 												};
@@ -1420,7 +2125,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1431,7 +2142,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1439,7 +2156,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=500;
 													};
 												};
@@ -1447,7 +2170,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1458,7 +2187,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1466,7 +2201,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=100;
 													};
 												};
@@ -1474,7 +2215,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1485,7 +2232,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1493,7 +2246,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=50;
 													};
 												};
@@ -1501,7 +2260,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1512,7 +2277,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1520,7 +2291,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=75;
 													};
 												};
@@ -1528,7 +2305,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1539,7 +2322,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1547,7 +2336,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=3.5;
 													};
 												};
@@ -1555,7 +2350,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1566,7 +2367,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1574,7 +2381,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=0.5;
 													};
 												};
@@ -1582,7 +2395,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1593,7 +2412,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1601,7 +2426,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=8;
 													};
 												};
@@ -1609,7 +2440,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1620,7 +2457,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1628,7 +2471,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=0.001;
 													};
 												};
@@ -1636,7 +2485,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1647,7 +2502,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1655,7 +2516,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="STRING";
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
 														value="[0,1,1]";
 													};
 												};
@@ -1663,7 +2530,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1674,7 +2547,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1682,7 +2561,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=0.5;
 													};
 												};
@@ -1690,7 +2575,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1701,7 +2592,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1709,7 +2606,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=0.90397525;
 													};
 												};
@@ -1717,7 +2620,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1728,7 +2637,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1736,7 +2651,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=9;
 													};
 												};
@@ -1744,7 +2665,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1755,7 +2682,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1763,7 +2696,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1771,7 +2710,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1782,7 +2727,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1790,7 +2741,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1798,7 +2755,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1809,7 +2772,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1817,7 +2786,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1825,7 +2800,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1836,7 +2817,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1844,7 +2831,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="BOOL";
+														class type
+														{
+															type[]=
+															{
+																"BOOL"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1852,7 +2845,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1863,7 +2862,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1871,7 +2876,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=2;
 													};
 												};
@@ -1879,7 +2890,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1890,7 +2907,13 @@ class CustomAttributes
 									{
 										class data
 										{
-											singleType="ARRAY";
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
 											class value
 											{
 												items=2;
@@ -1898,7 +2921,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=0.5;
 													};
 												};
@@ -1906,7 +2935,13 @@ class CustomAttributes
 												{
 													class data
 													{
-														singleType="SCALAR";
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
 														value=1;
 													};
 												};
@@ -1921,7 +2956,13 @@ class CustomAttributes
 							class data
 							{
 								nil=1;
-								singleType="ANY";
+								class type
+								{
+									type[]=
+									{
+										"ANY"
+									};
+								};
 							};
 						};
 					};
@@ -1936,7 +2977,13 @@ class CustomAttributes
 			{
 				class data
 				{
-					singleType="SCALAR";
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
 					value=1;
 				};
 			};
@@ -1978,7 +3025,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=77;
+		items=80;
 		class Item0
 		{
 			dataType="Object";
@@ -2007,7 +3054,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2107,7 +3160,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2140,7 +3199,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2153,7 +3218,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=1;
 						};
 					};
@@ -2166,7 +3237,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=1;
 						};
 					};
@@ -2238,7 +3315,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
@@ -2251,7 +3334,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2345,7 +3434,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="#adminLogged";
 						};
 					};
@@ -2358,7 +3453,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2371,7 +3472,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="";
 						};
 					};
@@ -2384,7 +3491,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=3;
 						};
 					};
@@ -2412,7 +3525,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="";
 						};
 					};
@@ -2425,7 +3544,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=7;
 						};
 					};
@@ -2438,7 +3563,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="";
 						};
 					};
@@ -2451,7 +3582,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=5;
 						};
 					};
@@ -2464,7 +3601,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=1;
 						};
 					};
@@ -2477,7 +3620,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
 							class value
 							{
 								items=3;
@@ -2485,7 +3634,13 @@ class Mission
 								{
 									class data
 									{
-										singleType="SCALAR";
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
 										value=0;
 									};
 								};
@@ -2493,7 +3648,13 @@ class Mission
 								{
 									class data
 									{
-										singleType="SCALAR";
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
 										value=0;
 									};
 								};
@@ -2501,7 +3662,13 @@ class Mission
 								{
 									class data
 									{
-										singleType="SCALAR";
+										class type
+										{
+											type[]=
+											{
+												"SCALAR"
+											};
+										};
 										value=0;
 									};
 								};
@@ -2517,7 +3684,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="";
 						};
 					};
@@ -2553,7 +3726,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2589,7 +3768,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2622,7 +3807,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2655,7 +3846,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2689,7 +3886,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2722,7 +3925,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2757,7 +3966,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2792,7 +4007,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2826,7 +4047,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2861,7 +4088,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -2897,7 +4130,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -3490,7 +4729,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=2;
 						};
 					};
@@ -3536,7 +4781,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="STRING";
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
 									value="Male07ENG";
 								};
 							};
@@ -3549,7 +4800,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="SCALAR";
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
 									value=0.97000003;
 								};
 							};
@@ -3588,7 +4845,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="STRING";
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
 									value="Male06ENG";
 								};
 							};
@@ -3601,7 +4864,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="SCALAR";
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
 									value=1.05;
 								};
 							};
@@ -3641,7 +4910,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="STRING";
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
 									value="Male07ENG";
 								};
 							};
@@ -3654,7 +4929,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="SCALAR";
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
 									value=0.97000003;
 								};
 							};
@@ -3715,7 +4996,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="STRING";
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
 									value="Male07ENG";
 								};
 							};
@@ -3728,7 +5015,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="SCALAR";
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
 									value=1;
 								};
 							};
@@ -3818,7 +5111,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="Survivor Group 1@Stronghold";
 						};
 					};
@@ -4140,7 +5439,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -4172,7 +5477,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="SCALAR";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
 							value=8;
 						};
 					};
@@ -4185,7 +5496,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -4219,7 +5536,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -4253,7 +5576,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -4287,7 +5616,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -4321,7 +5656,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -4363,7 +5704,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4398,7 +5745,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4433,7 +5786,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4468,7 +5827,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4503,7 +5868,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4538,7 +5909,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4573,7 +5950,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4608,7 +5991,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4675,7 +6064,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4710,7 +6105,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4745,7 +6146,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4780,7 +6187,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="STRING";
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
 									value="[[[[""launch_RPG32_F"",""arifle_Katiba_F"",""LMG_Zafir_F""],[1,2,1]],[[""16Rnd_9x21_Mag"",""30Rnd_65x39_caseless_green"",""10Rnd_762x54_Mag"",""150Rnd_762x54_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""Chemlight_red"",""RPG32_F"",""RPG32_HE_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellRed"",""UGL_FlareYellow_F"",""UGL_FlareRed_F"",""30Rnd_9x21_Mag_SMG_02""],[6,24,12,4,6,2,2,6,3,1,2,6,6,2,2,2,2,6]],[[""Laserdesignator_02"",""FirstAidKit"",""acc_flashlight"",""bipod_02_F_blk""],[1,10,2,1]],[[""B_FieldPack_ocamo""],[2]]],false]";
 								};
 							};
@@ -4793,7 +6206,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4828,7 +6247,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4864,7 +6289,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4899,7 +6330,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4934,7 +6371,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -4969,7 +6412,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5004,7 +6453,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5039,7 +6494,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5074,7 +6535,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5109,7 +6576,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5144,7 +6617,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5179,7 +6658,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5214,7 +6699,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5248,7 +6739,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5284,7 +6781,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5319,7 +6822,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5355,7 +6864,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5390,7 +6905,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5424,7 +6945,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5459,7 +6986,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5493,7 +7026,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5527,7 +7066,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5561,7 +7106,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5595,7 +7146,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5630,7 +7187,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5664,7 +7227,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5698,7 +7267,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5732,7 +7307,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5766,7 +7347,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5799,7 +7386,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5832,7 +7425,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5866,7 +7465,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5900,7 +7505,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5934,7 +7545,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -5968,7 +7585,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6002,7 +7625,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6036,7 +7665,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6071,7 +7706,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6105,7 +7746,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6139,7 +7786,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6173,7 +7826,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6207,7 +7866,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6241,7 +7906,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6275,7 +7946,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6310,7 +7987,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6344,7 +8027,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6379,7 +8068,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6414,7 +8109,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6449,7 +8150,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6483,7 +8190,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6518,7 +8231,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6552,7 +8271,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6587,7 +8312,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6621,7 +8352,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6656,7 +8393,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6690,7 +8433,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6725,7 +8474,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6759,7 +8514,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6794,7 +8555,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6829,7 +8596,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6864,7 +8637,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6899,7 +8678,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6934,7 +8719,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -6968,7 +8759,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7002,7 +8799,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7036,7 +8839,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7070,7 +8879,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7104,7 +8919,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7138,7 +8959,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7172,7 +8999,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7206,7 +9039,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7240,7 +9079,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7274,7 +9119,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7309,7 +9160,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7344,7 +9201,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7379,7 +9242,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7413,7 +9282,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7448,7 +9323,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7483,7 +9364,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7518,7 +9405,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7553,7 +9446,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7588,7 +9487,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7622,7 +9527,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7656,7 +9567,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7691,7 +9608,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7726,7 +9649,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7760,7 +9689,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7795,7 +9730,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7830,7 +9771,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7925,7 +9872,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7960,7 +9913,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -7995,7 +9954,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8030,7 +9995,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8065,7 +10036,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8100,7 +10077,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8311,7 +10294,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8324,7 +10313,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8358,7 +10353,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8371,7 +10372,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8385,7 +10392,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5002.4907,76.943657,3931.0027};
-						angles[]={0,3.7303643,-0};
+						angles[]={0,3.7303643,0};
 					};
 					side="Empty";
 					class Attributes
@@ -8405,7 +10412,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8418,7 +10431,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8452,7 +10471,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8465,7 +10490,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8499,7 +10530,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8512,7 +10549,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8526,7 +10569,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4974.1567,74.559006,3934.137};
-						angles[]={0,3.6225154,-0};
+						angles[]={0,3.6225154,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8547,7 +10590,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8560,7 +10609,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8574,7 +10629,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4996.0269,73.76236,3929.6482};
-						angles[]={0,3.701761,-0};
+						angles[]={0,3.701761,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8595,7 +10650,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8608,7 +10669,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8622,7 +10689,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4993.0376,73.780533,3927.3496};
-						angles[]={0,3.701761,-0};
+						angles[]={0,3.701761,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8643,7 +10710,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8656,7 +10729,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8670,7 +10749,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1074.0135,4.9780731,658.82031};
-						angles[]={0,5.3747883,-0};
+						angles[]={0,5.3747883,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8691,7 +10770,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8704,7 +10789,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8718,7 +10809,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1073.3549,5.0376453,657.67383};
-						angles[]={0,5.2838345,-0};
+						angles[]={0,5.2838345,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8739,7 +10830,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8752,7 +10849,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8766,7 +10869,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1011.2739,2.4014549,669.05841};
-						angles[]={0,3.1166475,-0};
+						angles[]={0,3.1166475,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8786,7 +10889,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8799,7 +10908,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8813,7 +10928,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1052.3467,3.2873087,718.87421};
-						angles[]={0,3.5457699,-0};
+						angles[]={0,3.5457699,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8834,7 +10949,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8847,7 +10968,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8861,7 +10988,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1037.0544,22.942978,653.771};
-						angles[]={0,1.550328,-0};
+						angles[]={0,1.550328,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8881,7 +11008,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8894,7 +11027,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8908,7 +11047,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1034.4988,22.942978,653.69849};
-						angles[]={0,4.3123913,-0};
+						angles[]={0,4.3123913,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8928,7 +11067,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8941,7 +11086,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -8955,7 +11106,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1037.1653,22.942982,656.06104};
-						angles[]={0,1.6675844,-0};
+						angles[]={0,1.6675844,0};
 					};
 					side="Empty";
 					flags=4;
@@ -8976,7 +11127,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -8989,7 +11146,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9003,7 +11166,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1077.2692,4.509994,690.83136};
-						angles[]={0,4.1949205,-0};
+						angles[]={0,4.1949205,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9024,7 +11187,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9037,7 +11206,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9051,7 +11226,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4694.0933,389.10327,7399.2642};
-						angles[]={0,3.933902,-0};
+						angles[]={0,3.933902,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9071,7 +11246,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9084,7 +11265,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9098,7 +11285,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4695.2847,389.10327,7398.4399};
-						angles[]={0,3.8189194,-0};
+						angles[]={0,3.8189194,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9118,7 +11305,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9131,7 +11324,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9145,7 +11344,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4700.5234,397.34583,7376.6074};
-						angles[]={0,1.6946268,-0};
+						angles[]={0,1.6946268,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9165,7 +11364,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9178,7 +11383,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9192,7 +11403,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4698.9141,397.34583,7376.4438};
-						angles[]={0,4.8123636,-0};
+						angles[]={0,4.8123636,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9212,7 +11423,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9225,7 +11442,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9239,7 +11462,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4675.3394,392.7099,7374.9316};
-						angles[]={0,5.271657,-0};
+						angles[]={0,5.271657,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9259,7 +11482,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9272,7 +11501,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9286,7 +11521,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4681.6313,392.7099,7376.3789};
-						angles[]={0,0.27495214,-0};
+						angles[]={0,0.27495214,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9306,7 +11541,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9319,7 +11560,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9333,7 +11580,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4650.2178,390.4314,7390.0571};
-						angles[]={0,4.896203,-0};
+						angles[]={0,4.896203,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9353,7 +11600,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9366,7 +11619,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9380,7 +11639,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4652.2603,390.4314,7390.9692};
-						angles[]={0,5.7304802,-0};
+						angles[]={0,5.7304802,0};
 					};
 					side="Empty";
 					flags=4;
@@ -9400,7 +11659,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9413,7 +11678,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=1;
 								};
 							};
@@ -9470,7 +11741,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="STRING";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
 							value="[[[[""FirstAidKit""],[2]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
@@ -9483,7 +11760,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -9524,7 +11807,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9559,7 +11848,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9594,7 +11889,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9628,7 +11929,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9662,7 +11969,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9697,7 +12010,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9731,7 +12050,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9766,7 +12091,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9800,7 +12131,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9834,7 +12171,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9868,7 +12211,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9902,7 +12251,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9937,7 +12292,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -9971,7 +12332,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10005,7 +12372,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10039,7 +12412,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10073,7 +12452,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10107,7 +12492,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10141,7 +12532,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10176,7 +12573,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10211,7 +12614,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10246,7 +12655,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10281,7 +12696,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10316,7 +12737,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10351,7 +12778,13 @@ class Mission
 							{
 								class data
 								{
-									singleType="BOOL";
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
 									value=0;
 								};
 							};
@@ -10420,7 +12853,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -10455,7 +12894,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -10489,7 +12934,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -10522,7 +12973,13 @@ class Mission
 					{
 						class data
 						{
-							singleType="BOOL";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
 							value=0;
 						};
 					};
@@ -10545,6 +13002,289 @@ class Mission
 			id=726;
 			type="Land_Sawmill_01_illuminati_tower_F";
 			atlOffset=-0.32978511;
+		};
+		class Item77
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4661.7871,390.40771,7388.2598};
+						angles[]={0,4.2384448,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAI ""all"";" \n "" \n "this addAction [""Weapon Shop"", {[] call lost_hope_fnc_openShopDialog;}];";
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+					};
+					id=741;
+					type="C_Man_smart_casual_2_F_afro";
+					atlOffset=0.0002746582;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=740;
+			atlOffset=0.0002746582;
+		};
+		class Item78
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5031.3877,72.691444,3958.3579};
+						angles[]={0,3.647881,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAI ""all"";" \n "" \n "this addAction [""Weapon Shop"", {[] call lost_hope_fnc_openShopDialog;}];";
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+					};
+					id=745;
+					type="C_Man_smart_casual_2_F_afro";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=744;
+		};
+		class Item79
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1036.6738,2.2872469,723.47601};
+						angles[]={0,3.3999581,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAI ""all"";" \n "" \n "this addAction [""Weapon Shop"", {[] call lost_hope_fnc_openShopDialog;}];";
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+					};
+					id=747;
+					type="C_Man_smart_casual_2_F_afro";
+					atlOffset=0.12427187;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=746;
+			atlOffset=0.12427187;
 		};
 	};
 };
