@@ -18,6 +18,7 @@ class lost_hope
 		class createCamera {};
 		class screenToBlack {};
 		class modsLoaded {};
+		class getConfig {};
 	};
 
 	class marker {
@@ -74,4 +75,11 @@ class lost_hope
 		class setTaskState {};
 	};
 
+	class weaponShop {
+		class openShopDialog {};
+		class getWeapons {}; 
+		class displaySelectedItem {};
+		class getCategories {};
+		class buyWeapon {};
+	};
 };

@@ -1,5 +1,6 @@
 #include "dialogs\defines.hpp"
 #include "UI\RscMyHUD.hpp"
+#include "UI\shopHud.hpp"
 
 class CfgFunctions
 {
@@ -15,6 +16,11 @@ class lost_hope_locations
 {
 	#include "configs\cfgLocations.hpp"
 };
+
+class lost_hope_shop {
+	#include "configs\cfgWeaponShop.hpp"
+};
+
 
 class RscTitles
 {
