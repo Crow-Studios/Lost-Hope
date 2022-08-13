@@ -11,6 +11,7 @@ class lost_hope
 		class notificationHint {};
 		class playBoatAnimation {};
 		class createCamera {};
+		class getConfig {};
 	};
 
 	class marker {
@@ -38,5 +39,6 @@ class lost_hope
 		class getWeapons {}; 
 		class displaySelectedItem {};
 		class getCategories {};
+		class buyWeapon {};
 	};
 };

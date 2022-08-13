@@ -7,11 +7,11 @@
 *	Return Value: None
 */
 
-
 params ["_unit", "_localPlayerUID"];
 
 _unit setVariable ["lost_hope"+_localPlayerUID+"markerCheck", true];
 _unit setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
+_unit setVariable ["lost_hope"+_localPlayerUID+"playerMoney", 500000];
 
 _unit setVariable ["isZombie", false];
 zombieGroup = grpNull;
@@ -33,3 +33,12 @@ _script = [_localPlayerUID, _unit] spawn {
 [30, _unit] call lost_hope_fnc_resetMarkerTime;
 
 [5, _unit] call lost_hope_fnc_zombieCleanup;
+
+// player addAction ["money", {
+// 	private _unit = player;
+
+// 	private _localPlayerUID = getPlayerUID _unit;
+	
+// 	_ree = _unit getVariable ("lost_hope"+_localPlayerUID+"playerMoney");
+// 	diag_log _ree;
+// }];

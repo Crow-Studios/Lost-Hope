@@ -54,17 +54,17 @@ locations = call lost_hope_fnc_getMarkers;
 			// checks if the player is in the town, and then checks the distance
 			if ( _name in _x && ([_unit, _distance] call lost_hope_fnc_getMarkerDistance) && (_markerVar)) then {
 				// hint the town
-				["Location Nearby!!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
+				// ["Location Nearby!!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
 				[_distance, _groups, getMarkerPos _x, EAST, true, _count] call lost_hope_fnc_markerSetup;
 				missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];
 			};
-			if ("safezone_1" == _x && ([_unit, 75] call lost_hope_fnc_getMarkerDistance)) then {
-				["Location Nearby!!", "You are near Safezone_1", "info", 5 ] call lost_hope_fnc_notificationHint;
-			};
+			// if ("safezone_1" == _x && ([_unit, 75] call lost_hope_fnc_getMarkerDistance)) then {
+			// 	["Location Nearby!!", "You are near Safezone_1", "info", 5 ] call lost_hope_fnc_notificationHint;
+			// };
 
-			if ("safezone_2" == _x && ([_unit, 300] call lost_hope_fnc_getMarkerDistance)) then {
-				["Location Nearby!!", "You are near Safezone_2", "info", 5 ] call lost_hope_fnc_notificationHint;
-			};
+			// if ("safezone_2" == _x && ([_unit, 300] call lost_hope_fnc_getMarkerDistance)) then {
+			// 	// ["Location Nearby!!", "You are near Safezone_2", "info", 5 ] call lost_hope_fnc_notificationHint;
+			// };
 
 		};
 	};

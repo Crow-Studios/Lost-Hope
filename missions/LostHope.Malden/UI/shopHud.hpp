@@ -43,6 +43,7 @@ class gunShop {
 		class buyBtn: RscButton
 		{
 			idc = 1600;
+			onButtonClick = "[] call lost_hope_fnc_buyWeapon";
 
 			text = "Buy"; //--- ToDo: Localize;
 			x = 0.304511 * safezoneW + safezoneX;
@@ -77,7 +78,7 @@ class gunShop {
 			h = 0.022 * safezoneH;
 			colorText[] = {-1,-1,-1,1};
 		};
-		class ItemCaliber: RscStructuredText
+		class ItemPrice: RscStructuredText
 		{
 			idc = 1101;
 
@@ -86,26 +87,6 @@ class gunShop {
 			w = 0.0977446 * safezoneW;
 			h = 0.022 * safezoneH;
 			colorText[] = {-1,-1,-1,1};
-		};
-		class ItemPrice: RscStructuredText
-		{
-			idc = 1102;
-
-			x = 0.489711 * safezoneW + safezoneX;
-			y = 0.731 * safezoneH + safezoneY;
-			w = 0.0977446 * safezoneW;
-			h = 0.022 * safezoneH;
-			colorText[] = {-1,-1,-1,1};
-		};
-		class typeDropdown: RscCombo
-		{
-			idc = 2100;
-			x = 0.304511 * safezoneW + safezoneX;
-			y = 0.225 * safezoneH + safezoneY;
-			w = 0.257223 * safezoneW;
-			h = 0.022 * safezoneH;
-			colorBackground[] = {-1,-1,-1,1};
-			colorActive[] = {-1,-1,-1,1};
 		};
 	};
 };
