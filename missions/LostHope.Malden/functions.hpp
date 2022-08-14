@@ -7,7 +7,9 @@ class lost_hope
 	class init {
 		class spawn_initServer {};
 		class spawn_initPlayerLocal {};
-		class modConflicts {};
+		class spawn_initPlayer {};
+		class spawn_modConflicts {};
+		class spawn_setVariables {};
 	};
 
 	class core {
@@ -38,6 +40,7 @@ class lost_hope
 	};
 
 	class zombie {
+		class ambientZombie {};
 		class convertUnitToZombie {};
 		class spawnZombie {};
 		class spawnHorde {};

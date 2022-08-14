@@ -21,13 +21,13 @@ if (hivemindGroup isEqualTo grpNull) then {
 };
 
 // add another check here
-_classname createUnit [_position, hivemindGroup, "unit = this"];
+_classname createUnit [_position, hivemindGroup, "mutant = this"];
 
-unit setVariable ["isZombie", true];
-unit setVariable ["canDelete", false, true];
-unit setVariable ["isMutant", true];
+mutant setVariable ["isZombie", true];
+mutant setVariable ["canDelete", false, true];
+mutant setVariable ["isMutant", true];
 
-unit addEventHandler ["Killed", {
+mutant addEventHandler ["Killed", {
     params ["_unit", "_killer", "_instigator", "_useEffects"];
     [_unit] spawn {
         params ["_unit"];

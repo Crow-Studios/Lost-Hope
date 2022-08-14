@@ -40,9 +40,9 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
         private _nearestRoad = [_pos, _distance / 2] call BIS_fnc_nearestRoad;
 
         //if ("triggerman" in _loadout) then {};
-        ["C_man_polo_1_F", _pos, _group, _loadout, _side, _name] call lost_hope_fnc_spawnZombie;
+        private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, _side, _name] call lost_hope_fnc_spawnZombie;
 
-        if (_nearestRoad != objNull) then {unit setPosATL getPosATL _nearestRoad};
+        if (_nearestRoad != objNull) then {_zombie setPosATL getPosATL _nearestRoad};
         uiSleep .2;
     };
 

@@ -28,7 +28,7 @@ _cam camSetFocus [50, 1];
 _cam camSetTarget _target;
 
 if (_animated) then {
-    _cam camSetPos [(_posTarget select 0), (_posTarget select 1) + 30, (_posTarget select 2) + _height / 2];
+    _cam camSetPos [(_posTarget select 0), (_posTarget select 1) + 20, (_posTarget select 2) + _height / 2];
 };
 
 _cam camCommit _time;

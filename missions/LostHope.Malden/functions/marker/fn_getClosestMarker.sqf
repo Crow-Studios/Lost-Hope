@@ -4,29 +4,29 @@
 *
 *	Arguments:
 *	0: _unit 		<OBJECT> - Unit you want to run this on
-*	1: _radius		<INTEGER> - 0-1000 (not a hard limit, just general idea)
 *	Return Value: None
 */
 
-params ["_unit", "_radius"];
+params ["_unit"];
 
 private _leader = leader (group _unit);
 
 private _localPlayerUID = getPlayerUID _unit;
 
-private _result = [];
+diag_log "RUNNING GET CLOSEST MARKER";
 
 {
+
 	if (_x distance _leader >= 400) then {
-		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
+		_x setVariable ["lost_hope_continueMarkerScript", true, true];
 	} else {
-		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", false];
-	};
-	if (_x == _leader) then {
-		_x setVariable ["lost_hope"+_localPlayerUID+"continueMarkerScript", true];
+		_x setVariable ["lost_hope_continueMarkerScript", false, true];
 	};
 
-	_result append [name _leader, _x distance _leader];
+	if (_x == _leader) then {
+		_x setVariable ["lost_hope_continueMarkerScript", true, true];
+	};
+
 
 } forEach units group _unit;
 
@@ -35,7 +35,7 @@ _nearby_locations = [];
 locations = call lost_hope_fnc_getMarkers;
 
 {
-	private _continue = _unit getVariable ("lost_hope"+_localPlayerUID+"continueMarkerScript");
+	private _continue = _unit getVariable ("lost_hope_continueMarkerScript");
 	private _markerVar = missionNamespace getVariable [("Lost_Hope_Marker"+_x+"CanRun"), false];
 	for "_i" from 0 to count locations-1 do {
 		private _name = ((locations select _i) select 0);

@@ -27,11 +27,11 @@ if (zombieGroup isEqualTo grpNull) then {
 };
 
 if (sunOrMoon != 1) then {
-    selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, zombieGroup, "unit = this"];
-    unit setVariable ["isZombie", true];
-    unit setVariable ["isMutant", false];
-    unit setVariable ["canDelete", false, true];
-    unit setVariable ["zombieType", _name];
+    selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, zombieGroup, "zombie = this"];
+    zombie setVariable ["isZombie", true];
+    zombie setVariable ["isMutant", false];
+    zombie setVariable ["canDelete", false, true];
+    zombie setVariable ["zombieType", _name];
 } else {
 
     switch (_name) do
@@ -44,29 +44,29 @@ if (sunOrMoon != 1) then {
         case "science": {_type = selectRandom [4,5,6]};
     };
 
-    _classname createUnit [_position, zombieGroup, "unit = this"];
+    _classname createUnit [_position, zombieGroup, "zombie = this"];
 
     /*
-    unit disableAI "AUTOTARGET";
-    unit disableAI "TARGET";
-    unit disableAI "FSM";
+    zombie disableAI "AUTOTARGET";
+    zombie disableAI "TARGET";
+    zombie disableAI "FSM";
 
-    unit setSkill ["spotTime", 0.1];
+    zombie setSkill ["spotTime", 0.1];
 
-    unit setUnitCombatMode "BLUE";
+    zombie setUnitCombatMode "BLUE";
     */
 
-    unit setVariable ["isZombie", true];
-    unit setVariable ["zombieType", _name];
-    unit setVariable ["canDelete", false, true];
+    zombie setVariable ["isZombie", true];
+    zombie setVariable ["zombieType", _name];
+    zombie setVariable ["canDelete", false, true];
 
-    [unit, _path, _group, _loadout, _type] call lost_hope_fnc_setLoadout;
+    [zombie, _path, _group, _loadout, _type] call lost_hope_fnc_setLoadout;
 
     if (_classname == "dev_module_sfx_zombies") then {} else {
-        [unit, _type] spawn lost_hope_fnc_convertUnitToZombie;
+        [zombie, _type] spawn lost_hope_fnc_convertUnitToZombie;
     };
     
-    unit addEventHandler ["Killed", {
+    zombie addEventHandler ["Killed", {
         params ["_unit", "_killer", "_instigator", "_useEffects"];
         [_unit] spawn {
             params ["_unit"];
@@ -75,3 +75,5 @@ if (sunOrMoon != 1) then {
     }];
 
 };
+
+zombie

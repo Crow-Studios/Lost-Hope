@@ -25,14 +25,14 @@ _startEventScript = [_time, _trader, _type] spawn {
 
                 private _pos = [getMarkerPos _trader, 10, 30, 3, 0, 20, 0] call BIS_fnc_findSafePos;
 
-                ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
+                private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
 
-                unit setPos _pos;
+                _zombie setPos _pos;
 
-                [unit] join traderEvent;
+                [_zombie] join traderEvent;
 
-                unit setVariable ["isZombie", true];
-                unit setVariable ["canDelete", false, true];
+                _zombie setVariable ["isZombie", true];
+                _zombie setVariable ["canDelete", false, true];
 
                 uiSleep 0.2;
 
