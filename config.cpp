@@ -25,6 +25,42 @@ class CfgMarkerClasses
 	};
 };
 
+class CfgFunctions
+{
+	class lost_hope_mod
+	{
+		class functions
+		{
+            class client_addItemActions
+            {
+                file = "Lost_Hope\functions\fn_client_addItemActions.sqf";
+            };
+            class client_detectThrow
+            {
+                file = "Lost_Hope\functions\fn_client_detectThrow.sqf";
+            };
+            class client_itemActions
+            {
+                file = "Lost_Hope\functions\fn_client_itemActions.sqf";
+            };
+		};
+	};
+};
+
+class Extended_InitPost_EventHandlers {
+	class CAManBase
+	{
+		class lost_hope_detectThrow
+		{
+			init = "[(_this select 0)] call lost_hope_mod_fnc_client_detectThrow";
+		};
+		class lost_hope_itemActions 
+		{
+			init = "[] call lost_hope_mod_fnc_client_itemActions";
+		};
+	};
+};
+
 class cfgMarkers
 {
 	class Flag;

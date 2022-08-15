@@ -5,15 +5,15 @@
 	Description: Creates an airdrop that drops within 100 meters of the player
 */
 
-params ["_unit"];
+params ["_unit", "_flareThrown", "_flare"];
 
 disableSerialization;
 
 deleteMarker "airdropLocation";
 
 //Checks
-if (_unit isEqualTo objNull) exitWith {};
-if (missionNamespace getVariable ["Airdrop_Active", false]) exitWith {["Error", "There is an ongoing airdrop mission right now!", "info", 5 ] call ["lost_hope_fnc_notificationHint"];};
+if (_unit isEqualTo objNull) exitWith {diag_log "Airdrop: Aborted, no unit/not a unit"};
+if (missionNamespace getVariable ["Airdrop_Active", false]) exitWith {["Error", "There is an ongoing airdrop mission right now!", "info", 5] call ["lost_hope_fnc_notificationHint"];};
 
 // UI Creation
 ("Airdrop" call BIS_fnc_rscLayer) cutRsc ["Airdrop_UI", "PLAIN"]; //Open UI
@@ -31,7 +31,10 @@ private _randomPos = [[[getPosATL _unit, _maxRange]], [ "water", [getPosATL _uni
 
 _aircraft = "C_Plane_Civil_01_racing_F" createVehicle _randomPos;
 _aircraft setPosATL [getPosATL _aircraft select 0, getPosATL _aircraft select 1, (getPosATL _aircraft select 2) + 1500];
-_flare = createVehicle ["lost_hope_ammo_flare_1", getPosATL _unit];
+if !(_flareThrown) then {
+	_flare = createVehicle ["lost_hope_ammo_flare_1", getPosATL _unit];
+};
+_flareType = typeOf _flare;
 _flarePos = getPosATL _flare;
 _grp = createGroup civilian;
 "B_RangeMaster_F" createUnit [getPosATL _aircraft,_grp,"pilot = this"];
@@ -43,7 +46,7 @@ _flare allowDamage false;
 pilot allowDamage false;
 
 //Hints
-["Airdrop", "An airdrop has been called in by a player! Check your maps to find it!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"];
+["Airdrop", "An airdrop has been called in by a player! Check your maps to find it!", "info", 5] remoteExec ["lost_hope_fnc_notificationHint"];
 _airdrop_picture ctrlSetText "UI\pictures\Airdrop\incoming.paa";
 
 //Settings
@@ -60,8 +63,8 @@ _aircraftstr setMarkerText "Airdrop Plane";
 missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,true];
 
 //Main Method
-[_aircraft, _airdropDistance_text, _airdrop_picture, _unit, _flare, _flarePos] spawn {
-	params ["_aircraft", "_text", "_airdrop_picture", "_unit", "_flare", "_flarePos"];
+[_aircraft, _airdropDistance_text, _airdrop_picture, _unit, _flare, _flarePos, _flareType] spawn {
+	params ["_aircraft", "_text", "_airdrop_picture", "_unit", "_flare", "_flarePos", "_flareType"];
 	while {true} do {
 		meters = _aircraft distance2D _flarePos;
 		"aircraft" setMarkerPos getPosATL _aircraft;
@@ -76,14 +79,14 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 
 		if (meters <= 100) exitWith {
 			_text ctrlSetStructuredText parseText format ["The package has been dropped!"]; 
-			["Airdrop", "The package has been dropped! Hurry up and look for it!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"]; 
+			["Airdrop", "The package has been dropped! Hurry up and look for it!", "info", 5] remoteExec ["lost_hope_fnc_notificationHint"]; 
 			uiSleep .75;
 			_airdrop_picture ctrlSetText "UI\pictures\Airdrop\airdrop.paa";
 			deleteMarker "aircraft";
 		};
 		
 		if ( meters >= 10 && !(alive _flare) ) then {
-			_flare = createVehicle ["lost_hope_ammo_flare_1", _flarePos];
+			_flare = createVehicle [_flareType, _flarePos];
 			_flare allowDamage false;
 		};
 
@@ -102,8 +105,10 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 		];
 	};
 
-	_crate = createVehicle ["C_IDAP_supplyCrate_F", getPosATL _aircraft - [0,0,-10]];
+	_crate = createVehicle ["C_IDAP_supplyCrate_F", getPosATL _aircraft];
+	_crate setPosATL (getPosATL _aircraft);
 	_crate allowDamage false;
+	uiSleep .2;
 	_crate setVelocity [0,0,0];
 	clearItemCargoGlobal _crate;
 	clearBackpackCargoGlobal _crate;
@@ -112,12 +117,16 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 	_crate attachTo [_para,[0,0,0]];
 	_smoke = createVehicle ["lost_hope_ammo_flare_1", getPosATL _crate];
 	_smoke attachTo [_crate,[0,0,0]];
+	_para setVehicleCargo _crate;
 	_lootType = selectRandom ["lost_hope_airdrop_weapons", "lost_hope_airdrop_supplies", "lost_hope_airdrop_clothing", "lost_hope_airdrop_mixed"];
 
 	while {alive _para} do {
-		_crate setVectorUp [0,0,0];
-		_para setVectorUp [0,0,0];
+		_crate setVectorUp [0,0,1];
+		_para setVectorUp [0,0,1];
 		_para setVelocity [0,0,-5];
+		if ( ( getPosATL _para ) select 2 <= 5 ) then {
+			deleteVehicle _para;
+		};
 		uiSleep .01;
 	};
 
