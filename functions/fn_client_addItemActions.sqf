@@ -10,15 +10,15 @@ _classname, // item classname (can be a base class)
 [_name], // name
 _color, // color RGBA
 _icon, // icon path 
-[{conditionEnable},{conditionShow}], // condition to use, condition to show
+[{params ["_unit", "_container", "_item", "_slot", "_params"]; (_params select 0)},{params ["_unit", "_container", "_item", "_slot", "_params"]; (_params select 1) }], // condition to use, condition to show
 {
     params ["_unit", "_container", "_item", "_slot", "_params"]; // parameters
-    _statement = statement;
-    call _statement;
-    statement = nil;
+    
+    call (_params select 2);
     // function here
 },
-_remove // remove from inventory
+_remove, // remove from inventory
+[_conditionEnable, _conditionShow, _statement]
 ] call CBA_fnc_addItemContextMenuOption;
 
 /*
