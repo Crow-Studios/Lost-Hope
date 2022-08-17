@@ -43,6 +43,10 @@ class CfgFunctions
             {
                 file = "Lost_Hope\functions\fn_client_itemActions.sqf";
             };
+            class client_addItem
+            {
+                file = "Lost_Hope\functions\fn_client_addItem.sqf";
+            };
 		};
 	};
 };
@@ -90,4 +94,30 @@ class cfgMarkers
 		size = 32;
 		showEditorMarkerColor = 1; //Whether to show icon color in the editor
 	};
+};
+
+class CfgSounds {
+	sounds[] = {};
+	class lost_hope_glass_break_1 {
+		name = "lost_hope_glass_break_1";
+		sound[] = {"\Lost_Hope\sounds\lost_hope_glass_break_1.ogg", 600, 1.0};
+		titles[] = {0, ""};
+	};
+
+	class lost_hope_glass_break_2 {
+		name = "lost_hope_glass_break_1";
+		sound[] = {"\Lost_Hope\sounds\lost_hope_glass_break_2.ogg", 600, 1.0};
+		titles[] = {0, ""};
+	};
+	
+	class lost_hope_glass_break_3 {
+		name = "lost_hope_glass_break_3";
+		sound[] = {"\Lost_Hope\sounds\lost_hope_glass_break_3.ogg", 600, 1.0};
+		titles[] = {0, ""};
+	};
+};
+
+class cfgVehicles 
+{
+	#include "config\cfgTextures.hpp"
 };

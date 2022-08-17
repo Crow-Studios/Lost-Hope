@@ -9,3 +9,6 @@
 
 // Bottle
 ["lost_hope_static_item_bottle", "Drink Water", [], "", true, true, {hint "Water Works"}, true] call lost_hope_mod_fnc_client_addItemActions;
+
+// Bile
+["lost_hope_mag_bile", "Use Bile", [], "", true, true, {hint "Bile Works"}, true] call lost_hope_mod_fnc_client_addItemActions;

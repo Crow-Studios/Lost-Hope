@@ -8,7 +8,10 @@ private _RHS = ( (_modsLoaded) select 1 );
 
 private _ACE = ( (_modsLoaded) select 2 );
 
-if (_3CB) then {diag_log "MOD CONFLICTS: 3CB LOADED, NO ISSUES"};
+if (_3CB) then {
+    diag_log "MOD CONFLICTS: 3CB LOADED, NO ISSUES"; 
+    BAFLoaded = true;
+};
 
 if (_3CB && _RHS) exitWith {
     diag_log "MOD CONFLICTS: 3CB AND RHS LOADED, MAJOR ISSUES, ABORTING";
@@ -17,6 +20,12 @@ if (_3CB && _RHS) exitWith {
     failMission "END1";
 };
 
-if (_RHS) then {diag_log "MOD CONFLICTS: RHS LOADED, NO ISSUES"};
+if (_RHS) then {
+    diag_log "MOD CONFLICTS: RHS LOADED, NO ISSUES";
+    RHSLoaded = true;
+};
 
-if (_ACE) then {diag_log "MOD CONFLICTS: ACE LOADED, NO ISSUES"};
+if (_ACE) then {
+    diag_log "MOD CONFLICTS: ACE LOADED, NO ISSUES";
+    ACELoaded = true;
+};

@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=770;
+		nextID=772;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=795;
+		nextID=805;
 	};
 	class Camera
 	{
-		pos[]={1001.7974,23.592684,725.98389};
-		dir[]={0.71363938,-0.34965929,-0.60703242};
-		up[]={0.26634482,0.93687415,-0.22655642};
-		aside[]={-0.64793199,-3.054738e-007,-0.76172131};
+		pos[]={1914.761,161.24449,2142.45};
+		dir[]={0.057982925,-0.27554256,0.95953858};
+		up[]={0.016620148,0.96128887,0.27504084};
+		aside[]={0.9981792,-1.8626451e-009,-0.0603179};
 	};
 };
 binarizationWanted=0;
@@ -57,6 +57,7 @@ addons[]=
 	"A3_Structures_F_Training",
 	"A3_Structures_F_Exp_Industrial_Port",
 	"A3_Structures_F_Ind_Cargo",
+	"ace_cargo",
 	"A3_Boat_F_Gamma_Boat_Civil_04",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
@@ -68,11 +69,13 @@ addons[]=
 	"A3_Structures_F_Furniture",
 	"A3_Props_F_Exp_Commercial_Market",
 	"A3_Structures_F_EPB_Civ_Garbage",
+	"ace_dragging",
 	"A3_Structures_F_Civ_Constructions",
 	"A3_Structures_F_Civ_Camping",
 	"A3_Weapons_F_Exp",
 	"A3_Weapons_F_Enoch",
 	"A3_Weapons_F_Mark",
+	"ace_realisticnames",
 	"A3_Structures_F_EPC_Civ_Accessories",
 	"A3_Structures_F_Ind_SolarPowerPlant",
 	"A3_Structures_F_Enoch_Military_Barracks",
@@ -11314,7 +11317,7 @@ class Mission
 			};
 			id=763;
 			type="lost_hope_static_object_bottle";
-			atlOffset=0.094268799;
+			atlOffset=0.1280899;
 		};
 		class Item79
 		{
@@ -11379,7 +11382,7 @@ class Mission
 			};
 			id=768;
 			type="lost_hope_static_object_apple";
-			atlOffset=0.03653717;
+			atlOffset=0.032089233;
 		};
 	};
 };

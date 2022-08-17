@@ -14,7 +14,7 @@ _icon, // icon path
 {
     params ["_unit", "_container", "_item", "_slot", "_params"]; // parameters
     
-    call (_params select 2);
+    [] call (_params select 2);
     // function here
 },
 _remove, // remove from inventory
