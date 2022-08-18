@@ -47,6 +47,14 @@ class CfgFunctions
             {
                 file = "Lost_Hope\functions\fn_client_addItem.sqf";
             };
+            class client_throwBile
+            {
+                file = "Lost_Hope\functions\fn_client_throwBile.sqf";
+            };
+            class client_useBile
+            {
+                file = "Lost_Hope\functions\fn_client_useBile.sqf";
+            };
 		};
 	};
 };
@@ -60,7 +68,7 @@ class Extended_InitPost_EventHandlers {
 		};
 		class lost_hope_itemActions 
 		{
-			init = "[] call lost_hope_mod_fnc_client_itemActions";
+			init = "[(_this select 0)] call lost_hope_mod_fnc_client_itemActions";
 		};
 	};
 };

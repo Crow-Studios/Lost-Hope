@@ -5,6 +5,8 @@
 	Description: This file is responsible for creating an airdrop that at a random point on the map
 */
 
+// don't use this, it hasn't been updated. I'm looking at you, stevio.
+
 disableSerialization;
 
 deleteMarker "airdropLocationRANDOM";

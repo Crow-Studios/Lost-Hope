@@ -1,8 +1,8 @@
 /*
-["lost_hope_static_item_apple", "Eat Apple", [], "", true, true, {hint "This Works"}, true] call lost_hope_mod_fnc_addItemActions;
+["lost_hope_static_item_apple", "Eat Apple", [], "", true, true, true, [], ""] call lost_hope_mod_fnc_addItemActions;
 */
 
-params ["_classname", "_name", "_color", "_icon", "_conditionEnable", "_conditionShow", "_statement", "_remove"];
+params ["_classname", "_name", "_color", "_icon", "_conditionEnable", "_conditionShow", "_remove", "_param", "_function"];
 
 [
 _classname, // item classname (can be a base class)
@@ -14,11 +14,11 @@ _icon, // icon path
 {
     params ["_unit", "_container", "_item", "_slot", "_params"]; // parameters
     
-    [] call (_params select 2);
+    (_params select 2) spawn compile (_params select 3);
     // function here
 },
 _remove, // remove from inventory
-[_conditionEnable, _conditionShow, _statement]
+[_conditionEnable, _conditionShow, _param, _function] // extra params passed
 ] call CBA_fnc_addItemContextMenuOption;
 
 /*
