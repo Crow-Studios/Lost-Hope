@@ -69,8 +69,8 @@ locations = call lost_hope_fnc_getMarkers;
 				if ("science" in _name) then
 				{
 					//[getMarkerPos _x, independent] call lost_hope_fnc_spawnHivemind;
-					for "_i" from 0 to 4 do {
-						[selectRandom ["dev_asymhuman_stage2_o", "dev_toxmut_o", "dev_asymhuman_o"], getMarkerPos _x, independent] call lost_hope_fnc_spawnMutant;
+					for "_i" from 0 to 9 do {
+						[selectRandom ["Zombie_Special_OPFOR_Boomer"], getMarkerPos _x, EAST] call lost_hope_fnc_spawnMutant;
 					};
 				};
 			};
@@ -83,12 +83,12 @@ locations = call lost_hope_fnc_getMarkers;
 
 		};
 
-		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) ) then {
+		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) && ) then {
 			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
 			diag_log format["%1 has been reset", _x];
 		};
 
-		if ( "trader" in _x && ([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance) && (_markerVar) ) exitWith {
+		if ( "trader" in _x && ([_unit, 150, _x] call lost_hope_fnc_getMarkerDistance) && (_markerVar) && (_continue) ) exitWith {
 			["Location Nearby!", "You are near a Trader", "info", 10] call lost_hope_fnc_notificationHint;
 			[_x, "lost_hope_zombie_vanilla_military"] call lost_hope_fnc_traderSetup;
 			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),false];

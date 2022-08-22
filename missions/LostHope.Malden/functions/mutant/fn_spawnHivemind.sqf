@@ -4,9 +4,15 @@
 *   Params are quite simple
 */
 
-params ["_position", "_side"];
+params ["_classname", "_position", "_side"];
 
-"dev_hivemind_o" createUnit [_position, hivemindGroup, "hivemind = this"];
+if (hivemindGroup isEqualTo grpNull) then {
+    hivemindGroup = createGroup [_side, true];
+};
 
-hivemind setVariable ["isZombie", true];
+_classname createUnit [_position, hivemindGroup, "hivemind = this"];
+
+hivemind setVariable ["isZombie", true, true];
 hivemind setVariable ["canDelete", false, true];
+
+hivemind

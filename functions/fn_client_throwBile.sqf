@@ -7,7 +7,7 @@ _projectile setVelocity [0,0,0];
 private _dummy = "#particlesource" createVehicle getPosATL _projectile;
 _dummy setPosATL getPosATL _projectile;
 
-[ _dummy, selectRandom ["lost_hope_glass_break_1", "lost_hope_glass_break_2", "lost_hope_glass_break_3"] ] remoteExecCall ["say3D"];
+[ _dummy, selectRandom ["lost_hope_glass_break_1", "lost_hope_glass_break_2", "lost_hope_glass_break_3"] ] remoteExec ["say3D"];
 
 uiSleep .1;
 
@@ -19,7 +19,7 @@ _goo setVectorUp surfaceNormal position _goo;
 _goo setDir selectRandom [30, 60, 90, 120];
 
 {
-	if ( _x distance _goo <= 50 && (_x getVariable "isZombie") ) then {
+	if ( _x distance _goo <= 50 && (_x getVariable "isZombie") && !(_x getVariable "isMutant") ) then {
 		_x disableAI "AUTOTARGET";
 		_x disableAI "TARGET";
 		_x forgetTarget _unit;

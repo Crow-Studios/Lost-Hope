@@ -5,7 +5,7 @@
 	Description: Creates an airdrop that drops within 100 meters of the player
 */
 
-params ["_unit", "_flareThrown", "_flare"];
+params ["_unit", "_flareThrown", "_flare", "_boss"];
 
 disableSerialization;
 
@@ -36,7 +36,7 @@ if !(_flareThrown) then {
 };
 _flareType = typeOf _flare;
 _flarePos = getPosATL _flare;
-_grp = createGroup civilian;
+_grp = createGroup [civilian, true];
 "B_RangeMaster_F" createUnit [getPosATL _aircraft,_grp,"pilot = this"];
 pilot moveInDriver _aircraft;
 
@@ -63,8 +63,8 @@ _aircraftstr setMarkerText "Airdrop Plane";
 missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,true];
 
 //Main Method
-[_aircraft, _airdropDistance_text, _airdrop_picture, _unit, _flare, _flarePos, _flareType] spawn {
-	params ["_aircraft", "_text", "_airdrop_picture", "_unit", "_flare", "_flarePos", "_flareType"];
+[_aircraft, _airdropDistance_text, _airdrop_picture, _unit, _flare, _flarePos, _flareType, _boss] spawn {
+	params ["_aircraft", "_text", "_airdrop_picture", "_unit", "_flare", "_flarePos", "_flareType", "_boss"];
 	while {true} do {
 		meters = _aircraft distance2D _flarePos;
 		"aircraft" setMarkerPos getPosATL _aircraft;
@@ -191,6 +191,73 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 	_text ctrlSetStructuredText parseText format ["The package has landed!"];
 	["Airdrop", "The package has landed! Hurry before it gets looted!", "info", 5 ] remoteExec ["lost_hope_fnc_notificationHint"];
 
+	// Spawn zombie horde to airdrop
+
+	if (_boss) then {
+
+		private _pos = [getPosATL _crate, 20, 30, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
+
+		private _mutant = ["WBK_SpecialZombie_Smasher_3", _pos, EAST] call lost_hope_fnc_spawnMutant;
+
+		while {_mutant distance _crate <= 10} do {
+			_mutant doMove (position _crate);
+			if (_x distance _crate <= 10) exitWith {};
+			sleep 0.3;
+		};
+
+		for "_i" from 0 to 19 do {
+
+			private _group = ["lost_hope_zombie_vanilla_police", "lost_hope_zombie_vanilla_science", "lost_hope_zombie_vanilla_military"];
+			private _group = selectRandom _group;
+			private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
+
+			private _pos = [getPosATL _crate, 10, 20, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
+
+			//if ("triggerman" in _loadout) then {};
+			private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
+
+			uiSleep .2;
+		};
+
+		private _amount = 10;
+
+		if (selectRandom [1,2,3] isEqualTo 1) then {
+			groupSide = grpNull;
+			for "_i" from 0 to (_amount - 1) do {
+
+				private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie") call BIS_fnc_getCfgSubClasses );
+				private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
+				private _armed = getNumber (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group >> _loadout >> "armed");
+				diag_log _armed;
+				hint str _armed;
+
+				switch (_armed) do
+				{
+					case 0: {melee = true};
+					case 1: {melee = false};
+				};
+
+				diag_log melee;
+				
+				private _pos = [getPosATL _crate, 100, 300, 3, 0, 20, 0] call BIS_fnc_findSafePos;
+				private _unit = ["C_man_polo_1_F", _pos, _group, _loadout, INDEPENDENT, melee] call lost_hope_fnc_spawnUnit;
+
+				if (groupSide isEqualTo grpNull) then {
+					groupSide = createGroup [EAST, true];
+				};
+
+				if !(groupSide isEqualTo grpNull) then {
+					[_unit] join groupSide;
+				};
+
+				_unit doMove (position _crate);
+
+				uiSleep 0.2;
+
+			};
+		};
+
+	};
 	/*
 	createMarker ["airdropLocation", getPosATL _aircraft];
 	"airdropLocation" setMarkerShape "ELLIPSE";
@@ -213,8 +280,3 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 	uiSleep 600;
 	deleteVehicle _crate;
 };
-
-
-//TODO
-
-//Add items in the package

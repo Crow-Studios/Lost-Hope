@@ -4,29 +4,35 @@
 *
 *	Arguments:
 *	0: _time		<INTGER> - Time (in seconds)
-*	1: _unit 		<OBJECT> - Unit you want to run this on
 *	Return Value: None
 */
 
 
-params ["_time", "_unit"]; // In seconds
+params ["_time"]; // In seconds
 
 while {true} do {
     uiSleep _time;
 
-    private _buildings = [];
 
     {
-        if (_x distance _unit <= 800) then {
-            _x setVariable ["canDelete", false, true];
-        } else {
-            _x setVariable ["canDelete", true, true];
-        };
+        private _entitiesPlayer = [];
+        private _entities = _x nearEntities ["CAManBase", 800];
+        private _loot = _x;
 
-        if ( (_x getVariable "canDelete") ) then {
-            deleteVehicle _x;
+        {
+            if (_x getVariable ["isPlayer", false]) then {
+                _entitiesPlayer append [true];
+            } else {
+                _entitiesPlayer append [false];
+            };
+        } forEach _entities;
+
+        diag_log _entitiesPlayer;
+
+        if !( true in _entitiesPlayer ) then {
+            deleteVehicle _loot;
         };
     } forEach entities "WeaponHolderSimulated_Scripted";
-    if !(alive _unit) exitWith {diag_log "BUILDING CLEANUP: Unit has been killed, Aborting and Rerunning"};
-    //titleText [format["Resetting Buildings Loot: %1", _buildings], "PLAIN DOWN"];
+
+    //if !(alive _unit) exitWith {diag_log "BUILDING CLEANUP: Unit has been killed, Aborting and Rerunning"};
 };

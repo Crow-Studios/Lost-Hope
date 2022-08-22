@@ -33,3 +33,7 @@ private _eventScript = [] spawn {
         };
     };
 };
+
+[5] spawn lost_hope_fnc_zombieCleanup;
+[600] spawn lost_hope_fnc_bodyCleanup;
+[5] spawn lost_hope_fnc_loot_resetBuildings;

@@ -26,7 +26,7 @@
 			secondary[] = {"Knife_m3", "Knife_kukri", "Shovel_Russian_Rotated", "WBK_SmallHammer"};
 			uniform[] = {"UK3CB_BAF_U_CombatUniform_MTP_TShirt", "UK3CB_BAF_U_JumperUniform_Plain", "UK3CB_BAF_U_JumperUniform_MTP", "UK3CB_BAF_U_Smock_MTP_DPMW"};
 			vest[] = {""};
-			backpack[] = {"GoG_HolsterSwordVestBack"};
+			backpack[] = {""};
 			headgear[] = {"H_Cap_marshal", "H_MilCap_blue", "H_Shemag_olive", "H_StrawHat_dark", "H_Hat_tan"};
 			facewear[] = {"G_Respirator_yellow_F", "G_Blindfold_01_black_F", "G_Sport_Checkered"};
 			nvg = "";

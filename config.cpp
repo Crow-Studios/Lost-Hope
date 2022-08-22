@@ -42,6 +42,7 @@ class CfgFunctions
             class client_itemActions
             {
                 file = "Lost_Hope\functions\fn_client_itemActions.sqf";
+				postInit = 1;
             };
             class client_addItem
             {
@@ -65,10 +66,6 @@ class Extended_InitPost_EventHandlers {
 		class lost_hope_detectThrow
 		{
 			init = "[(_this select 0)] call lost_hope_mod_fnc_client_detectThrow";
-		};
-		class lost_hope_itemActions 
-		{
-			init = "[(_this select 0)] call lost_hope_mod_fnc_client_itemActions";
 		};
 	};
 };

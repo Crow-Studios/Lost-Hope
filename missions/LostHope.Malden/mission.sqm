@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=772;
+		nextID=795;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=805;
+		nextID=855;
 	};
 	class Camera
 	{
-		pos[]={1914.761,161.24449,2142.45};
-		dir[]={0.057982925,-0.27554256,0.95953858};
-		up[]={0.016620148,0.96128887,0.27504084};
-		aside[]={0.9981792,-1.8626451e-009,-0.0603179};
+		pos[]={726.80341,143.16522,12312.778};
+		dir[]={-0.15191394,-0.45415604,-0.87787509};
+		up[]={-0.077439576,0.89092213,-0.44750515};
+		aside[]={-0.9853555,-7.4505806e-009,0.17051314};
 	};
 };
 binarizationWanted=0;
@@ -83,17 +83,17 @@ addons[]=
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"A3_Structures_F_Enoch_Industrial_Sawmills",
 	"A3_Characters_F_AoW",
-	"Lost_Hope_Bottle",
-	"Lost_Hope_Flare_2",
-	"Lost_Hope_Flare_1",
+	"A3_Characters_F_Heads",
+	"ace_goggles",
+	"Lost_Hope_Apple",
 	"Lost_Hope_BEANZ",
-	"Lost_Hope_Apple"
+	"Lost_Hope_Bottle"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=39;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -337,28 +337,25 @@ class AddonsMetaData
 		};
 		class Item35
 		{
-			className="Lost_Hope_Bottle";
-			name="Lost_Hope_Bottle";
+			className="ace_goggles";
+			name="ACE3 - Goggles";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
 		class Item36
 		{
-			className="Lost_Hope_Flare_2";
-			name="Lost_Hope_Flare_2";
+			className="Lost_Hope_Apple";
+			name="Lost_Hope_Apple";
 		};
 		class Item37
-		{
-			className="Lost_Hope_Flare_1";
-			name="Lost_Hope_Flare_1";
-		};
-		class Item38
 		{
 			className="Lost_Hope_BEANZ";
 			name="Lost_Hope_BEANZ";
 		};
-		class Item39
+		class Item38
 		{
-			className="Lost_Hope_Apple";
-			name="Lost_Hope_Apple";
+			className="Lost_Hope_Bottle";
+			name="Lost_Hope_Bottle";
 		};
 	};
 };
@@ -2016,7 +2013,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=83;
+		items=79;
 		class Item0
 		{
 			dataType="Object";
@@ -3735,7 +3732,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAI ""all"";";
-						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -8922,7 +8918,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5032.4141,124.79533,4028.8};
-						angles[]={0,3.6763802,0};
+						angles[]={0,3.661639,0};
 					};
 					side="Empty";
 					class Attributes
@@ -8969,7 +8965,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5039.7866,124.79528,4026.1409};
-						angles[]={0,2.1335859,0};
+						angles[]={0,2.8279576,0};
 					};
 					side="Empty";
 					class Attributes
@@ -11305,84 +11301,133 @@ class Mission
 		};
 		class Item78
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="Civilian";
+			class Entities
 			{
-				position[]={5005.4438,72.526093,3957.604};
-				angles[]={6.2615871,0,0.021598242};
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={541.25598,26.765251,12338.043};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this setVariable [""lost_hope_debug_man"",true,true];";
+						description="DEBUG MAN";
+						isPlayer=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_B_CombatUniform_mcam";
+								isBackpack=0;
+							};
+							class backpack
+							{
+								typeName="B_Bergen_mcamo_F";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="lost_hope_mag_flare_1";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="lost_hope_mag_flare_2";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="lost_hope_mag_bile";
+										count=5;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="lost_hope_mag_homemade_bomb";
+										count=5;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="lost_hope_static_item_apple";
+										count=5;
+									};
+									class Item1
+									{
+										name="lost_hope_static_item_BEANZ_Opened";
+										count=5;
+									};
+									class Item2
+									{
+										name="lost_hope_static_item_BEANZ";
+										count=5;
+									};
+									class Item3
+									{
+										name="lost_hope_static_item_bottle";
+										count=5;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							goggles="G_Sport_Blackred";
+						};
+					};
+					id=785;
+					type="C_man_p_beggar_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
-			side="Empty";
 			class Attributes
 			{
 			};
-			id=763;
-			type="lost_hope_static_object_bottle";
-			atlOffset=0.1280899;
-		};
-		class Item79
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5005.2344,72.453171,3957.5586};
-				angles[]={6.2527266,5.5722828,0.0022704322};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=765;
-			type="lost_hope_static_object_flare_2";
-			atlOffset=0.026855469;
-		};
-		class Item80
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5005.2637,72.458023,3957.6096};
-				angles[]={6.2527266,5.5722828,0.0022704322};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=766;
-			type="lost_hope_static_object_flare_1";
-			atlOffset=0.029968262;
-		};
-		class Item81
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5005.3125,72.495583,3957.7803};
-				angles[]={6.2543383,5.832653,0.010037418};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=767;
-			type="lost_hope_static_object_BEANZ";
-			atlOffset=0.062789917;
-		};
-		class Item82
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={5005.4863,72.47261,3957.7581};
-				angles[]={6.2615871,0,0.021598242};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=768;
-			type="lost_hope_static_object_apple";
-			atlOffset=0.032089233;
+			id=784;
 		};
 	};
 };

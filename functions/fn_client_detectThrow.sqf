@@ -7,13 +7,13 @@ _unit addEventHandler ["Fired",
 	
 	if (_ammo isEqualTo "lost_hope_ammo_flare_1") then {
 		_projectile setVelocity [0,0,0];
-		[_unit, true, _projectile] call lost_hope_fnc_airdropPlayer;
+		[_unit, true, _projectile, false] call lost_hope_fnc_airdropPlayer;
 	};
 
 	// leaving this here for when we add seperate airdrop types, as opposed to random types
 	if (_ammo isEqualTo "lost_hope_ammo_flare_2") then {
 		_projectile setVelocity [0,0,0];
-		[_unit, true, _projectile] call lost_hope_fnc_airdropPlayer;
+		[_unit, true, _projectile, false] call lost_hope_fnc_airdropPlayer;
 	};
 	
 	if (_ammo isEqualTo "lost_hope_ammo_bile") then {

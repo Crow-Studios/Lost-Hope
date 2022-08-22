@@ -22,7 +22,7 @@ params ["_classname", "_position", "_group", "_loadout", "_side", "_isMelee"];
 private _path = "lost_hope_zombie_loadouts";
 private _grp = createGroup [_side, true];
 
-if (_isMelee) then {_classname = "B_soldier_Melee_RUSH"};
+if (_isMelee) then {_classname = "B_soldier_Melee_RUSH_fists"};
 
 _classname createUnit [_position, _grp, "unit = this"];
 

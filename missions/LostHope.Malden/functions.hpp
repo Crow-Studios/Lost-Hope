@@ -15,6 +15,7 @@ class lost_hope
 	class core {
 		class holdAction {};
 		class zombieCleanup {};
+		class bodyCleanup {};
 		class notificationHint {};
 		class playBoatAnimation {};
 		class createCamera {};
@@ -50,7 +51,6 @@ class lost_hope
 	class DEV {
 		class dev_drawLootLocations {};
 		class dev_drawZombieLocations {};
-		class dev_drawIndividualZombies {};
 	};
 
 	class loot {
@@ -69,6 +69,7 @@ class lost_hope
 		class traderInfested {};
 		class traderTakeOver {};
 		class canSpawnEvent {};
+		class canSpawnAirdrop {};
 		class airdropPlayer {};
 		class airdropRandom {};
 	};
