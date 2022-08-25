@@ -86,4 +86,7 @@ class lost_hope
 		class getCategories {};
 		class buyWeapon {};
 	};
+	class traderTasksSystem {
+		class OpenTraderDialog {};
+	};
 };

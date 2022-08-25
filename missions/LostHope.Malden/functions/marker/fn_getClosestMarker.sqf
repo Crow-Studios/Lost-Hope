@@ -83,7 +83,7 @@ locations = call lost_hope_fnc_getMarkers;
 
 		};
 
-		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) && ) then {
+		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) ) then {
 			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
 			diag_log format["%1 has been reset", _x];
 		};
