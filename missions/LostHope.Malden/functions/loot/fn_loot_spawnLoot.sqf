@@ -22,9 +22,9 @@ private _houses = _unit nearObjects ["Building", 2000];
 if (sunOrMoon != 1) then 
 {
 	_type = "lost_hope_zombie_vanilla_military";
-	_chance = _chance * 2;
-	_itemChance = _itemChance * 2;
-	_weaponChance = _weaponChance * 3;
+	_chance = _chance * .8;
+	_itemChance = _itemChance * .5;
+	_weaponChance = _weaponChance * .9;
 };
 
 {
@@ -91,7 +91,7 @@ if (sunOrMoon != 1) then
 					private _secondary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "secondary") );
 					private _magazinesPrimary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _primary >> "magazines") );
 					private _magazinesSecondary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _secondary >> "magazines") );
-					if (selectRandom [1,2] == 2) then {
+					if (selectRandom [1,2] isEqualTo 2) then {
 						_holder addWeaponCargoGlobal [_primary,1];
 						_holder addMagazineCargoGlobal [_magazinesPrimary, _magazinesCount];
 					} else {

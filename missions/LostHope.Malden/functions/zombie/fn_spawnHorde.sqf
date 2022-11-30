@@ -16,11 +16,7 @@
 
 params ["_classname", "_position", "_side", "_sound"];
 
-private _sfxUnit = "dev_module_sfx_zombies";
-
-if (_sound) then {
-    [_sfxUnit, _position, "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", _side, _name] call lost_hope_fnc_spawnZombie;
-};
+private _joinGroup = [EAST, true] call lost_hope_fnc_createGroup;
 
 for "_i" from 0 to (random [20, 30, 40]) do {
 
@@ -30,8 +26,8 @@ for "_i" from 0 to (random [20, 30, 40]) do {
     private _pos = [_position, 50, 200, 3, 0, 20, 0] call BIS_fnc_findSafePos;
     private _nearestRoad = [_pos, 500] call BIS_fnc_nearestRoad;
 
-    if ("triggerman" in _loadout) then {};
-    private _zombie = [_classname, _pos, _group, _loadout, _side, _name] call lost_hope_fnc_spawnZombie;
+    if ("triggerman" in _loadout) exitWith {};
+    private _zombie = [_classname, _pos, _group, _loadout, _side, _name, _joinGroup] call lost_hope_fnc_spawnZombie;
 
     if (_nearestRoad != objNull) then {_zombie setPosATL getPosATL _nearestRoad};
 

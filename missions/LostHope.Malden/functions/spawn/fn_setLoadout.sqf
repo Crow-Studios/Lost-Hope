@@ -19,7 +19,7 @@ params ["_unit", "_path", "_group", "_loadout", "_type"];
 
 // Grab loadout stuff
 
-if (_type == 7) then {
+if (_type isEqualTo 7) then {
 
     private _uniform = getArray (missionConfigFile >> _path >> _group >> _loadout >> "uniform");
     private _vest = getArray (missionConfigFile >> _path >> _group >> _loadout >> "vest");
@@ -121,7 +121,7 @@ if (_type == 7) then {
         // Don't want items like maps going into actual slots, AI don't need them equipped
     } else {
         // if chance is 1 in config, means unit wants guaranteed loot
-        if (_chance == 1) then {
+        if (_chance isEqualTo 1) then {
             _unit addItem _nvg;
             _unit addItem _binoculars;
             _unit addItem _map;

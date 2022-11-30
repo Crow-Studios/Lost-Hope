@@ -18,14 +18,15 @@ _startEventScript = [_time, _trader, _type] spawn {
             if (traderEvent isEqualTo grpNull) then {
                 traderEvent = createGroup [EAST, true];
             };
+            private _joinGroup = [EAST, true] call lost_hope_fnc_createGroup;
             for "_i" from 0 to (random [30, 40, 50]) do {
 
                 private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie") call BIS_fnc_getCfgSubClasses );
                 private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
 
                 private _pos = [getMarkerPos _trader, 10, 30, 3, 0, 20, 0] call BIS_fnc_findSafePos;
-
-                private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
+                
+                private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military", _joinGroup] call lost_hope_fnc_spawnZombie;
 
                 _zombie setPos _pos;
 

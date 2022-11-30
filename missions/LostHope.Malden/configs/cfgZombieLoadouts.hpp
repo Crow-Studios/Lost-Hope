@@ -206,7 +206,7 @@
 		class lost_hope_zombie_military_sergeant
 		{
 			primary[] = {"arifle_TRG20_F", "arifle_Mk20_F"};
-			secondary[] = {"dev_weapon_scanner"};
+			secondary[] = {"hgun_Pistol_heavy_01_F", "hgun_Rook40_F", "hgun_Pistol_heavy_02_F"};
 			uniform[] = {"U_B_GhillieSuit", "U_B_CTRG_1", "U_I_OfficerUniform"};
 			vest[] = {"V_PlateCarrier1_blk", "V_PlateCarrier1_rgr", "V_PlateCarrierL_CTRG", "V_PlateCarrierIA2_dgtl", "V_CarrierRigKBT_01_heavy_Olive_F"};
 			backpack[] = {"B_SCBA_01_F", "B_TacticalPack_ocamo"};

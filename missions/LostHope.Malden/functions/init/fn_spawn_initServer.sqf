@@ -2,7 +2,7 @@ private _unit = player;
 
 private _localPlayerUID = getPlayerUID _unit;
 
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MISSION INIT - VITAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MISSION INIT - VITAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \\
 
 {
     missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
@@ -11,20 +11,12 @@ private _localPlayerUID = getPlayerUID _unit;
     };
 } forEach allMapMarkers;
 
-zombieGroup = grpNull;
-hivemindGroup = grpNull;
-traderEvent = grpNull;
-
-publicVariable "zombieGroup";
-publicVariable "hivemindGroup";
-publicVariable "traderEvent";
-
 private _eventScript = [] spawn {
     while {true} do {
         uiSleep 1200;
 
         if (selectRandom [1] isEqualTo 1) then {
-            private _event = selectRandom ["traderInfested", "traderTakeOver"];
+            private _event = selectRandom ["traderInfested"];
             switch (_event) do
             {
                 case "traderInfested": { [ (selectRandom ["trader_1", "trader_2", "trader_3"]), 600, selectRandom ["military", "farm", "city"] ] spawn lost_hope_fnc_traderInfested };
@@ -34,6 +26,6 @@ private _eventScript = [] spawn {
     };
 };
 
-[5] spawn lost_hope_fnc_zombieCleanup;
 [600] spawn lost_hope_fnc_bodyCleanup;
 [5] spawn lost_hope_fnc_loot_resetBuildings;
+["lost_hope_ambience_church"] spawn lost_hope_fnc_nightTransition;

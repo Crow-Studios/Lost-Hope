@@ -25,6 +25,20 @@ if (_draw) then {
                     0.9,0.9,0,
                     format ["Zombie Group Count: %1", (count units group _x)]
                 ];
+                drawLine3D 
+                [
+                    getPos player,
+                    getPos _x,
+                    [0,1,0,1]
+                ];
+                {
+                    drawLine3D
+                    [
+                        getPos leader group _x,
+                        getPos _x,
+                        [1,0,0,1]
+                    ];
+                } forEach units group _x;
             };
             if ( _x getVariable "isZombie" && !(_x getVariable "isMutant") && _x distance player <= 200 && (count units group _x <= 10) ) then {
                 private _type = _x getVariable ["zombieType", "UNKNOWN"];

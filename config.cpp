@@ -31,6 +31,10 @@ class CfgFunctions
 	{
 		class functions
 		{
+            class client_playSound 
+			{
+                file = "\Lost_Hope\functions\fn_client_playSound.sqf";
+            };
             class client_addItemActions
             {
                 file = "Lost_Hope\functions\fn_client_addItemActions.sqf";
@@ -118,6 +122,12 @@ class CfgSounds {
 	class lost_hope_glass_break_3 {
 		name = "lost_hope_glass_break_3";
 		sound[] = {"\Lost_Hope\sounds\lost_hope_glass_break_3.ogg", 600, 1.0};
+		titles[] = {0, ""};
+	};
+	// Ambience
+	class lost_hope_ambience_church {
+		name = "lost_hope_ambience_church";
+		sound[] = {"\Lost_Hope\sounds\lost_hope_ambience_church.ogg", 600, 1.0};
 		titles[] = {0, ""};
 	};
 };

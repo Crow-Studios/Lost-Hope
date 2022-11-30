@@ -199,6 +199,8 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 
 		private _mutant = ["WBK_SpecialZombie_Smasher_3", _pos, EAST] call lost_hope_fnc_spawnMutant;
 
+		private _joinGroup = [EAST, true] call lost_hope_fnc_createGroup;	
+
 		while {_mutant distance _crate <= 10} do {
 			_mutant doMove (position _crate);
 			if (_x distance _crate <= 10) exitWith {};
@@ -214,7 +216,7 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 			private _pos = [getPosATL _crate, 10, 20, 3, 0, 20, 0] call BIS_fnc_findSafePos; // position, min dist, max dist, dist from buildings
 
 			//if ("triggerman" in _loadout) then {};
-			private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
+			private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military", _joinGroup] call lost_hope_fnc_spawnZombie;
 
 			uiSleep .2;
 		};

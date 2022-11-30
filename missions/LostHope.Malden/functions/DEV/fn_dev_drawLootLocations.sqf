@@ -6,15 +6,17 @@ if (_draw) then {
     _drawIcon_Weapon = addMissionEventHandler ["Draw3D",
     {
         {
+            /*
             drawIcon3D 
             [
-                "Lost_Hope\markers\lost_hope_biohazard.paa",
+                "a3\ui_f\data\GUI\Rsc\RscDisplayGear\ui_gear_backpack_gs.paa",
                 //"a3\ui_f\data\Map\Markers\Military\dot_ca.paa",
                 [[1,0,0,1], [1,1,1,1]],
                 (_x modelToWorldVisual [0,0,0.5]),
                 2,2,0,
-                "Loot Spawn"
+                ""
             ];
+            */
             drawIcon3D
             [
                 "",

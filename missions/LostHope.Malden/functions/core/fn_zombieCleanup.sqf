@@ -1,6 +1,6 @@
 /*
 *	Author: Silence
-*	Description: Gets closest marker to unit, framework for mission
+*	Description: N/A
 *
 *	Arguments:
 *	0: _time 		<INTEGER> - Time in seconds
@@ -9,6 +9,8 @@
 
 
 params ["_time"]; // In seconds
+
+// literally pointless now, only use to hog up performance...
 
 diag_log "ZOMBIE CLEANUP: RUNNING ZOMBIE CLEANUP SCRIPT";
 

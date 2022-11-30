@@ -1,5 +1,6 @@
 class CfgMissions
 {
+	/*
 	class Campaigns
 	{
 		class LostHope
@@ -7,19 +8,19 @@ class CfgMissions
 			directory = "Lost_Hope\missions";
 		};
 	};
+	*/
 	class MPMissions
 	{
 		// Lost Hope - Malden 2035
-		class LostHopeMalden
+		class MP_ZGM_m14
 		{
 			briefingName = "Lost Hope - Malden";
-			directory = "Lost_Hope\missions\LostHope.Malden";
-			author = "Lost Hope Dev Team";
+			directory = "Lost_Hope\missions\Lost_Hope.Malden";
 		};
 	};
 };
 
-/*
+// Experimenting with this
 class CfgMainMenuSpotlight
 {
 	class LostHope
@@ -78,4 +79,3 @@ class CfgMainMenuSpotlight
 	};
 
 };
-*/

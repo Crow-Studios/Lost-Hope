@@ -59,9 +59,9 @@ switch (_cat) do
 				player addWeapon _selected;
 			} else {};
 		};
-		if (_type == "Handgun") then 
+		if (_type isEqualTo "Handgun") then 
 		{
-			if (handgunWeapon player == "") then 
+			if (handgunWeapon player isEqualTo "") then 
 			{
 				["Iventory Alert!!", format ["You just bought a %1", _selected], "info", 5 ] call lost_hope_fnc_notificationHint;
 
@@ -74,7 +74,7 @@ switch (_cat) do
 	case "Item": {
 		if (_type in ["AccessoryMuzzle","AccessoryPointer","AccessorySights","AccessoryBipod"]) then 
 		{
-			if (primaryWeapon player == "") then 
+			if (primaryWeapon player isEqualTo "") then 
 			{ 
 				player addItemToBackpack _selected;
 			} else {
@@ -99,7 +99,7 @@ switch (_cat) do
 	};
 
 	case "Magazine" : {
-		if (_type == "Bullet") then 
+		if (_type isEqualTo "Bullet") then 
 		{
 			_compatibleMag = getArray (configFile >> _config >> currentWeapon player >> "Magazines" );
 

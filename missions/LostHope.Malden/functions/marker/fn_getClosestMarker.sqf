@@ -23,7 +23,7 @@ diag_log "RUNNING GET CLOSEST MARKER";
 		_x setVariable ["lost_hope_continueMarkerScript", false, true];
 	};
 
-	if (_x == _leader) then {
+	if (_x isEqualTo _leader) then {
 		_x setVariable ["lost_hope_continueMarkerScript", true, true];
 	};
 
@@ -63,27 +63,27 @@ locations = call lost_hope_fnc_getMarkers;
 				// hint the area
 				["Location Nearby!", format ["You are near a %1", _name], "info", 5 ] call lost_hope_fnc_notificationHint;
 
-				[_distance, _groups, getMarkerPos _x, EAST, false, _count, _name] call lost_hope_fnc_markerSetup;
+				[_distance, _groups, getMarkerPos _x, EAST, _count, _name] call lost_hope_fnc_markerSetup;
 				[_unit, _x, _chance, _chanceItems, _chanceWeapons, _name] spawn lost_hope_fnc_loot_spawnLoot;
 				diag_log format["%1 has been triggered by %2", _x, _unit];
 				if ("science" in _name) then
 				{
 					//[getMarkerPos _x, independent] call lost_hope_fnc_spawnHivemind;
-					for "_i" from 0 to 9 do {
-						[selectRandom ["Zombie_Special_OPFOR_Boomer"], getMarkerPos _x, EAST] call lost_hope_fnc_spawnMutant;
-					};
+					//for "_i" from 0 to 9 do {
+						//[selectRandom ["Zombie_Special_OPFOR_Boomer"], getMarkerPos _x, EAST] call lost_hope_fnc_spawnMutant;
+					//};
 				};
 			};
 
 			/*
-			if ("safezone_1" == _x && ([_unit, 300, _x] call lost_hope_fnc_getMarkerDistance)) then {
+			if ("safezone_1" isEqualTo _x && ([_unit, 300, _x] call lost_hope_fnc_getMarkerDistance)) then {
 				//["Location Nearby!", "You are near Safezone_1", "info", 5] call lost_hope_fnc_notificationHint;
 			};
 			*/
 
 		};
 
-		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar) && ) then {
+		if ( (_name in _x) && !([_unit, _distance, _x] call lost_hope_fnc_getMarkerDistance) && !(_markerVar)) then {
 			missionNamespace setVariable [("Lost_Hope_Marker"+_x+"CanRun"),true,true];
 			diag_log format["%1 has been reset", _x];
 		};

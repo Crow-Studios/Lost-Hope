@@ -13,8 +13,9 @@ class lost_hope
 	};
 
 	class core {
-		class holdAction {};
 		class zombieCleanup {};
+		class checkTime {};
+		class nightTransition {};
 		class bodyCleanup {};
 		class notificationHint {};
 		class playBoatAnimation {};
@@ -46,11 +47,16 @@ class lost_hope
 		class spawnZombie {};
 		class spawnHorde {};
 		class spawnHerd {};
+		class sunDamage {};
+		class createGroup {};
+		class groupInit {};
 	};
 
 	class DEV {
 		class dev_drawLootLocations {};
+		class dev_drawDevMode {};
 		class dev_drawZombieLocations {};
+		class dev_drawMarkerLocations {};
 	};
 
 	class loot {

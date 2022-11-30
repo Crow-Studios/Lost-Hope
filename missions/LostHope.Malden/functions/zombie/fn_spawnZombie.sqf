@@ -16,22 +16,23 @@
 *	Return Value: None
 */
 
-params ["_classname", "_position", "_group", "_loadout", "_side", "_name"];
+params ["_classname", "_position", "_group", "_loadout", "_side", "_name", "_joinGroup"];
 
 private _type = getNumber (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group >>  _loadout >> "type");
 private _path = "lost_hope_zombie_loadouts";
 
 // add another check here
-if (zombieGroup isEqualTo grpNull) then {
-    zombieGroup = createGroup [_side, true];
-};
+// if (zombieGroup isEqualTo grpNull) then {
+//     zombieGroup = createGroup [_side, true];
+// };
 
 if (sunOrMoon != 1) then {
-    selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, zombieGroup, "zombie = this"];
+    selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, _joinGroup, "zombie = this"];
     zombie setVariable ["isZombie", true];
     zombie setVariable ["isMutant", false];
     zombie setVariable ["canDelete", false, true];
     zombie setVariable ["zombieType", _name];
+    [zombie] spawn lost_hope_fnc_sunDamage;
 } else {
 
     switch (_name) do
@@ -44,7 +45,8 @@ if (sunOrMoon != 1) then {
         case "science": {_type = selectRandom [4,5,6]};
     };
 
-    _classname createUnit [_position, zombieGroup, "zombie = this"];
+    if (_classname isEqualTo "") then {_classname = "C_Man_Polo_01_F"};
+    _classname createUnit [_position, _joinGroup, "zombie = this"];
 
     /*
     zombie disableAI "AUTOTARGET";

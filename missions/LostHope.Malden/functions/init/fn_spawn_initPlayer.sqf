@@ -4,7 +4,7 @@ if (_unit getVariable ["lost_hope_debug_man",false]) then {
     debug_man = true
 } else {
     debug_man = false;
-};
+}; // debug quickstart
 
 if (debug_man) then {} else {
     [_unit, "lost_hope_loadouts_zombie", "lost_hope_zombie_vanilla_civilians", "lost_hope_zombie", 7] call lost_hope_fnc_setLoadout;

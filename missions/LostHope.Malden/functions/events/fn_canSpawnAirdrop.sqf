@@ -35,7 +35,8 @@ _startEventScript = [_time, _object] spawn {
                 };
 
                 //if ("triggerman" in _loadout) then {};
-                private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military"] call lost_hope_fnc_spawnZombie;
+                private _joinGroup = [EAST, true] call lost_hope_fnc_createGroup;
+                private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, EAST, "military", _joinGroup] call lost_hope_fnc_spawnZombie;
                 [_zombie] join zombieAirdrop;
 
                 uiSleep .2;
