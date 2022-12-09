@@ -13,4 +13,4 @@ params ["_unit"];
 ["lost_hope_static_item_bottle", "Drink Water", [], "", true, true, true, [], ""] spawn lost_hope_mod_fnc_client_addItemActions;
 
 // Bile
-["lost_hope_mag_bile", "Use Bile", [], "", true, true, true, [_unit, EAST, 60], "lost_hope_mod_fnc_client_useBile"] spawn lost_hope_mod_fnc_client_addItemActions;
+["lost_hope_mag_bile", "Use Bile", [], "", true, true, true, [player, EAST, 60], "lost_hope_mod_fnc_client_useBile"] spawn lost_hope_mod_fnc_client_addItemActions;

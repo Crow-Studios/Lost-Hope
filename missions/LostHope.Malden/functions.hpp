@@ -13,7 +13,6 @@ class lost_hope
 	};
 
 	class core {
-		class zombieCleanup {};
 		class checkTime {};
 		class nightTransition {};
 		class bodyCleanup {};

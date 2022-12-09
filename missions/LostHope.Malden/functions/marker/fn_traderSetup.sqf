@@ -1,7 +1,5 @@
 params ["_marker", "_traderType"];
 
-diag_log "Running Trader Setup";
-
 {
     diag_log [_x, (_x inArea _marker)];
     if (_x inArea _marker) then {

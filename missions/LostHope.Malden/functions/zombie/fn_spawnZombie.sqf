@@ -26,7 +26,7 @@ private _path = "lost_hope_zombie_loadouts";
 //     zombieGroup = createGroup [_side, true];
 // };
 
-if (sunOrMoon != 1) then {
+if (([] call lost_hope_fnc_checkTime) isEqualTo 0) then {
     selectRandom ["Zombie_Special_OPFOR_Leaper_1", "Zombie_Special_OPFOR_Screamer"] createUnit [_position, _joinGroup, "zombie = this"];
     zombie setVariable ["isZombie", true];
     zombie setVariable ["isMutant", false];

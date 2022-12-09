@@ -17,11 +17,10 @@ def packAllPbo(addonbuilder,in_path,out_path):
                 isFile = True
 
         if (isFile == False):
-            print(f"-exclude={str(in_path)}\exclude.txt")
-            subprocess.call([addonbuilder, f"{in_path}/{folder}", out_path, "-binarizeNoLogs", f"-exclude={in_path}\exclude.txt"]) # use the exclude.txt to delete .bin file (f"-exclude={in_path}/exclude.txt")
+            subprocess.call([addonbuilder, f"{in_path}/{folder}", out_path, "-clear", "-temp", "-binarizeNoLogs", f"-include={in_path}/include.txt"]) # use the include.txt
         else:
             print(f"{folder} was aborted")
 
-packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\Lost_Hope\@Lost_Hope\\addons")
+packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root\Lost_Hope\@Lost_Hope\\addons")
 time.sleep(3)
-packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\Lost-Hope-Models", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\Lost_Hope\@Lost_Hope\\addons")
+packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\Lost-Hope-Models", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root\Lost_Hope\@Lost_Hope\\addons")

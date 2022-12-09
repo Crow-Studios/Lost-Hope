@@ -15,9 +15,6 @@ _startEventScript = [_time, _trader, _type] spawn {
         } forEach allPlayers - (entities "HeadlessClient_F");
 
         if (startEvent) exitWith {
-            if (traderEvent isEqualTo grpNull) then {
-                traderEvent = createGroup [EAST, true];
-            };
             private _joinGroup = [EAST, true] call lost_hope_fnc_createGroup;
             for "_i" from 0 to (random [30, 40, 50]) do {
 
@@ -30,7 +27,7 @@ _startEventScript = [_time, _trader, _type] spawn {
 
                 _zombie setPos _pos;
 
-                [_zombie] join traderEvent;
+                [_zombie] join _joinGroup;
 
                 _zombie setVariable ["isZombie", true];
                 _zombie setVariable ["canDelete", false, true];
@@ -51,9 +48,9 @@ _startEventScript = [_time, _trader, _type] spawn {
                 unit doMove getMarkerPos _trader;
             };
             */
-            waitUntil {count units traderEvent >= 10};
-            [player] spawn lost_hope_fnc_hasEventFinished;
-            [_time, _trader] call lost_hope_fnc_canCancelEvent;
+            waitUntil {count units _joinGroup >= 10};
+            [player, _joinGroup] spawn lost_hope_fnc_hasEventFinished;
+            [_time, _trader, _joinGroup] call lost_hope_fnc_canCancelEvent;
         };
     };
 };

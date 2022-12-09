@@ -12,12 +12,13 @@ if (debug_man) then {} else {
 
     [player, player, 10, true, 30] call lost_hope_fnc_createCamera;
     ["", "BLACK IN", 10] spawn lost_hope_fnc_screenToBlack;
+    playMusic "lost_hope_music_intro";
 };
 
 while {_unit getVariable "lost_hope_markerCheck"} do {
-    if !(alive _unit) exitWith {diag_log "SPAWN INIT PLAYER: Unit has been killed, Aborting and Rerunning"};
+    if !(alive _unit) exitWith {};
     [_unit] spawn lost_hope_fnc_getClosestMarker;
-    [_unit, 200, selectRandom ["lost_hope_zombie_vanilla_farmers", "lost_hope_zombie_vanilla_civilians"], EAST, "city"] spawn lost_hope_fnc_ambientZombie;
+    [_unit, 200, "lost_hope_zombie_vanilla_military", EAST, "city"] spawn lost_hope_fnc_ambientZombie;
     uiSleep 5;
 };
 

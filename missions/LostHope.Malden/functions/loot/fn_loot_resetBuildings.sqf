@@ -27,8 +27,6 @@ while {true} do {
             };
         } forEach _entities;
 
-        diag_log _entitiesPlayer;
-
         if !( true in _entitiesPlayer ) then {
             deleteVehicle _loot;
         };

@@ -10,6 +10,6 @@
 
 params ["_unit", "_radius", "_marker"];
 
-dstnc = _unit distance getMarkerPos _marker <= _radius;
+private _dstnc = _unit distance getMarkerPos _marker <= _radius;
 
-dstnc
+_dstnc

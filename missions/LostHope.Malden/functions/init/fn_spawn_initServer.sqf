@@ -28,4 +28,4 @@ private _eventScript = [] spawn {
 
 [600] spawn lost_hope_fnc_bodyCleanup;
 [5] spawn lost_hope_fnc_loot_resetBuildings;
-["lost_hope_ambience_church"] spawn lost_hope_fnc_nightTransition;
+["lost_hope_ambience_church", 5] spawn lost_hope_fnc_nightTransition;

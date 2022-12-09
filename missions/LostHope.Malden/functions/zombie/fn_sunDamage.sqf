@@ -1,8 +1,8 @@
 params ["_unit"];
 
-waitUntil {sunOrMoon isEqualTo 1};
+waitUntil {([] call lost_hope_fnc_checkTime) isEqualTo 1};
 
-uiSleep selectRandom [1,2]; // make sure anims aren't perfectly synced
+uiSleep random [1,3,5]; // make sure anims aren't perfectly synced
 
 _unit switchMove "WBK_Runner_Calm_Scream";
 _unit disableAI "All";

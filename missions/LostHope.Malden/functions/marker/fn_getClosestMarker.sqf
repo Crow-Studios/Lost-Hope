@@ -13,8 +13,6 @@ private _leader = leader (group _unit);
 
 private _localPlayerUID = getPlayerUID _unit;
 
-diag_log "RUNNING GET CLOSEST MARKER";
-
 {
 
 	if (_x distance _leader >= 400) then {

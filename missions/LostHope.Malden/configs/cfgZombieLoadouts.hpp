@@ -5,7 +5,7 @@
 		{
 			primary[] = {""};
 			secondary[] = {""};
-			uniform[] = {"U_C_Journalist", "U_C_Poloshirt_redwhite", "U_C_Poloshirt_burgundy", "U_Marshal"};
+			uniform[] = {"Lost_Hope_Clothing_Potato_Man", "U_C_Poloshirt_redwhite", "U_C_Poloshirt_burgundy", "U_Marshal"};
 			vest[] = {""};
 			backpack[] = {"B_LegStrapBag_black_F", "B_Messenger_Black_F", "B_Messenger_IDAP_F"};
 			headgear[] = {"H_Watchcap_blk", "H_Booniehat_tan", "H_Cap_blk", "H_Cap_surfer", "H_Hat_tan"};

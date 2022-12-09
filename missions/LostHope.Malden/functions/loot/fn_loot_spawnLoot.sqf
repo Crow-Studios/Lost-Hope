@@ -19,7 +19,7 @@ diag_log format["SPAWN LOOT TRIGGERED BY: %1 AT MARKER %2 WITH GIVEN CHANCE %3 A
 
 private _houses = _unit nearObjects ["Building", 2000];
 
-if (sunOrMoon != 1) then 
+if (([] call lost_hope_fnc_checkTime) isEqualTo 0) then 
 {
 	_type = "lost_hope_zombie_vanilla_military";
 	_chance = _chance * .8;
@@ -41,7 +41,6 @@ if (sunOrMoon != 1) then
 				case "science": {_type = selectRandom ["lost_hope_zombie_vanilla_military", "lost_hope_zombie_vanilla_science"]};
 			};
 			private _random = round (random 100);
-			diag_log _random;
 			if (_chance > _random) then
 			{
 				// Move all of these to config, then grab
@@ -83,10 +82,8 @@ if (sunOrMoon != 1) then
 				//_holder enableSimulation false;
 				_holder allowDamage false;
 				
-				diag_log [_weaponChance, _random, _armed];
-
 				if ( (_weaponChance >= _random) && (_armed isEqualTo 1) ) then {
-					diag_log format ["WEAPON HAS BEEN SPAWNED AT POS: %1", getPosATL _holder];
+					diag_log format ["LOOT HAS BEEN SPAWNED AT POS: %1", getPosATL _holder];
 					private _primary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "primary") );
 					private _secondary = selectRandom ( getArray (missionConfigFile >> "lost_hope_loadouts_zombie" >> _type >> _group >> "secondary") );
 					private _magazinesPrimary = selectRandom ( getArray (configFile >> "CfgWeapons" >> _primary >> "magazines") );

@@ -1,6 +1,6 @@
-params ["_unit"];
+params ["_unit", "_joinGroup"];
 
-waitUntil {count units traderEvent <= 5};
+waitUntil {count units _joinGroup <= 5};
 
 ["lost_hope_task_trader", "SUCCEEDED"] call lost_hope_fnc_setTaskState;
 uiSleep 1;

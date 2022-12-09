@@ -115,10 +115,3 @@ switch (_cat) do
 	};
 
 };
-
-diag_log _selected;
-
-// diag_log _itemClassName;
-
-
-

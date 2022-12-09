@@ -1,8 +1,6 @@
 params ["_unit", "_side", "_time"];
 
-if (_unit getVariable ["hasUsedBile", false]) exitWith {hint "You've already used some bile."};
-
-diag_log format ["%1 has used bile", _unit];
+if (_unit getVariable ["hasUsedBile", false]) exitWith {hint "You've already used some bile.", [player, "lost_hope_mag_bile", 1] call lost_hope_mod_fnc_client_addItem};
 
 private _unitGroup = group _unit;
 

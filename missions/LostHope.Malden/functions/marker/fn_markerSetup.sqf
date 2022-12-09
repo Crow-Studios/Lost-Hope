@@ -23,7 +23,7 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
 } else {
     private _amount = round (random _count);
     hint str (_amount + 1);
-    if (sunOrMoon != 1) then {_amount = _amount / 2}; // don't want 50 OP zombies
+    if (([] call lost_hope_fnc_checkTime) isEqualTo 0) then {_amount = _amount / 2}; // don't want 50 OP zombies
     private _joinGroup = [EAST, true] call lost_hope_fnc_createGroup;
     for "_i" from 0 to (_amount) do {
 
@@ -37,7 +37,7 @@ if (random [0.1, 0.5, 1] >= 0.8) then {
         private _zombie = ["C_man_polo_1_F", _pos, _group, _loadout, _side, _name, _joinGroup] call lost_hope_fnc_spawnZombie;
 
         if (_nearestRoad != objNull) then {_zombie setPosATL getPosATL _nearestRoad};
-        uiSleep .2;
+        uiSleep .5;
     };
 
 };

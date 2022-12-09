@@ -230,19 +230,16 @@ missionNamespace setVariable [("Lost_Hope_Marker"+_aircraftstr+"CanRun"),false,t
 				private _group = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie") call BIS_fnc_getCfgSubClasses );
 				private _loadout = selectRandom ( (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group) call BIS_fnc_getCfgSubClasses );
 				private _armed = getNumber (missionConfigFile >> "lost_hope_loadouts_zombie" >> _group >> _loadout >> "armed");
-				diag_log _armed;
-				hint str _armed;
 
 				switch (_armed) do
 				{
 					case 0: {melee = true};
 					case 1: {melee = false};
 				};
-
-				diag_log melee;
 				
 				private _pos = [getPosATL _crate, 100, 300, 3, 0, 20, 0] call BIS_fnc_findSafePos;
-				private _unit = ["C_man_polo_1_F", _pos, _group, _loadout, INDEPENDENT, melee] call lost_hope_fnc_spawnUnit;
+    			private _joinGroup = [INDEPENDENT, true] call lost_hope_fnc_createGroup;
+				private _unit = ["C_man_polo_1_F", _pos, _group, _loadout, melee, _joinGroup] call lost_hope_fnc_spawnUnit;
 
 				if (groupSide isEqualTo grpNull) then {
 					groupSide = createGroup [EAST, true];

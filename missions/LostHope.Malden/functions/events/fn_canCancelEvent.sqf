@@ -1,7 +1,7 @@
-params ["_time", "_trader"];
+params ["_time", "_trader", "_joinGroup"];
 
-private _cancelEventScript = [_time, _trader] spawn {
-    params ["_time", "_trader"];
+private _cancelEventScript = [_time, _trader, _joinGroup] spawn {
+    params ["_time", "_trader", "_joinGroup"];
 
     uiSleep _time;
 
@@ -20,6 +20,6 @@ private _cancelEventScript = [_time, _trader] spawn {
         ["lost_hope_task_trader"] call lost_hope_fnc_deleteTask;
         {
             deleteVehicle _x;
-        } forEach units traderEvent;
+        } forEach units _joinGroup;
     };
 };

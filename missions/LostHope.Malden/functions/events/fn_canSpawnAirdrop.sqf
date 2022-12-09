@@ -1,6 +1,6 @@
 params ["_time", "_object"];
 
-_startEventScript = [_time, _object] spawn {
+private _startEventScript = [_time, _object] spawn {
     params ["_time", "_object"];
     while {true} do {
         uiSleep _time;

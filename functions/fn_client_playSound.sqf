@@ -41,11 +41,9 @@ if (_loop) exitWith {
 		params ["_object", "_sound", "_loop", "_global"];
 		
 		while {alive _object && _object getVariable "canPlaySound"} do {
-
-			diag_log "A sound is being played";
 			
-			private _loopTime = getNumber (configFile >> "cfgVehicles" >> typeOf _object >> "loopTime");
-			private _maxDistance = getNumber (configFile >> "cfgVehicles" >> typeOf _object >> "maxDistance");
+			private _loopTime = getNumber (configFile >> "cfgSounds" >> _sound >> "loopTime");
+			private _maxDistance = getNumber (configFile >> "cfgSounds" >> _sound >> "maxDistance");
 			
 			if (_loopTime == 0) exitWith {
 				diag_log "Sound playing in loop, should not be. Please fix";
@@ -73,13 +71,11 @@ if (_loop) exitWith {
 	
 };
 
-diag_log "A sound is being played";
-
 if (_global) then {
-	private _maxDistance = getNumber (configFile >> "cfgVehicles" >> typeOf _object >> "maxDistance");
+	private _maxDistance = getNumber (configFile >> "cfgSounds" >> _sound >> "maxDistance");
 	[ _object, [_sound, _maxDistance, 1] ] remoteExec ["say3D"];
 } else {
-	_object say3D _sound;
+	_object say2D _sound;
 };
 
 diag_log format ["Sound playing is %1", _sound];
