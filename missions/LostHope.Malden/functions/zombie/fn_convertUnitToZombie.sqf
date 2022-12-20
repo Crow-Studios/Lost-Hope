@@ -29,6 +29,23 @@ private _anim = selectRandom ["WBK_Middle_GetUpUnconscious", "WBK_Crawler_To_Idl
 //_unit switchMove _anim;
 //_unit playMoveNow _anim;
 
+/*
+_unit setVariable 
+[
+    "IMS_EventHandler_Hit",
+    {
+        private _victim = _this select 0;
+        private _attacker = _this select 1;
+        private _weapon = _this select 2;
+
+        diag_log _victim;
+
+        if (_victim getVariable ["isZombie", false]) then {titleText ["You hit a zombie!","PLAIN"]};
+    },
+    true
+];
+*/
+
 _unit setVariable ["isMutant", false];
 
 result append [_unit, name _unit, _type];

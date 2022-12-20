@@ -22,5 +22,5 @@ def packAllPbo(addonbuilder,in_path,out_path):
             print(f"{folder} was aborted")
 
 packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root\Lost_Hope\@Lost_Hope\\addons")
-time.sleep(3)
-packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\Lost-Hope-Models", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root\Lost_Hope\@Lost_Hope\\addons")
+packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_models", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root\Lost_Hope\@Lost_Hope\\addons")
+packAllPbo("F:\SteamLibrary\steamapps\common\Arma 3 Tools\AddonBuilder\AddonBuilder.exe","C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_misc", "C:\\Users\jakey\Documents\Arma 3 - Other Profiles\Silence\missions\PACK\lost_hope_root\Lost_Hope\@Lost_Hope\\addons")
