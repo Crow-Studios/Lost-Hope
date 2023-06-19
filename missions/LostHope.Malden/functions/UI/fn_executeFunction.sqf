@@ -9,8 +9,6 @@ _functionTreeSel = lbCurSel _LB_FUNCTIONS;
 _functionStr = _LB_FUNCTIONS lbData _functionTreeSel;
 _functionType = _LB_FUNCTIONS lbValue _functionTreeSel;
 
-hint str _functionStr;
-
 //get the selected player
 _playerSelected = lbCurSel _LB_PLAYER;
 _playerUIDStr = _LB_PLAYER lbData _playerSelected;
